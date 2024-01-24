@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import bgImage from "../assets/register.jpg";
 import addImage from "../assets/addImage.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 
@@ -9,7 +9,9 @@ const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
   const axiosPublic = useAxiosPublic();
+
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -56,7 +58,6 @@ const RegisterPage = () => {
 
       if (res?.data?.success) {
         try {
-          e.target.reset()
           const userData = {
             firstName: formData?.firstName,
             lastName: formData?.lastName,
@@ -64,8 +65,11 @@ const RegisterPage = () => {
             password: formData?.password,
             photo_url: photoURL,
           };
-          console.log(userData);
-          setLoading(false);
+          const res = await axiosPublic.post("/auth/register", userData);
+          if (res.data?.success) {
+            setLoading(false);
+            navigate("/login");
+          }
         } catch (err) {
           console.log("Image upload failed", err.message);
         }
