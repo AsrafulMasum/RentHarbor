@@ -71,11 +71,11 @@ const RegisterPage = () => {
             navigate("/login");
           }
         } catch (err) {
-          console.log("Image upload failed", err.message);
+          console.log("Registration failed", err.message);
         }
       }
     } catch (err) {
-      console.log("Registration failed", err.message);
+      console.log("Image upload failed", err.message);
     }
   };
 
@@ -170,12 +170,14 @@ const RegisterPage = () => {
 
           <Button text="Register" style="w-1/2 mt-4" loading={loading} />
         </form>
-        <Link
-          className="text-white text-center mt-2 text-sm hover:underline"
-          to="/login"
-        >
-          Already have an account? Log In Here
-        </Link>
+        <div className="text-center">
+          <Link
+            className="text-white text-center mt-2 text-sm hover:underline"
+            to="/login"
+          >
+            Already have an account? Log In Here
+          </Link>
+        </div>
       </div>
     </div>
   );

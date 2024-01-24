@@ -1,16 +1,15 @@
 import axios from "axios";
-import { useEffect } from "react";
-import { toast } from "react-toastify";
-import useAuth from "./useAuth";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../Provider/DataProvider";
 
 const axiosSecure = axios.create({
-  baseURL: "https://rentharbor.vercel.app",
-  withCredentials: true
+  baseURL: "http://localhost:3000",
+  withCredentials: true,
 });
 
 const useAxiosSecure = () => {
-  const { logOut } = useAuth();
+  const { logoutUser } = useContext(DataContext);
 
   const navigate = useNavigate();
 
@@ -21,17 +20,12 @@ const useAxiosSecure = () => {
       },
       (err) => {
         if (err.response.status === 401 || err.response.status === 403) {
-          logOut()
-            .then(() => {
-              navigate("/logIn");
-            })
-            .catch((err) => {
-              toast.error(err.message);
-            });
+          logoutUser();
+          navigate("/logIn");
         }
       }
     );
-  }, [logOut, navigate]);
+  }, [logoutUser, navigate]);
   return axiosSecure;
 };
 
