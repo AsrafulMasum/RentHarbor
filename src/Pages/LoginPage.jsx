@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import bgImage from "../assets/login.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
-import { DataContext } from "../Provider/DataProvider";
+import { DataContext } from "../Provider/AuthProvider";
 
 const LoginPage = () => {
   const navigate = useNavigate();

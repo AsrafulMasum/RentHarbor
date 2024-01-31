@@ -4,22 +4,38 @@ import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 export const DataContext = createContext();
 
-const DataProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const axiosPublic = useAxiosPublic();
   const [user, setUser] = useState(null);
 
-  const loginUser = async (email, password, setLoading) => {
+  const loginUser = async (email, password) => {
     const res = await axiosPublic.post("/auth/login", { email, password });
     if (res.data.success) {
+      setUserIdToLS(res.data.user._id);
+    }
+  };
+
+  const setUserIdToLS = (id) => {
+    localStorage.setItem("userId", id);
+    getUser();
+  };
+
+  const getUser = async () => {
+    const userId = localStorage.getItem("userId");
+    if (userId) {
+      const res = await axiosPublic.get(`/auth/user/${userId}`);
       setUser(res.data.user);
-      setLoading(false);
     }
   };
 
   useEffect(() => {
+    getUser();
+  }, []);
+
+  useEffect(() => {
     if (user) {
       axiosPublic
-        .post("/jwt", user, {
+        .post("/token/jwt", user, {
           withCredentials: true,
         })
         .then(() => {})
@@ -28,7 +44,7 @@ const DataProvider = ({ children }) => {
         });
     } else {
       axiosPublic
-        .post("/logout", user, {
+        .post("/token/logout", user, {
           withCredentials: true,
         })
         .then(() => {})
@@ -40,8 +56,10 @@ const DataProvider = ({ children }) => {
 
   const logoutUser = () => {
     setUser(null);
+    localStorage.removeItem("userId");
   };
 
+  console.log(user);
   const data = {
     user,
     loginUser,
@@ -51,8 +69,8 @@ const DataProvider = ({ children }) => {
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
 
-DataProvider.propTypes = {
+AuthProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export default DataProvider;
+export default AuthProvider;

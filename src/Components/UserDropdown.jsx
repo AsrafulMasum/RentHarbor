@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import defaultUser from "../assets/user.png";
-import useLoadSecureData from "../Hooks/useLoadSecureData"
+// import useLoadSecureData from "../Hooks/useLoadSecureData"
 import { useContext } from "react";
-import { DataContext } from "../Provider/DataProvider";
+import { DataContext } from "../Provider/AuthProvider";
 
 const UserDropdown = () => {
   const { user, logoutUser } = useContext(DataContext);
 
-  const isAdminURL = `/users/admin/${user?.email}`
-  const {data: isAdmin} = useLoadSecureData(isAdminURL)
+  // const isAdminURL = `/users/admin/${user?.email}`
+  // const {data: isAdmin} = useLoadSecureData(isAdminURL)
 
   const handleLogout = () => {
     logoutUser()
@@ -34,11 +34,11 @@ const UserDropdown = () => {
             {user?.lastName}
           </p>
 
-          <li>
+          {/* <li>
             <Link to={isAdmin?.admin ? "/dashboard/admin" : "/dashboard/user"} className="text-black">
               Dashboard
             </Link>
-          </li>
+          </li> */}
           <li>
             <button
               onClick={handleLogout}

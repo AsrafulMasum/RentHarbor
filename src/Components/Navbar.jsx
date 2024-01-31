@@ -2,7 +2,7 @@ import logo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { DataContext } from "../Provider/DataProvider";
+import { DataContext } from "../Provider/AuthProvider";
 import UserDropdown from "./UserDropdown";
 import Button from "./Button";
 
