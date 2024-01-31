@@ -59,7 +59,6 @@ const AuthProvider = ({ children }) => {
     localStorage.removeItem("userId");
   };
 
-  console.log(user);
   const data = {
     user,
     loginUser,

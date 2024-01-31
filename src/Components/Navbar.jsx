@@ -1,35 +1,37 @@
+import "./Navigation.css";
 import logo from "../assets/logo.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { DataContext } from "../Provider/AuthProvider";
 import UserDropdown from "./UserDropdown";
 import Button from "./Button";
+import { CiSearch } from "react-icons/ci";
 
 const Navbar = ({ children }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { user } = useContext(DataContext);
 
   const navLinks = (
     <>
       <li>
-        <Link>Navbar Item 1</Link>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <Link>Navbar Item 2</Link>
+        <NavLink to="/about">About</NavLink>
       </li>
     </>
   );
 
   const handleNavigate = () => {
-    navigate("/login")
-  }
+    navigate("/login");
+  };
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-black bg-opacity-60">
+        <div className="w-full navbar bg-gray-700 bg-opacity-60">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -51,9 +53,22 @@ const Navbar = ({ children }) => {
               </svg>
             </label>
           </div>
-          <Link to="/" className="flex-1 px-2 mx-2">
-            <img className="w-12" src={logo} alt="Logo" />
-          </Link>
+          <div className="flex-1 px-2 mx-2">
+            <Link to="/">
+              <img className="w-12" src={logo} alt="Logo" />
+            </Link>
+          </div>
+          <div className="hidden lg:flex items-center justify-between">
+            <input
+              className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300"
+              type="text"
+              name="search"
+              placeholder="Search ..."
+            />
+            <button className="rounded-r-xl border border-l-0 py-[7px] px-2 text-primary text-2xl font-extrabold">
+              <CiSearch />
+            </button>
+          </div>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
               {/* Navbar menu content here */}
