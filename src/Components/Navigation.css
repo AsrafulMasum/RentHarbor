@@ -11,10 +11,10 @@ ul li a.active:hover {
 
 ul li a:hover {
   background: none !important;
-  font-weight: 500;
   color: #264F0B !important;
 }
 
 ul li a {
-  color: #ffffff;
+  color: #000000;
+  font-weight: 500;
 }
