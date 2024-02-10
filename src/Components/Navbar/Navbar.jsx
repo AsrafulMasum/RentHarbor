@@ -1,11 +1,11 @@
 import "./Navigation.css";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { DataContext } from "../Provider/AuthProvider";
+import { DataContext } from "../../Provider/AuthProvider";
 import UserDropdown from "./UserDropdown";
-import Button from "./Button";
+import Button from "../Button";
 import { CiSearch } from "react-icons/ci";
 
 const Navbar = ({ children }) => {
@@ -31,7 +31,7 @@ const Navbar = ({ children }) => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-white fixed">
+        <div className="w-full navbar bg-white fixed z-10">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"

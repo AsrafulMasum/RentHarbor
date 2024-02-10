@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 // import { Link } from "react-router-dom";
-import defaultUser from "../assets/user.png";
+import defaultUser from "../../assets/user.png";
 // import useLoadSecureData from "../Hooks/useLoadSecureData"
 import { useContext } from "react";
-import { DataContext } from "../Provider/AuthProvider";
+import { DataContext } from "../../Provider/AuthProvider";
 
 const UserDropdown = () => {
   const { user, logoutUser } = useContext(DataContext);
