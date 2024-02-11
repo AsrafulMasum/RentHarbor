@@ -168,7 +168,7 @@ const RegisterPage = () => {
             />
           )}
 
-          <Button text="Register" style="w-1/2 mt-4" loading={loading} />
+          <Button text="Register" style="w-1/2 mt-4 bg-transparent" loading={loading} />
         </form>
         <div className="text-center">
           <Link

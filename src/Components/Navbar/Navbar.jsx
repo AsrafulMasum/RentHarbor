@@ -31,7 +31,8 @@ const Navbar = ({ children }) => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-gray-500 bg-opacity-50 fixed z-10">
+        <div className="w-full bg-gray-500 bg-opacity-80 fixed z-10">
+          <div className="navbar max-w-screen-xl mx-auto">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -88,10 +89,11 @@ const Navbar = ({ children }) => {
               <div onClick={handleNavigate}>
                 <Button
                   text="Login"
-                  style="btn btn-sm border-primary hover:border-white"
+                  style="btn btn-sm border-primary hover:border-white bg-transparent"
                 ></Button>
               </div>
             )}
+          </div>
           </div>
         </div>
         {/* Page content here */}

@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Button from "../Button";
 
 const Banner = () => {
   return (
@@ -14,7 +15,7 @@ const Banner = () => {
         cssMode={true}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
@@ -28,15 +29,31 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <div className="hero-content text-neutral-content">
+              <div>
+                <h1 className="mb-5 text-3xl font-bold">
+                  WELCOME TO OUR HOUSE RENT
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Welcome to RentHarbor, your premier destination for finding
+                  the perfect home rental tailored to your unique lifestyle.
+                  Whether you&#39;re seeking a cozy apartment in the heart of
+                  the city, a spacious family home in a peaceful suburban
+                  neighborhood, or a luxurious vacation rental by the beach,
+                  we&#39;re here to simplify your search and make the process of
+                  finding your ideal home effortless. With a diverse range of
+                  listings, intuitive search tools, and expert guidance,
+                  we&#39;re committed to helping you discover the home that
+                  suits your needs, preferences, and budget. Begin your journey
+                  towards finding your dream rental today with RentHarbor.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <div className="flex gap-4">
+                  <Button
+                    text="Property"
+                    style="btn-wide bg-secondary border-none"
+                  ></Button>
+                  <Button text="Contact Us" style="btn-wide bg-transparent"></Button>
+                </div>
               </div>
             </div>
           </div>
@@ -50,15 +67,31 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <div className="hero-content text-neutral-content">
+              <div>
+                <h1 className="mb-5 text-3xl font-bold">
+                  WELCOME TO OUR HOUSE RENT
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Welcome to RentHarbor, your premier destination for finding
+                  the perfect home rental tailored to your unique lifestyle.
+                  Whether you&#39;re seeking a cozy apartment in the heart of
+                  the city, a spacious family home in a peaceful suburban
+                  neighborhood, or a luxurious vacation rental by the beach,
+                  we&#39;re here to simplify your search and make the process of
+                  finding your ideal home effortless. With a diverse range of
+                  listings, intuitive search tools, and expert guidance,
+                  we&#39;re committed to helping you discover the home that
+                  suits your needs, preferences, and budget. Begin your journey
+                  towards finding your dream rental today with RentHarbor.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <div className="flex gap-4">
+                  <Button
+                    text="Property"
+                    style="btn-wide bg-secondary border-none"
+                  ></Button>
+                  <Button text="Contact Us" style="btn-wide bg-transparent"></Button>
+                </div>
               </div>
             </div>
           </div>
@@ -72,15 +105,31 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <div className="hero-content text-neutral-content">
+              <div>
+                <h1 className="mb-5 text-3xl font-bold">
+                  WELCOME TO OUR HOUSE RENT
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Welcome to RentHarbor, your premier destination for finding
+                  the perfect home rental tailored to your unique lifestyle.
+                  Whether you&#39;re seeking a cozy apartment in the heart of
+                  the city, a spacious family home in a peaceful suburban
+                  neighborhood, or a luxurious vacation rental by the beach,
+                  we&#39;re here to simplify your search and make the process of
+                  finding your ideal home effortless. With a diverse range of
+                  listings, intuitive search tools, and expert guidance,
+                  we&#39;re committed to helping you discover the home that
+                  suits your needs, preferences, and budget. Begin your journey
+                  towards finding your dream rental today with RentHarbor.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <div className="flex gap-4">
+                  <Button
+                    text="Property"
+                    style="btn-wide bg-secondary border-none"
+                  ></Button>
+                  <Button text="Contact Us" style="btn-wide bg-transparent"></Button>
+                </div>
               </div>
             </div>
           </div>
@@ -89,20 +138,35 @@ const Banner = () => {
           <div
             className="hero min-h-screen"
             style={{
-              backgroundImage:
-                "url(https://i.postimg.cc/prQcKvdY/lux-cat.jpg)",
+              backgroundImage: "url(https://i.postimg.cc/prQcKvdY/lux-cat.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <div className="hero-content text-neutral-content">
+              <div>
+                <h1 className="mb-5 text-3xl font-bold">
+                  WELCOME TO OUR HOUSE RENT
+                </h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Welcome to RentHarbor, your premier destination for finding
+                  the perfect home rental tailored to your unique lifestyle.
+                  Whether you&#39;re seeking a cozy apartment in the heart of
+                  the city, a spacious family home in a peaceful suburban
+                  neighborhood, or a luxurious vacation rental by the beach,
+                  we&#39;re here to simplify your search and make the process of
+                  finding your ideal home effortless. With a diverse range of
+                  listings, intuitive search tools, and expert guidance,
+                  we&#39;re committed to helping you discover the home that
+                  suits your needs, preferences, and budget. Begin your journey
+                  towards finding your dream rental today with RentHarbor.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                <div className="flex gap-4">
+                  <Button
+                    text="Property"
+                    style="btn-wide bg-secondary border-none"
+                  ></Button>
+                  <Button text="Contact Us" style="btn-wide bg-transparent"></Button>
+                </div>
               </div>
             </div>
           </div>
