@@ -99,7 +99,7 @@ const Navbar = ({ children }) => {
         {/* Page content here */}
         <div>{children}</div>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side z-20">
         <label
           htmlFor="my-drawer-3"
           aria-label="close sidebar"
