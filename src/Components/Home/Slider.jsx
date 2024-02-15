@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 const Slider = () => {
   const variants = {
     initial: {
-      y: 200,
+      y: -200,
       opacity: 0,
     },
     animate: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1,
-        staggerChildren: 0.3,
+        duration: 2,
+        staggerChildren: -1,
       },
     },
   };
