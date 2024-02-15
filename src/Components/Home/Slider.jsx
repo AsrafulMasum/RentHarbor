@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 const Slider = () => {
   const variants = {
     initial: {
-      y: -200,
+      x: 200,
       opacity: 0,
     },
     animate: {
-      y: 0,
+      x: 4,
       opacity: 1,
       transition: {
         duration: 2,
-        staggerChildren: -1,
+        staggerChildren: 0.5,
       },
     },
   };
   return (
     <>
-      <div className="text-neutral-content w-full max-w-screen-xl mx-auto">
+      <div className="text-neutral-content w-full max-w-screen-xl mx-4 lg:mx-auto">
         <motion.div variants={variants} initial="initial" whileInView="animate">
           <motion.h1 variants={variants} className="mb-5 text-2xl font-bold text-primary">
             WELCOME TO OUR HOUSE RENT
