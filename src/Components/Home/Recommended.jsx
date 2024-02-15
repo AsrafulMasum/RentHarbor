@@ -8,7 +8,7 @@ const Recommended = () => {
       <Title
         title="Recommended For You"
         subTitle="Start Your Trip With Memory"
-        desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eligendi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eligendi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eligendi. "
+        desc="Discover our rental house locations, from city centers to serene countryside settings, tailored to suit your ideal getaway."
       />
 
       <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-4 mt-10">

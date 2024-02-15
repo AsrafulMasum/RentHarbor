@@ -1,5 +1,5 @@
 import "./Navigation.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
