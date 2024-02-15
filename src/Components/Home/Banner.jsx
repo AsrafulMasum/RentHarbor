@@ -28,7 +28,7 @@ const Banner = () => {
                 "url(https://i.postimg.cc/xTdkbR8B/barn-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-50"></div>
             <Slider />
           </div>
         </SwiperSlide>
@@ -40,7 +40,7 @@ const Banner = () => {
                 "url(https://i.postimg.cc/4xGsC4tZ/beach-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-30"></div>
+            <div className="hero-overlay bg-opacity-50"></div>
             <Slider />
           </div>
         </SwiperSlide>
@@ -52,7 +52,7 @@ const Banner = () => {
                 "url(https://i.postimg.cc/cLFjDdBF/camping-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-30"></div>
+            <div className="hero-overlay bg-opacity-50"></div>
             <Slider />
           </div>
         </SwiperSlide>
@@ -63,7 +63,7 @@ const Banner = () => {
               backgroundImage: "url(https://i.postimg.cc/prQcKvdY/lux-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-30"></div>
+            <div className="hero-overlay bg-opacity-50"></div>
             <Slider />
           </div>
         </SwiperSlide>

@@ -4,7 +4,7 @@ const City = ({ city, img, price, style }) => {
   return (
     <div className={`relative group overflow-hidden ${style}`}>
       <img
-        className="group-hover:scale-105 duration-500 mix-blend-multiply w-full h-full object-cover overflow-hidden"
+        className="group-hover:scale-110 duration-500 mix-blend-multiply w-full h-full object-cover overflow-hidden"
         src={img}
         alt="City"
       />
