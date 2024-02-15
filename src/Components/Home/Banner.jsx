@@ -28,7 +28,7 @@ const Banner = () => {
                 "url(https://i.postimg.cc/xTdkbR8B/barn-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-30"></div>
+            <div className="hero-overlay bg-opacity-60"></div>
             <Slider />
           </div>
         </SwiperSlide>
