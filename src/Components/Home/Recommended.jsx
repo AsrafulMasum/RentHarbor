@@ -6,7 +6,7 @@ const Recommended = () => {
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto">
       <Title
-        title="Recommended For You"
+        title="Recommended Locations For You"
         subTitle="Start Your Trip With Memory"
         desc="Discover our rental house locations, from city centers to serene countryside settings, tailored to suit your ideal getaway."
       />
