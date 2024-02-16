@@ -25,7 +25,7 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(https://i.postimg.cc/xTdkbR8B/barn-cat.jpg)",
+                "url(https://i.postimg.cc/cLFjDdBF/camping-cat.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-50"></div>
@@ -49,7 +49,7 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(https://i.postimg.cc/cLFjDdBF/camping-cat.jpg)",
+                "url(https://i.postimg.cc/xTdkbR8B/barn-cat.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-50"></div>
