@@ -33,67 +33,67 @@ const Navbar = ({ children }) => {
         {/* Navbar */}
         <div className="w-full bg-gray-500 bg-opacity-80 fixed z-10">
           <div className="navbar max-w-screen-xl mx-auto">
-          <div className="flex-none lg:hidden">
-            <label
-              htmlFor="my-drawer-3"
-              aria-label="open sidebar"
-              className="btn btn-square btn-ghost"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
+            <div className="flex-none lg:hidden">
+              <label
+                htmlFor="my-drawer-3"
+                aria-label="open sidebar"
+                className="btn btn-square btn-ghost"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-          <div className="flex-1 px-2 mx-2">
-            <Link to="/">
-              <img className="w-12" src={logo} alt="Logo" />
-            </Link>
-          </div>
-          <div className="hidden lg:flex items-center justify-between">
-            <input
-              className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300"
-              type="text"
-              name="search"
-              placeholder="Search ..."
-            />
-            <button className="rounded-r-xl border border-l-0 py-[7px] px-2 text-primary text-2xl font-extrabold">
-              <CiSearch />
-            </button>
-          </div>
-          <div className="flex-none hidden lg:block">
-            <ul className="menu menu-horizontal">
-              {/* Navbar menu content here */}
-              {navLinks}
-            </ul>
-          </div>
-          <div className="ml-4">
-            {user ? (
-              <UserDropdown></UserDropdown>
-            ) : (
-              // <Link
-              //   to="/login"
-              //   className="btn btn-sm btn-outline text-white px-6 hover:bg-primary hover:border-primary duration-300"
-              // >
-              //   Join Us
-              // </Link>
-              <div onClick={handleNavigate}>
-                <Button
-                  text="Login"
-                  style="btn btn-sm border-primary hover:border-white bg-transparent"
-                ></Button>
-              </div>
-            )}
-          </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block w-6 h-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+            </div>
+            <div className="flex-1 px-2 mx-2">
+              <Link to="/">
+                <img className="w-12" src={logo} alt="Logo" />
+              </Link>
+            </div>
+            <div className="hidden lg:flex items-center justify-between">
+              <input
+                className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300"
+                type="text"
+                name="search"
+                placeholder="Search ..."
+              />
+              <button className="rounded-r-xl border border-l-0 py-[7px] px-2 text-primary text-2xl font-extrabold">
+                <CiSearch />
+              </button>
+            </div>
+            <div className="flex-none hidden lg:block">
+              <ul className="menu menu-horizontal">
+                {/* Navbar menu content here */}
+                {navLinks}
+              </ul>
+            </div>
+            <div className="ml-4">
+              {user ? (
+                <UserDropdown></UserDropdown>
+              ) : (
+                // <Link
+                //   to="/login"
+                //   className="btn btn-sm btn-outline text-white px-6 hover:bg-primary hover:border-primary duration-300"
+                // >
+                //   Join Us
+                // </Link>
+                <div onClick={handleNavigate}>
+                  <Button
+                    text="Login"
+                    style="btn btn-sm border-primary hover:border-white bg-transparent"
+                  ></Button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
         {/* Page content here */}
@@ -107,6 +107,17 @@ const Navbar = ({ children }) => {
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200">
           {/* Sidebar content here */}
+          <div className="flex items-center justify-between">
+            <input
+              className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300"
+              type="text"
+              name="search"
+              placeholder="Search ..."
+            />
+            <button className="rounded-r-xl border border-l-0 py-[7px] px-2 text-primary text-2xl font-extrabold">
+              <CiSearch />
+            </button>
+          </div>
           {navLinks}
         </ul>
       </div>
