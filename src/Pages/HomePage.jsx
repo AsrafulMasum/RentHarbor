@@ -1,6 +1,7 @@
 import Banner from "../Components/Home/Banner";
 import BookingSec from "../Components/Home/BookingSec";
 import Category from "../Components/Home/Category";
+import Faq from "../Components/Home/Faq";
 import Recommended from "../Components/Home/Recommended";
 import Services from "../Components/Home/Services";
 import WhyUs from "../Components/Home/WhyUs";
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Services />
       <Recommended />
       <WhyUs />
+      <Faq />
     </div>
   );
 };
