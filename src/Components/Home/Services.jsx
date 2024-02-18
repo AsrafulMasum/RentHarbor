@@ -6,7 +6,7 @@ import { BiSupport } from "react-icons/bi";
 
 const Services = () => {
   return (
-    <div className="max-w-screen-xl mx-4 lg:mx-auto">
+    <div className="max-w-screen-xl mx-4 lg:mx-auto my-10">
       <Title
         title="Our services"
         subTitle="RentHarbor Tailored to Your Needs"

@@ -7,7 +7,7 @@ import Button from "../Button";
 
 const Category = () => {
   return (
-    <div className="max-w-screen-xl mx-4 lg:mx-auto">
+    <div className="max-w-screen-xl mx-4 lg:mx-auto my-10">
       <Title
         title="Property Category"
         subTitle="Discover Your Ideal Property Today"

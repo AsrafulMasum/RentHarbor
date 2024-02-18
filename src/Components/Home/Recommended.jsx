@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Recommended = () => {
   return (
-    <div className="max-w-screen-xl mx-4 lg:mx-auto">
+    <div className="max-w-screen-xl mx-4 lg:mx-auto my-10">
       <Title
         title="Recommended Locations For You"
         subTitle="Start Your Trip With Memory"
