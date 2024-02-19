@@ -2,9 +2,11 @@ import Button from "../Components/Button";
 import Banner from "../Components/Home/Banner";
 import BookingSec from "../Components/Home/BookingSec";
 import Category from "../Components/Home/Category";
+import Count from "../Components/Home/Count";
 import Faq from "../Components/Home/Faq";
 import Recommended from "../Components/Home/Recommended";
 import Services from "../Components/Home/Services";
+import Testimonials from "../Components/Home/Testimonials";
 import WhyUs from "../Components/Home/WhyUs";
 
 const HomePage = () => {
@@ -23,6 +25,8 @@ const HomePage = () => {
       <Recommended />
       <WhyUs />
       <Faq />
+      <Count />
+      <Testimonials />
     </div>
   );
 };

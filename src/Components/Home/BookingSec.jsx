@@ -8,7 +8,7 @@ const BookingSec = () => {
           "url(https://i.postimg.cc/gkSqHN5j/Bespoke-Partnerships.png)",
         backgroundPosition: "center",
         backgroundSize: "cover",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
       }}
       className="py-40"
     >
