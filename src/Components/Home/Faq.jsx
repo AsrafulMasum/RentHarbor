@@ -16,7 +16,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white pt-10">
       <section className="max-w-screen-xl mx-4 lg:mx-auto">
         <Title
           title="FAQ"
