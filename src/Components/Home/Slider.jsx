@@ -26,16 +26,16 @@ const Slider = () => {
       >
         <motion.h1
           variants={variants}
-          className="mb-5 text-2xl font-bold text-primary uppercase"
+          className="mb-16 text-2xl font-bold text-primary uppercase"
         >
           WELCOME TO OUR Rent Harbor
         </motion.h1>
-        <motion.p variants={variants} className="mb-10 text-5xl max-w-2xl">
+        <motion.p variants={variants} className="mb-16 text-7xl max-w-3xl">
           Bringing Your Dream Home Vision to Life.
         </motion.p>
         <motion.div
           variants={variants}
-          className="flex flex-col md:flex-row gap-4"
+          className="flex flex-col md:flex-row gap-8"
         >
           <Button
             text="Property"
