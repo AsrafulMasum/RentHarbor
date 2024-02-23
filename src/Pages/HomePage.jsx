@@ -1,4 +1,5 @@
 import Button from "../Components/Button";
+import Footer from "../Components/Footer";
 import Banner from "../Components/Home/Banner";
 import BookingSec from "../Components/Home/BookingSec";
 import Category from "../Components/Home/Category";
@@ -27,6 +28,7 @@ const HomePage = () => {
       <Faq />
       <Count />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
