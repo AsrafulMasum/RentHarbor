@@ -20,6 +20,7 @@ const Banner = () => {
         }}
         modules={[Autoplay]}
       >
+        {/* slider */}
         <SwiperSlide>
           <div
             className="hero min-h-screen"
