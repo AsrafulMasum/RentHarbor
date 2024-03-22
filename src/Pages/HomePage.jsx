@@ -20,7 +20,7 @@ const HomePage = () => {
       <div className="bg-secondary py-10">
         <div className="max-w-screen-xl mx-4 lg:mx-auto flex justify-between items-center">
           <h2 className="text-3xl text-white">IF NEED ANY HELP! CONTACT US</h2>
-          <Button text="Contact Us" style="bg-transparent" />
+          <Button text="Contact Us" style="bg-transparent text-white" />
         </div>
       </div>
       <Recommended />

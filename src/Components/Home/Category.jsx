@@ -22,7 +22,7 @@ const Category = () => {
             buy, each offering unique features and amenities to suit your needs.
             Find your ideal home today.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm" />
+          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
         </div>
 
         <div className="p-10 border rounded-tr-[100px] rounded-bl-[100px] text-center flex flex-col justify-center items-center gap-2 hover:bg-secondary hover:text-white duration-500 group lg:w-1/4 h-96">
@@ -33,7 +33,7 @@ const Category = () => {
             apartments for rent or buy, featuring modern amenities and prime
             locations to match your lifestyle.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm" />
+          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
         </div>
 
         <div className="p-10 border rounded-tr-[100px] rounded-bl-[100px] text-center flex flex-col justify-center items-center gap-2 hover:bg-secondary hover:text-white duration-500 group lg:w-1/4 h-96">
@@ -44,7 +44,7 @@ const Category = () => {
             offering ample storage and versatile layouts to accommodate your
             growing needs.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm" />
+          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
         </div>
 
         <div className="p-10 border rounded-tr-[100px] rounded-bl-[100px] text-center flex flex-col justify-center items-center gap-2 hover:bg-secondary hover:text-white duration-500 group lg:w-1/4 h-96">
@@ -54,7 +54,7 @@ const Category = () => {
             Elevate your business with premium office rentals. Tailored
             environments, strategic locations, and premium amenities await.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm" />
+          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ const Button = ({ text, style, loading }) => {
         onMouseMove={handleMouseMove}
         style={styles}
         type="submit"
-        className={`btn py-2 px-4 cursor-pointer rounded-lg font-semibold border text-white hover:text-primary duration-500 ${style}`}
+        className={`btn py-2 px-4 cursor-pointer rounded-lg font-semibold border hover:text-primary duration-500 ${style}`}
       >
         <span>
           {loading ? (

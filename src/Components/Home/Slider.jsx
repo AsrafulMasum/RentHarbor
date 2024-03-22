@@ -39,9 +39,12 @@ const Slider = () => {
         >
           <Button
             text="Property"
-            style="btn-wide bg-secondary border-none"
+            style="btn-wide bg-secondary border-none text-white"
           ></Button>
-          <Button text="Contact Us" style="btn-wide bg-transparent"></Button>
+          <Button
+            text="Contact Us"
+            style="btn-wide bg-transparent text-white"
+          ></Button>
         </motion.div>
       </motion.div>
     </>

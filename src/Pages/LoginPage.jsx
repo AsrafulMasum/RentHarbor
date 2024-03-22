@@ -49,7 +49,7 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <Button text="Login" style="w-1/2 mt-4 bg-transparent" loading={loading} />
+          <Button text="Login" style="w-1/2 mt-4 bg-transparent text-white" loading={loading} />
         </form>
         <div className="text-center">
           <Link

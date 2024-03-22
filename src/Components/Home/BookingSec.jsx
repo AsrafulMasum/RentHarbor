@@ -23,7 +23,7 @@ const BookingSec = () => {
         </p>
         <Button
           text="Start Booking"
-          style="bg-secondary btn-wide border-none"
+          style="bg-secondary btn-wide border-none text-white"
         />
       </div>
     </div>

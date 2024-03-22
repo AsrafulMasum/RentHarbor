@@ -89,7 +89,7 @@ const Navbar = ({ children }) => {
                 <div onClick={handleNavigate}>
                   <Button
                     text="Login"
-                    style="btn btn-sm border-primary hover:border-white bg-transparent"
+                    style="btn btn-sm border-primary hover:border-white bg-transparent text-white"
                   ></Button>
                 </div>
               )}
