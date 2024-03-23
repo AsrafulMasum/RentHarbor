@@ -7,38 +7,52 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
 
-  
+  useEffect(() => {
+    const getTestimonials = async () => {
+      const res = await fetch("./testimonials.json");
+      const data = await res.json();
+      setTestimonials(data);
+    };
+
+    getTestimonials();
+  }, []);
 
   return (
-    <div className="my-10">
+    <div className="max-w-screen-xl mx-4 lg:mx-auto my-10">
       <Title
         title="Testimonials"
         subTitle="Stories of Success and Satisfaction"
         desc="Testimonials are brief statements that express satisfaction or approval, often used in marketing to build trust and credibility."
       />
 
-      <div className="my-10">
+      <div className="max-w-4xl mx-auto my-10">
         <Swiper
           navigation={true}
           modules={[Autoplay, Navigation]}
           loop={true}
           autoplay={{
             delay: 5000,
-            disableOnInteraction: false,
           }}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial?.id}>
+              <div className="flex flex-col justify-center items-center gap-4 text-center">
+                <img className="w-20" src={testimonial?.photo_url} alt="User" />
+                <div>
+                  <h4 className="text-lg font-semibold text-primary">
+                    {testimonial?.name}
+                  </h4>
+                  <p className="text-secondary">{testimonial?.location}</p>
+                </div>
+                <p className="w-2/3 md:w-10/12">{testimonial?.testimonial}</p>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

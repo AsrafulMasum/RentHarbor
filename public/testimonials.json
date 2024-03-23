@@ -5,7 +5,7 @@
     "location": "Los Angeles, USA",
     "testimonial": "RentHarbor made finding my dream home so easy! Their website is user-friendly, and I quickly found a beautiful apartment in a great neighborhood. The entire rental process was smooth and hassle-free. Thank you, RentHarbor!",
     "rating": 5,
-    "photo_url": "https://example.com/emma_thompson.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "location": "Toronto, Canada",
     "testimonial": "I've been searching for a rental property for weeks with no luck until I came across RentHarbor. Their extensive listings and helpful filters made it simple to narrow down my options. I'm now happily settled into my new home. Highly recommend!",
     "rating": 4.8,
-    "photo_url": "https://example.com/daniel_johnson.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "location": "London, UK",
     "testimonial": "RentHarbor exceeded my expectations! I found a stunning apartment within days of signing up on their platform. Their customer support team was also very responsive and assisted me throughout the entire rental process. I couldn't be happier!",
     "rating": 5,
-    "photo_url": "https://example.com/sophie_martinez.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "location": "Madrid, Spain",
     "testimonial": "I stumbled upon RentHarbor while searching for a rental home in Madrid, and I'm so glad I did! Their website is intuitive, and I was able to find a perfect place within my budget in no time. RentHarbor made my relocation seamless!",
     "rating": 4.7,
-    "photo_url": "https://example.com/carlos_fernandez.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "location": "Sydney, Australia",
     "testimonial": "RentHarbor made the daunting task of finding a rental property in Sydney so much easier! Their comprehensive listings and detailed descriptions helped me find exactly what I was looking for. I'm now happily settled into my new home. Thank you, RentHarbor!",
     "rating": 5,
-    "photo_url": "https://example.com/lily_wang.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "location": "Vancouver, Canada",
     "testimonial": "RentHarbor made finding a rental property in Vancouver a breeze! Their website is intuitive, and I was able to schedule viewings and apply for rentals directly through the platform. I'm now happily settled into my new apartment.",
     "rating": 4.9,
-    "photo_url": "https://example.com/david_smith.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "location": "Rome, Italy",
     "testimonial": "I had a fantastic experience using RentHarbor to find a rental home in Rome. Their website has a wide range of listings, and I found the perfect apartment within my budget quickly. RentHarbor made my relocation stress-free!",
     "rating": 4.8,
-    "photo_url": "https://example.com/isabella_rossi.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "location": "Dubai, UAE",
     "testimonial": "RentHarbor's platform is a game-changer! I found a luxury rental property in Dubai effortlessly. Their website is user-friendly, and their listings are up-to-date. I highly recommend RentHarbor to anyone looking for rental properties.",
     "rating": 5,
-    "photo_url": "https://example.com/mohammed_ali.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "location": "Melbourne, Australia",
     "testimonial": "RentHarbor made my apartment search in Melbourne stress-free! Their website is well-designed, and I appreciated the detailed descriptions and photos of each listing. I found the perfect place in no time. Thank you, RentHarbor!",
     "rating": 4.7,
-    "photo_url": "https://example.com/emma_wilson.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "location": "Paris, France",
     "testimonial": "Finding a rental property in Paris can be challenging, but RentHarbor made it easy! Their website is intuitive, and their listings are comprehensive. I found a charming apartment in the heart of the city thanks to RentHarbor.",
     "rating": 4.9,
-    "photo_url": "https://example.com/alexandre_dubois.jpg"
+    "photo_url": "https://i.postimg.cc/DfDdg3Yt/user.png"
   }
 ]
