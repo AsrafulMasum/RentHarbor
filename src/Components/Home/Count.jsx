@@ -18,28 +18,28 @@ const Count = () => {
       <div className="max-w-screen-xl mx-4 lg:mx-auto my-10 flex justify-between items-center">
         <div className="flex flex-col justify-center items-center gap-2 font-semibold">
           <FaHouse className="text-5xl text-primary" />
-          <div className="text-5xl">
+          <div className="text-4xl">
             <CountUp start={0} end={455} duration={2.5} />
           </div>
           <p>Property</p>
         </div>
         <div className="flex flex-col justify-center items-center gap-2 font-semibold">
           <FaUsers className="text-5xl text-primary" />
-          <div className="text-5xl">
+          <div className="text-4xl">
             <CountUp start={0} end={250} duration={2.5} />
           </div>
           <p>Happy Client</p>
         </div>
         <div className="flex flex-col justify-center items-center gap-2 font-semibold">
           <FaHands className="text-5xl text-primary" />
-          <div className="text-5xl">
+          <div className="text-4xl">
             <CountUp start={0} end={312} duration={2.5} />
           </div>
           <p>Host</p>
         </div>
         <div className="flex flex-col justify-center items-center gap-2 font-semibold">
           <FaGlobeAmericas className="text-5xl text-primary" />
-          <div className="text-5xl">
+          <div className="text-4xl">
             <CountUp start={0} end={40} duration={2.5} />
           </div>
           <p>Countries</p>
