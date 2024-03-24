@@ -14,10 +14,10 @@ const Banner = () => {
         slidesPerView={1}
         cssMode={true}
         loop={true}
-        autoplay={{
-          delay: 10000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 10000,
+        //   disableOnInteraction: false,
+        // }}
         modules={[Autoplay]}
       >
         {/* slider */}
@@ -30,7 +30,9 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-opacity-50"></div>
+            
             <Slider />
+            
           </div>
         </SwiperSlide>
         <SwiperSlide>
