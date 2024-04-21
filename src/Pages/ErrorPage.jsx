@@ -25,13 +25,13 @@ const ErrorPage = () => {
           <p className="text-2xl font-medium">{error.data}</p>
 
           <Link to={"/"}>
-            <Button text="Go Home" style="bg-secondary btn-wide" />
+            <Button text="Go Home" style="bg-secondary btn-wide text-white" />
           </Link>
         </div>
         <div className="text-center">
           <Lottie options={defaultOptions}></Lottie>
           <Link className="lg:hidden" to={"/"}>
-            <Button text="Go Home" style="bg-secondary btn-wide" />
+            <Button text="Go Home" style="bg-secondary btn-wide text-white" />
           </Link>
         </div>
       </div>
