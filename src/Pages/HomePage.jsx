@@ -5,6 +5,7 @@ import BookingSec from "../Components/Home/BookingSec";
 import Category from "../Components/Home/Category";
 import Count from "../Components/Home/Count";
 import Faq from "../Components/Home/Faq";
+import FeaturedProperties from "../Components/Home/FeaturedProperties";
 import Recommended from "../Components/Home/Recommended";
 import Services from "../Components/Home/Services";
 import Testimonials from "../Components/Home/Testimonials";
@@ -15,6 +16,7 @@ const HomePage = () => {
     <div>
       <Banner />
       <Category />
+      <FeaturedProperties />
       <BookingSec />
       <Services />
       <div className="bg-secondary py-10">
