@@ -4,6 +4,7 @@ import addImage from "../assets/addImage.png";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
+import { toast } from "react-toastify";
 
 const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
@@ -66,12 +67,20 @@ const RegisterPage = () => {
             photo_url: photoURL,
           };
           const res = await axiosPublic.post("/auth/register", userData);
+          console.log(res.data);
           if (res.data?.success) {
+            toast.success("You have registered successfully.")
             setLoading(false);
             navigate("/login");
           }
         } catch (err) {
+          setLoading(false);
           console.log("Registration failed", err.message);
+          if(err.response.status === 409){
+            toast.error("User already exists!")
+          }else{
+            toast.error("Something went wrong! Try again.")
+          }
         }
       }
     } catch (err) {
