@@ -5,13 +5,13 @@ ul li a.active {
   text-decoration: underline;
 }
 ul li a.active:hover {
-  color: #264F0B !important;
+  color: #AFDA8E !important;
   font-weight: 700;
 }
 
 ul li a:hover {
   background: none !important;
-  color: #264F0B !important;
+  color: #AFDA8E !important;
 }
 
 ul li a {

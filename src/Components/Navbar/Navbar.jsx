@@ -76,7 +76,7 @@ const Navbar = ({ children }) => {
                 {navLinks}
               </ul>
             </div>
-            <div className="ml-4">
+            <div className="ml-4 mr-4">
               {user ? (
                 <UserDropdown></UserDropdown>
               ) : (
@@ -94,6 +94,12 @@ const Navbar = ({ children }) => {
                 </div>
               )}
             </div>
+            <div className="pl-4 border-l">
+              <Button
+                text="Become A Host"
+                style="btn border-tertiary hover:border-transparent bg-transparent text-white"
+              />
+            </div>
           </div>
         </div>
         {/* Page content here */}
@@ -105,11 +111,11 @@ const Navbar = ({ children }) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-base-200">
+        <ul className="menu p-4 w-80 min-h-full bg-gray-700">
           {/* Sidebar content here */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <input
-              className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300"
+              className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300 "
               type="text"
               name="search"
               placeholder="Search ..."
