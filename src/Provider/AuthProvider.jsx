@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 
-export const DataContext = createContext();
+export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const axiosPublic = useAxiosPublic();
@@ -65,7 +65,7 @@ const AuthProvider = ({ children }) => {
     logoutUser,
   };
 
-  return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
+  return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;
 };
 
 AuthProvider.propTypes = {

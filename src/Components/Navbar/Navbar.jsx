@@ -3,14 +3,14 @@ import logo from "../../assets/logo.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { DataContext } from "../../Provider/AuthProvider";
+import { AuthContext } from "../../Provider/AuthProvider";
 import UserDropdown from "./UserDropdown";
 import Button from "../Button";
 import { CiSearch } from "react-icons/ci";
 
 const Navbar = ({ children }) => {
   const navigate = useNavigate();
-  const { user } = useContext(DataContext);
+  const { user } = useContext(AuthContext);
 
   const navLinks = (
     <>
@@ -94,7 +94,7 @@ const Navbar = ({ children }) => {
                 </div>
               )}
             </div>
-            <div className="pl-4 border-l">
+            <div className="pl-4 border-l hidden md:block">
               <Button
                 text="Become A Host"
                 style="btn border-tertiary hover:border-transparent bg-transparent text-white"

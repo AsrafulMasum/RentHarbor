@@ -4,6 +4,8 @@ import HomePage from "../Pages/HomePage";
 import RegisterPage from "../Pages/RegisterPage";
 import LoginPage from "../Pages/LoginPage";
 import ErrorPage from "../Pages/ErrorPage";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import GuestDashboard from "../Pages/Dashboard/GuestDashboard";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -14,6 +16,17 @@ const MainRoutes = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+    ],
+  },
+
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "guest",
+        element: <GuestDashboard />,
       },
     ],
   },

@@ -65,21 +65,22 @@ const RegisterPage = () => {
             email: formData?.email,
             password: formData?.password,
             photo_url: photoURL,
+            role: "Guest",
           };
           const res = await axiosPublic.post("/auth/register", userData);
           console.log(res.data);
           if (res.data?.success) {
-            toast.success("You have registered successfully.")
+            toast.success("You have registered successfully.");
             setLoading(false);
             navigate("/login");
           }
         } catch (err) {
           setLoading(false);
           console.log("Registration failed", err.message);
-          if(err.response.status === 409){
-            toast.error("User already exists!")
-          }else{
-            toast.error("Something went wrong! Try again.")
+          if (err.response.status === 409) {
+            toast.error("User already exists!");
+          } else {
+            toast.error("Something went wrong! Try again.");
           }
         }
       }
@@ -177,7 +178,11 @@ const RegisterPage = () => {
             />
           )}
 
-          <Button text="Register" style="w-1/2 mt-4 bg-transparent text-white" loading={loading} />
+          <Button
+            text="Register"
+            style="w-1/2 mt-4 bg-transparent text-white"
+            loading={loading}
+          />
         </form>
         <div className="text-center">
           <Link
