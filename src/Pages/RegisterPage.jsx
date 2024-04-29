@@ -17,6 +17,7 @@ const RegisterPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    phone: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -66,6 +67,7 @@ const RegisterPage = () => {
             password: formData?.password,
             photo_url: photoURL,
             role: "Guest",
+            phone: formData?.phone,
           };
           const res = await axiosPublic.post("/auth/register", userData);
           console.log(res.data);
@@ -118,6 +120,15 @@ const RegisterPage = () => {
             required
             name="lastName"
             value={formData.lastName}
+            onChange={handleChange}
+          />
+          <input
+            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            placeholder="Phone"
+            required
+            type="tel"
+            name="phone"
+            value={formData.phone}
             onChange={handleChange}
           />
           <input
