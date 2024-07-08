@@ -32,16 +32,21 @@ const UserDropdown = () => {
           className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-slate-400 rounded-box w-52"
         >
           <li>
-            <Link to="/dashboard"
+            <Link
+              to={
+                user?.role === "Guest"
+                  ? "/dashboard/guest"
+                  : user?.role === "Host"
+                  ? "/dashboard/host"
+                  : "/dashboard/admin"
+              }
               className="bg-textColor text-white mt-1 px-[14px]"
             >
               Dashboard
             </Link>
           </li>
           <li>
-            <Link
-              className="bg-textColor text-white mt-1 px-[14px]"
-            >
+            <Link className="bg-textColor text-white mt-1 px-[14px]">
               Become A Host
             </Link>
           </li>
