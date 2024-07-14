@@ -3,12 +3,12 @@ import { GrCheckboxSelected } from "react-icons/gr";
 
 const WhyUs = () => {
   return (
-    <div className="bg-secondary py-10">
+    <div className="bg-secondary py-16">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20 max-w-screen-xl mx-4 lg:mx-auto">
         <div className="flex-1 lg:w-2/5">
           <img src={img} alt="Home" />
         </div>
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-10">
           <h2 className="text-3xl text-primary font-semibold">
             Why you should choose us?
           </h2>

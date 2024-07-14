@@ -54,7 +54,7 @@ const Navbar = ({ children }) => {
                 </svg>
               </label>
             </div>
-            <div className="flex-1 px-2 mx-2">
+            <div className="flex-1">
               <Link to="/">
                 <img className="w-12" src={logo} alt="Logo" />
               </Link>
@@ -76,7 +76,7 @@ const Navbar = ({ children }) => {
                 {navLinks}
               </ul>
             </div>
-            <div className="ml-4 mr-4">
+            <div className="ml-4">
               {user ? (
                 <UserDropdown></UserDropdown>
               ) : (
@@ -96,7 +96,7 @@ const Navbar = ({ children }) => {
             </div>
             {
               user && 
-              <div className="pl-4 border-l hidden md:block">
+              <div className="ml-4 pl-4 border-l hidden md:block">
                 <Button
                   text="Become A Host"
                   style="btn border-tertiary hover:border-transparent bg-transparent text-white"
