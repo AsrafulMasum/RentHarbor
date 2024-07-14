@@ -17,6 +17,15 @@ const MainRoutes = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      {
+        path: "register",
+        element: <RegisterPage />,
+      },
+    
+      {
+        path: "login",
+        element: <LoginPage />,
+      },
     ],
   },
 
@@ -29,16 +38,6 @@ const MainRoutes = createBrowserRouter([
         element: <GuestDashboard />,
       },
     ],
-  },
-
-  {
-    path: "register",
-    element: <RegisterPage />,
-  },
-
-  {
-    path: "login",
-    element: <LoginPage />,
   },
 ]);
 

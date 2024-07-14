@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const Recommended = () => {
   return (
-    <div className="max-w-screen-xl mx-4 lg:mx-auto my-10">
+    <div className="max-w-screen-xl mx-4 lg:mx-auto my-16">
       <Title
         title="Recommended Locations For You"
         subTitle="Start Your Trip With Memory"
         desc="Discover our rental house locations, from city centers to serene countryside settings, tailored to suit your ideal getaway."
       />
 
-      <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-4 mt-10">
+      <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-4 mt-16">
         <Link>
           <City
             city="United Emirates"

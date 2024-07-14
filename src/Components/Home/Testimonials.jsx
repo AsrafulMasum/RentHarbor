@@ -30,7 +30,7 @@ const Testimonials = () => {
         desc="Testimonials are brief statements that express satisfaction or approval, often used in marketing to build trust and credibility."
       />
 
-      <div className="max-w-4xl mx-auto my-10">
+      <div className="max-w-4xl mx-auto my-16">
         <Swiper
           navigation={true}
           modules={[Autoplay, Navigation]}
@@ -41,7 +41,7 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial?.id}>
-              <div className="flex flex-col justify-center items-center gap-4 text-center">
+              <div className="flex flex-col justify-center items-center gap-12 text-center">
                 <img className="w-20" src={testimonial?.photo_url} alt="User" />
                 <div>
                   <h4 className="text-lg font-semibold text-primary">

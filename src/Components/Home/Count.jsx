@@ -15,7 +15,7 @@ const Count = () => {
       }}
       className="py-2 text-white"
     >
-      <div className="max-w-screen-xl mx-4 lg:mx-auto my-10 flex justify-between items-center">
+      <div className="max-w-screen-xl mx-4 lg:mx-auto my-16 flex justify-between items-center">
         <div className="flex flex-col justify-center items-center gap-2 font-semibold">
           <FaHouse className="text-5xl text-primary" />
           <div className="text-4xl">

@@ -94,12 +94,15 @@ const Navbar = ({ children }) => {
                 </div>
               )}
             </div>
-            <div className="pl-4 border-l hidden md:block">
-              <Button
-                text="Become A Host"
-                style="btn border-tertiary hover:border-transparent bg-transparent text-white"
-              />
-            </div>
+            {
+              user && 
+              <div className="pl-4 border-l hidden md:block">
+                <Button
+                  text="Become A Host"
+                  style="btn border-tertiary hover:border-transparent bg-transparent text-white"
+                />
+              </div>
+            }
           </div>
         </div>
         {/* Page content here */}

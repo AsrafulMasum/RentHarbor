@@ -12,7 +12,7 @@ const BookingSec = () => {
       }}
       className="py-40"
     >
-      <div className="max-w-screen-xl mx-4 lg:mx-auto text-white space-y-5">
+      <div className="max-w-screen-xl mx-4 lg:mx-auto text-white space-y-10">
         <h2 className="text-3xl text-primary font-semibold">RentHarbor</h2>
         <p className="lg:w-1/2">
           Easily book your ideal home through our platform. Browse listings,
