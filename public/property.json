@@ -1,0 +1,326 @@
+[
+  {
+    "propertyId": "1",
+    "title": "Cozy 2-bedroom apartment",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "90210"
+    },
+    "price_per_month": 1500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 900,
+    "amenities": ["Parking", "Pool"],
+    "numberOfBalconies": 1,
+    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
+    "contactInfo": {
+      "agent_name": "Jane Doe",
+      "phone": "+1-555-123-4567",
+      "email": "jane.doe@example.com"
+    },
+    "images": [
+      "https://example.com/images/apartment1_1.jpg",
+      "https://example.com/images/apartment1_2.jpg"
+    ],
+    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
+  },
+  {
+    "propertyId": "2",
+    "title": "Spacious 3-bedroom house",
+    "address": {
+      "street": "456 Oak St",
+      "city": "Somewhere",
+      "state": "TX",
+      "zip": "75001"
+    },
+    "price_per_month": 2200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1800,
+    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
+    "numberOfBalconies": 0,
+    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
+    "contactInfo": {
+      "agent_name": "John Smith",
+      "phone": "+1-555-987-6543",
+      "email": "john.smith@example.com"
+    },
+    "images": [
+      "https://example.com/images/house1_1.jpg",
+      "https://example.com/images/house1_2.jpg"
+    ],
+    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
+  },
+  {
+    "propertyId": "3",
+    "title": "Modern 1-bedroom loft",
+    "address": {
+      "street": "789 Pine St",
+      "city": "Elsewhere",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "price_per_month": 1800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "square_feet": 700,
+    "amenities": ["Gym", "Rooftop Access", "Doorman"],
+    "numberOfBalconies": 2,
+    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
+    "contactInfo": {
+      "agent_name": "Emily Brown",
+      "phone": "+1-555-555-5555",
+      "email": "emily.brown@example.com"
+    },
+    "images": [
+      "https://example.com/images/loft1_1.jpg",
+      "https://example.com/images/loft1_2.jpg"
+    ],
+    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+  },
+  {
+    "propertyId": "1",
+    "title": "Cozy 2-bedroom apartment",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "90210"
+    },
+    "price_per_month": 1500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 900,
+    "amenities": ["Parking", "Pool"],
+    "numberOfBalconies": 1,
+    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
+    "contactInfo": {
+      "agent_name": "Jane Doe",
+      "phone": "+1-555-123-4567",
+      "email": "jane.doe@example.com"
+    },
+    "images": [
+      "https://example.com/images/apartment1_1.jpg",
+      "https://example.com/images/apartment1_2.jpg"
+    ],
+    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
+  },
+  {
+    "propertyId": "2",
+    "title": "Spacious 3-bedroom house",
+    "address": {
+      "street": "456 Oak St",
+      "city": "Somewhere",
+      "state": "TX",
+      "zip": "75001"
+    },
+    "price_per_month": 2200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1800,
+    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
+    "numberOfBalconies": 0,
+    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
+    "contactInfo": {
+      "agent_name": "John Smith",
+      "phone": "+1-555-987-6543",
+      "email": "john.smith@example.com"
+    },
+    "images": [
+      "https://example.com/images/house1_1.jpg",
+      "https://example.com/images/house1_2.jpg"
+    ],
+    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
+  },
+  {
+    "propertyId": "3",
+    "title": "Modern 1-bedroom loft",
+    "address": {
+      "street": "789 Pine St",
+      "city": "Elsewhere",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "price_per_month": 1800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "square_feet": 700,
+    "amenities": ["Gym", "Rooftop Access", "Doorman"],
+    "numberOfBalconies": 2,
+    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
+    "contactInfo": {
+      "agent_name": "Emily Brown",
+      "phone": "+1-555-555-5555",
+      "email": "emily.brown@example.com"
+    },
+    "images": [
+      "https://example.com/images/loft1_1.jpg",
+      "https://example.com/images/loft1_2.jpg"
+    ],
+    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+  },
+  {
+    "propertyId": "1",
+    "title": "Cozy 2-bedroom apartment",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "90210"
+    },
+    "price_per_month": 1500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 900,
+    "amenities": ["Parking", "Pool"],
+    "numberOfBalconies": 1,
+    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
+    "contactInfo": {
+      "agent_name": "Jane Doe",
+      "phone": "+1-555-123-4567",
+      "email": "jane.doe@example.com"
+    },
+    "images": [
+      "https://example.com/images/apartment1_1.jpg",
+      "https://example.com/images/apartment1_2.jpg"
+    ],
+    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
+  },
+  {
+    "propertyId": "2",
+    "title": "Spacious 3-bedroom house",
+    "address": {
+      "street": "456 Oak St",
+      "city": "Somewhere",
+      "state": "TX",
+      "zip": "75001"
+    },
+    "price_per_month": 2200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1800,
+    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
+    "numberOfBalconies": 0,
+    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
+    "contactInfo": {
+      "agent_name": "John Smith",
+      "phone": "+1-555-987-6543",
+      "email": "john.smith@example.com"
+    },
+    "images": [
+      "https://example.com/images/house1_1.jpg",
+      "https://example.com/images/house1_2.jpg"
+    ],
+    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
+  },
+  {
+    "propertyId": "3",
+    "title": "Modern 1-bedroom loft",
+    "address": {
+      "street": "789 Pine St",
+      "city": "Elsewhere",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "price_per_month": 1800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "square_feet": 700,
+    "amenities": ["Gym", "Rooftop Access", "Doorman"],
+    "numberOfBalconies": 2,
+    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
+    "contactInfo": {
+      "agent_name": "Emily Brown",
+      "phone": "+1-555-555-5555",
+      "email": "emily.brown@example.com"
+    },
+    "images": [
+      "https://example.com/images/loft1_1.jpg",
+      "https://example.com/images/loft1_2.jpg"
+    ],
+    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+  },
+  {
+    "propertyId": "1",
+    "title": "Cozy 2-bedroom apartment",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zip": "90210"
+    },
+    "price_per_month": 1500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 900,
+    "amenities": ["Parking", "Pool"],
+    "numberOfBalconies": 1,
+    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
+    "contactInfo": {
+      "agent_name": "Jane Doe",
+      "phone": "+1-555-123-4567",
+      "email": "jane.doe@example.com"
+    },
+    "images": [
+      "https://example.com/images/apartment1_1.jpg",
+      "https://example.com/images/apartment1_2.jpg"
+    ],
+    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
+  },
+  {
+    "propertyId": "2",
+    "title": "Spacious 3-bedroom house",
+    "address": {
+      "street": "456 Oak St",
+      "city": "Somewhere",
+      "state": "TX",
+      "zip": "75001"
+    },
+    "price_per_month": 2200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "square_feet": 1800,
+    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
+    "numberOfBalconies": 0,
+    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
+    "contactInfo": {
+      "agent_name": "John Smith",
+      "phone": "+1-555-987-6543",
+      "email": "john.smith@example.com"
+    },
+    "images": [
+      "https://example.com/images/house1_1.jpg",
+      "https://example.com/images/house1_2.jpg"
+    ],
+    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
+  },
+  {
+    "propertyId": "3",
+    "title": "Modern 1-bedroom loft",
+    "address": {
+      "street": "789 Pine St",
+      "city": "Elsewhere",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "price_per_month": 1800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "square_feet": 700,
+    "amenities": ["Gym", "Rooftop Access", "Doorman"],
+    "numberOfBalconies": 2,
+    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
+    "contactInfo": {
+      "agent_name": "Emily Brown",
+      "phone": "+1-555-555-5555",
+      "email": "emily.brown@example.com"
+    },
+    "images": [
+      "https://example.com/images/loft1_1.jpg",
+      "https://example.com/images/loft1_2.jpg"
+    ],
+    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+  }
+]

@@ -14,7 +14,7 @@ const Category = () => {
         desc="Find your dream home with ease! Browse our curated collection of rental properties to find the perfect fit for your lifestyle."
       />
       <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-10 mt-16">
-        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[100px] hover:rounded-tr-[100px]">
+        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
           <FaHouse className="text-5xl text-primary group-hover:scale-125 duration-500" />
           <h4 className="text-xl font-bold">House</h4>
           <p className="my-4">
@@ -22,10 +22,10 @@ const Category = () => {
             buy, each offering unique features and amenities to suit your needs.
             Find your ideal home today.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
+          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
         </div>
 
-        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[100px] hover:rounded-tr-[100px]">
+        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
           <MdApartment className="text-5xl text-primary group-hover:scale-125 duration-500" />
           <h4 className="text-xl font-bold">Apartment</h4>
           <p className="my-4">
@@ -33,10 +33,10 @@ const Category = () => {
             apartments for rent or buy, featuring modern amenities and prime
             locations to match your lifestyle.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
+          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
         </div>
 
-        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[100px] hover:rounded-tr-[100px]">
+        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
           <FaWarehouse className="text-5xl text-primary group-hover:scale-125 duration-500" />
           <h4 className="text-xl font-bold">Warehouse</h4>
           <p className="my-4">
@@ -44,17 +44,17 @@ const Category = () => {
             offering ample storage and versatile layouts to accommodate your
             growing needs.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
+          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
         </div>
 
-        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[100px] hover:rounded-tr-[100px]">
+        <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group lg:w-1/4 h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
           <HiBuildingOffice2 className="text-5xl text-primary group-hover:scale-125 duration-500" />
           <h4 className="text-xl font-bold">Home Office</h4>
           <p className="my-4">
             Elevate your business with premium office rentals. Tailored
             environments, strategic locations, and premium amenities await.
           </p>
-          <Button text="Check it" style="bg-transparent btn-sm group-hover:text-primary" />
+          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
         </div>
       </div>
     </div>

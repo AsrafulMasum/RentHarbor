@@ -14,10 +14,10 @@ const Banner = () => {
         slidesPerView={1}
         cssMode={true}
         loop={true}
-        // autoplay={{
-        //   delay: 10000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         modules={[Autoplay]}
       >
         {/* slider */}
