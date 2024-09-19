@@ -21,6 +21,6 @@
   transition: width 0.5s, height 0.5s;
 }
 .btn:hover::before {
-  width: 1000px;
-  height: 1000px;
+  width: 2000px;
+  height: 2000px;
 }

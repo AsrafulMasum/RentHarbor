@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import bgImage from "../assets/register.jpg";
+import bgImage from "../assets/house.jpg";
 import addImage from "../assets/addImage.png";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
@@ -15,8 +15,7 @@ const RegisterPage = () => {
 
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     phone: "",
     email: "",
     password: "",
@@ -61,8 +60,7 @@ const RegisterPage = () => {
       if (res?.data?.success) {
         try {
           const userData = {
-            firstName: formData?.firstName,
-            lastName: formData?.lastName,
+            name: formData?.name,
             email: formData?.email,
             password: formData?.password,
             photo_url: photoURL,
@@ -93,7 +91,7 @@ const RegisterPage = () => {
 
   return (
     <div
-      className="h-screen w-screen flex flex-col justify-center items-center"
+      className="h-screen w-screen flex flex-col justify-center items-start"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
@@ -101,29 +99,21 @@ const RegisterPage = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col gap-4 w-4/5 lg:w-3/5 p-10 bg-black bg-opacity-80 rounded-2xl">
+      <div className="flex flex-col justify-center gap-4 w-4/5 lg:w-1/2 px-40 bg-black min-h-screen">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center gap-4"
+          className="flex flex-col items-center gap-10"
         >
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
-            placeholder="First Name"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
+            placeholder="Name"
             required
-            name="firstName"
-            value={formData.firstName}
+            name="name"
+            value={formData.name}
             onChange={handleChange}
           />
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
-            placeholder="Last Name"
-            required
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-          />
-          <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             placeholder="Phone"
             required
             type="tel"
@@ -132,7 +122,7 @@ const RegisterPage = () => {
             onChange={handleChange}
           />
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             placeholder="Email"
             name="email"
             type="email"
@@ -141,7 +131,7 @@ const RegisterPage = () => {
             required
           />
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             placeholder="Password"
             type="password"
             required
@@ -150,7 +140,7 @@ const RegisterPage = () => {
             onChange={handleChange}
           />
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             placeholder="Confirm Password"
             type="password"
             required
@@ -164,7 +154,7 @@ const RegisterPage = () => {
           )}
 
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 bg-transparent text-white outline-none placeholder:text-white"
             id="image"
             type="file"
             name="profileImage"
@@ -173,13 +163,15 @@ const RegisterPage = () => {
             required
             onChange={handleChange}
           />
-          <label
-            htmlFor="image"
-            className="flex flex-col justify-center items-center gap-2 cursor-pointer text-white text-sm"
-          >
-            <img className="w-6" src={addImage} alt="add profile photo" />
-            <p>Upload Your Photo</p>
-          </label>
+          <div className="flex flex-col justify-center items-center gap-2 cursor-pointer text-white text-sm">
+            <label
+              htmlFor="image"
+              className="flex flex-col justify-center items-center gap-2 cursor-pointer text-white text-sm"
+            >
+              <img className="w-6" src={addImage} alt="add profile photo" />
+              <p>Upload Your Photo</p>
+            </label>
+          </div>
 
           {formData.profileImage && (
             <img
@@ -191,16 +183,17 @@ const RegisterPage = () => {
 
           <Button
             text="Register"
-            style="w-1/2 mt-4 bg-transparent text-white"
+            style="w-full bg-secondary font-bold text-base text-white border-0"
             loading={loading}
           />
         </form>
-        <div className="text-center">
+        <div className="text-white text-center mt-2 text-sm">
+          Already have an account?{" "}
           <Link
-            className="text-white text-center mt-2 text-sm hover:underline"
             to="/login"
+            className="text-primary hover:underline text-base font-semibold"
           >
-            Already have an account? Log In Here
+            Login Here
           </Link>
         </div>
       </div>

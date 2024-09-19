@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import bgImage from "../assets/login.jpg";
+import bgImage from "../assets/house.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   return (
     <div
-      className="h-screen w-screen flex flex-col justify-center items-center"
+      className="h-screen w-screen flex flex-col justify-center items-end"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
@@ -28,13 +28,13 @@ const LoginPage = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col gap-4 w-4/5 lg:w-3/5 p-10 bg-black bg-opacity-80 rounded-2xl">
+      <div className="flex flex-col justify-center gap-4 w-4/5 lg:w-1/2 p-40 bg-black min-h-screen">
         <form
-          className="flex flex-col items-center gap-4"
+          className="flex flex-col items-center gap-10 w-full"
           onSubmit={handleSubmit}
         >
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             type="email"
             placeholder="Email"
             value={email}
@@ -42,23 +42,22 @@ const LoginPage = () => {
             required
           />
           <input
-            className="w-full px-4 py-2 bg-transparent text-center text-white border-b border-gray-400 outline-none placeholder:text-white"
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <Button text="Login" style="w-1/2 mt-4 bg-transparent text-white" loading={loading} />
+          <Button text="Login" style="w-full mt-4 bg-secondary font-bold text-base text-white border-0" loading={loading} />
         </form>
-        <div className="text-center">
-          <Link
-            className="text-white text-center mt-2 text-sm hover:underline"
-            to="/register"
+
+          <div
+            className="text-white text-center mt-2 text-sm"
           >
-            Don&#39;t have an account? Register Here
-          </Link>
-        </div>
+            Don&#39;t have an account? <Link to="/register" className="text-primary hover:underline text-base font-semibold">Register Here</Link>
+          </div>
+
       </div>
     </div>
   );

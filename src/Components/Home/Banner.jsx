@@ -15,8 +15,8 @@ const Banner = () => {
         cssMode={true}
         loop={true}
         autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
+          delay: 10000,
+          disableOnInteraction: true,
         }}
         modules={[Autoplay]}
       >
@@ -26,10 +26,10 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(https://i.postimg.cc/cLFjDdBF/camping-cat.jpg)",
+                "url(https://i.postimg.cc/J7J3dTvL/house.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-50"></div>
+            <div className="hero-overlay bg-opacity-70"></div>
             
             <Slider />
             
@@ -43,7 +43,7 @@ const Banner = () => {
                 "url(https://i.postimg.cc/4xGsC4tZ/beach-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-50"></div>
+            <div className="hero-overlay bg-opacity-70"></div>
             <Slider />
           </div>
         </SwiperSlide>
@@ -52,10 +52,10 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(https://i.postimg.cc/xTdkbR8B/barn-cat.jpg)",
+                "url(https://i.postimg.cc/s2RwT6s6/warehouse.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-50"></div>
+            <div className="hero-overlay bg-opacity-70"></div>
             <Slider />
           </div>
         </SwiperSlide>
@@ -66,7 +66,7 @@ const Banner = () => {
               backgroundImage: "url(https://i.postimg.cc/prQcKvdY/lux-cat.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-50"></div>
+            <div className="hero-overlay bg-opacity-70"></div>
             <Slider />
           </div>
         </SwiperSlide>

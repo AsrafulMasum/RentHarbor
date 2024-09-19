@@ -1,5 +1,5 @@
 import "./Navigation.css";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
@@ -31,7 +31,7 @@ const Navbar = ({ children }) => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full bg-black bg-opacity-50 fixed z-10 backdrop-blur-md">
+        <div className="w-full bg-secondary fixed z-10">
           <div className="navbar max-w-screen-xl mx-auto">
             <div className="flex-none lg:hidden">
               <label
@@ -56,7 +56,7 @@ const Navbar = ({ children }) => {
             </div>
             <div className="flex-1">
               <Link to="/">
-                <img className="w-12" src={logo} alt="Logo" />
+                <img className="w-16" src={logo} alt="Logo" />
               </Link>
             </div>
             <div className="hidden lg:flex items-center justify-between">
