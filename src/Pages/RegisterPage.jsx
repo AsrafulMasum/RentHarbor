@@ -56,6 +56,7 @@ const RegisterPage = () => {
       });
 
       const photoURL = res.data.data.display_url;
+      console.log(photoURL)
 
       if (res?.data?.success) {
         try {
@@ -85,6 +86,7 @@ const RegisterPage = () => {
         }
       }
     } catch (err) {
+      setLoading(false);
       console.log("Image upload failed", err.message);
     }
   };
