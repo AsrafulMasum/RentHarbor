@@ -1,9 +1,11 @@
-
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 function UserDashboard() {
-  return (
-    <div className="text-black">UserDashboard</div>
-  )
+  const { user } = useContext(AuthContext);
+  console.log(user)
+
+  return <div className="text-black">UserDashboard</div>;
 }
 
-export default UserDashboard
+export default UserDashboard;
