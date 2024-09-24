@@ -9,9 +9,6 @@ import { Link } from "react-router-dom";
 const UserDropdown = () => {
   const { user, logoutUser } = useContext(AuthContext);
 
-  // const isAdminURL = `/users/admin/${user?.email}`
-  // const {data: isAdmin} = useLoadSecureData(isAdminURL)
-
   const handleLogout = () => {
     logoutUser();
   };
@@ -33,13 +30,7 @@ const UserDropdown = () => {
         >
           <li>
             <Link
-              to={
-                user?.role === "Guest"
-                  ? "/dashboard/guest"
-                  : user?.role === "Host"
-                  ? "/dashboard/host"
-                  : "/dashboard/admin"
-              }
+              to="/dashboard"
               className="bg-textColor text-white mt-1 px-[14px]"
             >
               Dashboard

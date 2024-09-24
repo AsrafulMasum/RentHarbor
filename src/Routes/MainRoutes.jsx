@@ -5,7 +5,10 @@ import RegisterPage from "../Pages/RegisterPage";
 import LoginPage from "../Pages/LoginPage";
 import ErrorPage from "../Pages/ErrorPage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import GuestDashboard from "../Pages/Dashboard/GuestDashboard";
+import UserDashboard from "../Components/Dashboard/UserDashboard";
+import Accounts from "../Components/Dashboard/Accounts";
+import Properties from "../Components/Dashboard/Properties";
+import Payments from "../Components/Dashboard/Payments";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -34,9 +37,21 @@ const MainRoutes = createBrowserRouter([
     element: <Dashboard />,
     children: [
       {
-        path: "guest",
-        element: <GuestDashboard />,
+        index: true,
+        element: <UserDashboard />,
       },
+      {
+        path: "accounts",
+        element: <Accounts />
+      },
+      {
+        path: "properties",
+        element: <Properties />
+      },
+      {
+        path: "payments",
+        element: <Payments />
+      }
     ],
   },
 ]);
