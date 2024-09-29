@@ -2,6 +2,7 @@
   {
     "propertyId": "1",
     "title": "Cozy 2-bedroom apartment",
+    "category": "Apartment",
     "address": {
       "street": "123 Main St",
       "city": "Anytown",
@@ -12,23 +13,28 @@
     "bedrooms": 2,
     "bathrooms": 1,
     "square_feet": 900,
+    "master_room": 1,
+    "child_room": 1,
     "amenities": ["Parking", "Pool"],
     "numberOfBalconies": 1,
+    "kitchen": 1,
     "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
-    "contactInfo": {
-      "agent_name": "Jane Doe",
+    "host": {
+      "host_name": "Jane Doe",
       "phone": "+1-555-123-4567",
-      "email": "jane.doe@example.com"
+      "email": "jane.doe@example.com",
+      "rating": 4.5
     },
     "images": [
       "https://example.com/images/apartment1_1.jpg",
       "https://example.com/images/apartment1_2.jpg"
     ],
-    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
+    "description": "A cozy 2-bedroom apartment located in the heart of Anytown."
   },
   {
     "propertyId": "2",
     "title": "Spacious 3-bedroom house",
+    "category": "House",
     "address": {
       "street": "456 Oak St",
       "city": "Somewhere",
@@ -39,23 +45,28 @@
     "bedrooms": 3,
     "bathrooms": 2,
     "square_feet": 1800,
+    "master_room": 1,
+    "child_room": 2,
     "amenities": ["Garage", "Fenced Yard", "Fireplace"],
     "numberOfBalconies": 0,
-    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
-    "contactInfo": {
-      "agent_name": "John Smith",
+    "kitchen": 1,
+    "features": ["Granite Countertops", "Stainless Steel Appliances"],
+    "host": {
+      "host_name": "John Smith",
       "phone": "+1-555-987-6543",
-      "email": "john.smith@example.com"
+      "email": "john.smith@example.com",
+      "rating": 4.7
     },
     "images": [
       "https://example.com/images/house1_1.jpg",
       "https://example.com/images/house1_2.jpg"
     ],
-    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
+    "description": "A spacious 3-bedroom house with a large backyard, perfect for families."
   },
   {
     "propertyId": "3",
     "title": "Modern 1-bedroom loft",
+    "category": "Loft",
     "address": {
       "street": "789 Pine St",
       "city": "Elsewhere",
@@ -66,261 +77,566 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "square_feet": 700,
+    "master_room": 1,
+    "child_room": 0,
     "amenities": ["Gym", "Rooftop Access", "Doorman"],
     "numberOfBalconies": 2,
-    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
-    "contactInfo": {
-      "agent_name": "Emily Brown",
+    "kitchen": 1,
+    "features": ["Open Floor Plan", "Exposed Brick Walls"],
+    "host": {
+      "host_name": "Emily Brown",
       "phone": "+1-555-555-5555",
-      "email": "emily.brown@example.com"
+      "email": "emily.brown@example.com",
+      "rating": 4.8
     },
     "images": [
       "https://example.com/images/loft1_1.jpg",
       "https://example.com/images/loft1_2.jpg"
     ],
-    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+    "description": "A modern 1-bedroom loft with stunning city views."
   },
   {
-    "propertyId": "1",
-    "title": "Cozy 2-bedroom apartment",
+    "propertyId": "4",
+    "title": "Large commercial warehouse",
+    "category": "Warehouse",
     "address": {
-      "street": "123 Main St",
-      "city": "Anytown",
+      "street": "432 Industrial Dr",
+      "city": "Metropolis",
+      "state": "IL",
+      "zip": "62960"
+    },
+    "price_per_month": 5000,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "square_feet": 10000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Loading Dock", "Parking"],
+    "numberOfBalconies": 0,
+    "kitchen": 0,
+    "features": ["High Ceilings", "Industrial Power"],
+    "host": {
+      "host_name": "Clark Kent",
+      "phone": "+1-555-999-1234",
+      "email": "clark.kent@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://example.com/images/warehouse1_1.jpg",
+      "https://example.com/images/warehouse1_2.jpg"
+    ],
+    "description": "A spacious commercial warehouse with high ceilings and industrial power."
+  },
+  {
+    "propertyId": "5",
+    "title": "Downtown office space",
+    "category": "Office",
+    "address": {
+      "street": "789 Business Blvd",
+      "city": "Finance City",
+      "state": "NY",
+      "zip": "10002"
+    },
+    "price_per_month": 7500,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "square_feet": 5000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Conference Rooms", "24/7 Security"],
+    "numberOfBalconies": 1,
+    "kitchen": 0,
+    "features": ["High-Speed Internet", "Central Air"],
+    "host": {
+      "host_name": "Bruce Wayne",
+      "phone": "+1-555-123-9876",
+      "email": "bruce.wayne@example.com",
+      "rating": 4.8
+    },
+    "images": [
+      "https://example.com/images/office1_1.jpg",
+      "https://example.com/images/office1_2.jpg"
+    ],
+    "description": "A premium office space located in the financial district with state-of-the-art facilities."
+  },
+  {
+    "propertyId": "6",
+    "title": "Suburban warehouse with office",
+    "category": "Warehouse",
+    "address": {
+      "street": "321 Logistics Ln",
+      "city": "Suburbia",
+      "state": "OH",
+      "zip": "43123"
+    },
+    "price_per_month": 6000,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "square_feet": 12000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Office Space", "Parking Lot"],
+    "numberOfBalconies": 0,
+    "kitchen": 1,
+    "features": ["Private Office", "Loading Bay"],
+    "host": {
+      "host_name": "Tony Stark",
+      "phone": "+1-555-456-7890",
+      "email": "tony.stark@example.com",
+      "rating": 4.7
+    },
+    "images": [
+      "https://example.com/images/warehouse2_1.jpg",
+      "https://example.com/images/warehouse2_2.jpg"
+    ],
+    "description": "A suburban warehouse with integrated office space, ideal for logistics businesses."
+  },
+  {
+    "propertyId": "7",
+    "title": "Downtown retail space",
+    "category": "Commercial",
+    "address": {
+      "street": "555 Market St",
+      "city": "Big City",
+      "state": "TX",
+      "zip": "75002"
+    },
+    "price_per_month": 10000,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "square_feet": 3500,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Display Windows", "Customer Parking"],
+    "numberOfBalconies": 0,
+    "kitchen": 1,
+    "features": ["Prime Location", "High Foot Traffic"],
+    "host": {
+      "host_name": "Selina Kyle",
+      "phone": "+1-555-123-3210",
+      "email": "selina.kyle@example.com",
+      "rating": 4.6
+    },
+    "images": [
+      "https://example.com/images/retail1_1.jpg",
+      "https://example.com/images/retail1_2.jpg"
+    ],
+    "description": "Prime downtown retail space with large display windows and high foot traffic."
+  },
+  {
+    "propertyId": "8",
+    "title": "Corporate office building",
+    "category": "Office",
+    "address": {
+      "street": "100 Executive Dr",
+      "city": "Capital City",
+      "state": "DC",
+      "zip": "20001"
+    },
+    "price_per_month": 25000,
+    "bedrooms": 0,
+    "bathrooms": 10,
+    "square_feet": 20000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Conference Halls", "Parking Garage"],
+    "numberOfBalconies": 5,
+    "kitchen": 2,
+    "features": ["Elevators", "Security System"],
+    "host": {
+      "host_name": "Lex Luthor",
+      "phone": "+1-555-888-1111",
+      "email": "lex.luthor@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://example.com/images/office2_1.jpg",
+      "https://example.com/images/office2_2.jpg"
+    ],
+    "description": "A corporate office building with state-of-the-art facilities, perfect for large enterprises."
+  },
+  {
+    "propertyId": "9",
+    "title": "Seaside villa",
+    "category": "House",
+    "address": {
+      "street": "999 Oceanview Rd",
+      "city": "Beach City",
+      "state": "FL",
+      "zip": "33101"
+    },
+    "price_per_month": 8000,
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "square_feet": 4000,
+    "master_room": 1,
+    "child_room": 3,
+    "amenities": ["Private Pool", "Beach Access"],
+    "numberOfBalconies": 3,
+    "kitchen": 2,
+    "features": ["Ocean View", "Modern Design"],
+    "host": {
+      "host_name": "Aquaman",
+      "phone": "+1-555-000-9876",
+      "email": "aquaman@example.com",
+      "rating": 4.8
+    },
+    "images": [
+      "https://example.com/images/villa1_1.jpg",
+      "https://example.com/images/villa1_2.jpg"
+    ],
+    "description": "A luxurious seaside villa with private beach access and modern design."
+  },
+  {
+    "propertyId": "10",
+    "title": "High-rise penthouse",
+    "category": "Apartment",
+    "address": {
+      "street": "101 Skyscraper Blvd",
+      "city": "City Heights",
+      "state": "CA",
+      "zip": "90001"
+    },
+    "price_per_month": 12000,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "square_feet": 2500,
+    "master_room": 1,
+    "child_room": 2,
+    "amenities": ["Rooftop Pool", "Gym"],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Panoramic City Views", "High Ceilings"],
+    "host": {
+      "host_name": "Diana Prince",
+      "phone": "+1-555-123-7890",
+      "email": "diana.prince@example.com",
+      "rating": 5.0
+    },
+    "images": [
+      "https://example.com/images/penthouse1_1.jpg",
+      "https://example.com/images/penthouse1_2.jpg"
+    ],
+    "description": "A high-rise penthouse with breathtaking city views and luxurious amenities."
+  },
+  {
+    "propertyId": "11",
+    "title": "Luxury downtown condo",
+    "category": "Apartment",
+    "address": {
+      "street": "202 Luxury Ln",
+      "city": "Big City",
+      "state": "NY",
+      "zip": "10003"
+    },
+    "price_per_month": 8500,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "square_feet": 1500,
+    "master_room": 1,
+    "child_room": 1,
+    "amenities": ["Concierge", "Fitness Center"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["High-End Finishes", "City Views"],
+    "host": {
+      "host_name": "Oliver Queen",
+      "phone": "+1-555-987-4321",
+      "email": "oliver.queen@example.com",
+      "rating": 4.7
+    },
+    "images": [
+      "https://example.com/images/condo1_1.jpg",
+      "https://example.com/images/condo1_2.jpg"
+    ],
+    "description": "A luxury downtown condo with high-end finishes and city views."
+  },
+  {
+    "propertyId": "12",
+    "title": "Country estate",
+    "category": "House",
+    "address": {
+      "street": "789 Country Rd",
+      "city": "Countryside",
+      "state": "VT",
+      "zip": "05602"
+    },
+    "price_per_month": 10000,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "square_feet": 5000,
+    "master_room": 1,
+    "child_room": 4,
+    "amenities": ["Private Lake", "Horse Stables"],
+    "numberOfBalconies": 2,
+    "kitchen": 2,
+    "features": ["Spacious Grounds", "Fireplaces"],
+    "host": {
+      "host_name": "Clark Kent",
+      "phone": "+1-555-222-4444",
+      "email": "clark.kent@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://example.com/images/estate1_1.jpg",
+      "https://example.com/images/estate1_2.jpg"
+    ],
+    "description": "A sprawling country estate with private lake and horse stables, perfect for retreat."
+  },
+  {
+    "propertyId": "13",
+    "title": "Luxury retail outlet",
+    "category": "Commercial",
+    "address": {
+      "street": "555 Luxury St",
+      "city": "Fashion Town",
       "state": "CA",
       "zip": "90210"
     },
-    "price_per_month": 1500,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "square_feet": 900,
-    "amenities": ["Parking", "Pool"],
-    "numberOfBalconies": 1,
-    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
-    "contactInfo": {
-      "agent_name": "Jane Doe",
-      "phone": "+1-555-123-4567",
-      "email": "jane.doe@example.com"
+    "price_per_month": 15000,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "square_feet": 3000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Prime Location", "Customer Parking"],
+    "numberOfBalconies": 0,
+    "kitchen": 0,
+    "features": ["Glass Display Windows", "High-End Fixtures"],
+    "host": {
+      "host_name": "Selina Kyle",
+      "phone": "+1-555-333-7777",
+      "email": "selina.kyle@example.com",
+      "rating": 4.8
     },
     "images": [
-      "https://example.com/images/apartment1_1.jpg",
-      "https://example.com/images/apartment1_2.jpg"
+      "https://example.com/images/retail2_1.jpg",
+      "https://example.com/images/retail2_2.jpg"
     ],
-    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
+    "description": "A luxury retail outlet with high-end finishes and prime location in the heart of the shopping district."
   },
   {
-    "propertyId": "2",
-    "title": "Spacious 3-bedroom house",
+    "propertyId": "14",
+    "title": "Rural warehouse",
+    "category": "Warehouse",
     "address": {
-      "street": "456 Oak St",
-      "city": "Somewhere",
-      "state": "TX",
-      "zip": "75001"
+      "street": "800 Industrial Blvd",
+      "city": "Rural Town",
+      "state": "KS",
+      "zip": "66101"
     },
-    "price_per_month": 2200,
+    "price_per_month": 3000,
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "square_feet": 8000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Loading Docks", "On-Site Security"],
+    "numberOfBalconies": 0,
+    "kitchen": 0,
+    "features": ["High Ceilings", "Open Space"],
+    "host": {
+      "host_name": "Clark Kent",
+      "phone": "+1-555-444-2222",
+      "email": "clark.kent@example.com",
+      "rating": 4.7
+    },
+    "images": [
+      "https://example.com/images/warehouse3_1.jpg",
+      "https://example.com/images/warehouse3_2.jpg"
+    ],
+    "description": "A rural warehouse with large open spaces and on-site security, perfect for industrial use."
+  },
+  {
+    "propertyId": "15",
+    "title": "Modern city apartment",
+    "category": "Apartment",
+    "address": {
+      "street": "404 Skyline Blvd",
+      "city": "Urban City",
+      "state": "IL",
+      "zip": "60601"
+    },
+    "price_per_month": 4500,
     "bedrooms": 3,
     "bathrooms": 2,
-    "square_feet": 1800,
-    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
-    "numberOfBalconies": 0,
-    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
-    "contactInfo": {
-      "agent_name": "John Smith",
-      "phone": "+1-555-987-6543",
-      "email": "john.smith@example.com"
-    },
-    "images": [
-      "https://example.com/images/house1_1.jpg",
-      "https://example.com/images/house1_2.jpg"
-    ],
-    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
-  },
-  {
-    "propertyId": "3",
-    "title": "Modern 1-bedroom loft",
-    "address": {
-      "street": "789 Pine St",
-      "city": "Elsewhere",
-      "state": "NY",
-      "zip": "10001"
-    },
-    "price_per_month": 1800,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": 700,
-    "amenities": ["Gym", "Rooftop Access", "Doorman"],
+    "square_feet": 1600,
+    "master_room": 1,
+    "child_room": 2,
+    "amenities": ["Rooftop Lounge", "Gym"],
     "numberOfBalconies": 2,
-    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
-    "contactInfo": {
-      "agent_name": "Emily Brown",
-      "phone": "+1-555-555-5555",
-      "email": "emily.brown@example.com"
+    "kitchen": 1,
+    "features": ["Panoramic Views", "Hardwood Floors"],
+    "host": {
+      "host_name": "Diana Prince",
+      "phone": "+1-555-111-5555",
+      "email": "diana.prince@example.com",
+      "rating": 5.0
     },
     "images": [
-      "https://example.com/images/loft1_1.jpg",
-      "https://example.com/images/loft1_2.jpg"
+      "https://example.com/images/apartment2_1.jpg",
+      "https://example.com/images/apartment2_2.jpg"
     ],
-    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+    "description": "A modern city apartment with panoramic skyline views and luxurious finishes."
   },
   {
-    "propertyId": "1",
-    "title": "Cozy 2-bedroom apartment",
+    "propertyId": "16",
+    "title": "Industrial warehouse",
+    "category": "Warehouse",
     "address": {
-      "street": "123 Main St",
-      "city": "Anytown",
+      "street": "900 Factory Rd",
+      "city": "Manufacturing Hub",
+      "state": "MI",
+      "zip": "48201"
+    },
+    "price_per_month": 7000,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "square_feet": 15000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Loading Bays", "Forklift Access"],
+    "numberOfBalconies": 0,
+    "kitchen": 1,
+    "features": ["Reinforced Floors", "Heavy Machinery Access"],
+    "host": {
+      "host_name": "Tony Stark",
+      "phone": "+1-555-777-0000",
+      "email": "tony.stark@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://example.com/images/warehouse4_1.jpg",
+      "https://example.com/images/warehouse4_2.jpg"
+    ],
+    "description": "An industrial warehouse with specialized facilities for heavy machinery and logistics."
+  },
+  {
+    "propertyId": "17",
+    "title": "Luxury mountain retreat",
+    "category": "House",
+    "address": {
+      "street": "777 Mountain Trail",
+      "city": "Highlands",
+      "state": "CO",
+      "zip": "80439"
+    },
+    "price_per_month": 12000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "square_feet": 3500,
+    "master_room": 1,
+    "child_room": 3,
+    "amenities": ["Private Hot Tub", "Hiking Trails"],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Stone Fireplace", "Rustic Design"],
+    "host": {
+      "host_name": "Steve Rogers",
+      "phone": "+1-555-999-6666",
+      "email": "steve.rogers@example.com",
+      "rating": 4.8
+    },
+    "images": [
+      "https://example.com/images/retreat1_1.jpg",
+      "https://example.com/images/retreat1_2.jpg"
+    ],
+    "description": "A luxury mountain retreat with breathtaking views and rustic charm."
+  },
+  {
+    "propertyId": "18",
+    "title": "Urban retail space",
+    "category": "Commercial",
+    "address": {
+      "street": "888 Retail Ave",
+      "city": "Metro City",
+      "state": "NY",
+      "zip": "10004"
+    },
+    "price_per_month": 20000,
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "square_feet": 5000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Prime Location", "Customer Parking"],
+    "numberOfBalconies": 0,
+    "kitchen": 1,
+    "features": ["Display Windows", "High Ceilings"],
+    "host": {
+      "host_name": "Bruce Wayne",
+      "phone": "+1-555-111-4444",
+      "email": "bruce.wayne@example.com",
+      "rating": 4.7
+    },
+    "images": [
+      "https://example.com/images/retail3_1.jpg",
+      "https://example.com/images/retail3_2.jpg"
+    ],
+    "description": "An urban retail space located in the heart of Metro City with excellent visibility."
+  },
+  {
+    "propertyId": "19",
+    "title": "Suburban office building",
+    "category": "Office",
+    "address": {
+      "street": "222 Corporate Ave",
+      "city": "Suburbia",
+      "state": "TX",
+      "zip": "75003"
+    },
+    "price_per_month": 6000,
+    "bedrooms": 0,
+    "bathrooms": 4,
+    "square_feet": 8000,
+    "master_room": 0,
+    "child_room": 0,
+    "amenities": ["Conference Rooms", "Free Parking"],
+    "numberOfBalconies": 1,
+    "kitchen": 2,
+    "features": ["Open Layout", "Meeting Rooms"],
+    "host": {
+      "host_name": "Lex Luthor",
+      "phone": "+1-555-222-1111",
+      "email": "lex.luthor@example.com",
+      "rating": 4.6
+    },
+    "images": [
+      "https://example.com/images/office3_1.jpg",
+      "https://example.com/images/office3_2.jpg"
+    ],
+    "description": "A modern suburban office building with open layouts and professional conference facilities."
+  },
+  {
+    "propertyId": "20",
+    "title": "Luxury penthouse suite",
+    "category": "Apartment",
+    "address": {
+      "street": "123 Skyline Blvd",
+      "city": "High Town",
       "state": "CA",
       "zip": "90210"
     },
-    "price_per_month": 1500,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "square_feet": 900,
-    "amenities": ["Parking", "Pool"],
-    "numberOfBalconies": 1,
-    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
-    "contactInfo": {
-      "agent_name": "Jane Doe",
-      "phone": "+1-555-123-4567",
-      "email": "jane.doe@example.com"
+    "price_per_month": 25000,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "square_feet": 4000,
+    "master_room": 2,
+    "child_room": 2,
+    "amenities": ["Rooftop Pool", "Private Gym"],
+    "numberOfBalconies": 4,
+    "kitchen": 2,
+    "features": ["Panoramic Views", "Luxury Finishes"],
+    "host": {
+      "host_name": "Tony Stark",
+      "phone": "+1-555-777-9999",
+      "email": "tony.stark@example.com",
+      "rating": 5.0
     },
     "images": [
-      "https://example.com/images/apartment1_1.jpg",
-      "https://example.com/images/apartment1_2.jpg"
+      "https://example.com/images/penthouse2_1.jpg",
+      "https://example.com/images/penthouse2_2.jpg"
     ],
-    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
-  },
-  {
-    "propertyId": "2",
-    "title": "Spacious 3-bedroom house",
-    "address": {
-      "street": "456 Oak St",
-      "city": "Somewhere",
-      "state": "TX",
-      "zip": "75001"
-    },
-    "price_per_month": 2200,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "square_feet": 1800,
-    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
-    "numberOfBalconies": 0,
-    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
-    "contactInfo": {
-      "agent_name": "John Smith",
-      "phone": "+1-555-987-6543",
-      "email": "john.smith@example.com"
-    },
-    "images": [
-      "https://example.com/images/house1_1.jpg",
-      "https://example.com/images/house1_2.jpg"
-    ],
-    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
-  },
-  {
-    "propertyId": "3",
-    "title": "Modern 1-bedroom loft",
-    "address": {
-      "street": "789 Pine St",
-      "city": "Elsewhere",
-      "state": "NY",
-      "zip": "10001"
-    },
-    "price_per_month": 1800,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": 700,
-    "amenities": ["Gym", "Rooftop Access", "Doorman"],
-    "numberOfBalconies": 2,
-    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
-    "contactInfo": {
-      "agent_name": "Emily Brown",
-      "phone": "+1-555-555-5555",
-      "email": "emily.brown@example.com"
-    },
-    "images": [
-      "https://example.com/images/loft1_1.jpg",
-      "https://example.com/images/loft1_2.jpg"
-    ],
-    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
-  },
-  {
-    "propertyId": "1",
-    "title": "Cozy 2-bedroom apartment",
-    "address": {
-      "street": "123 Main St",
-      "city": "Anytown",
-      "state": "CA",
-      "zip": "90210"
-    },
-    "price_per_month": 1500,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "square_feet": 900,
-    "amenities": ["Parking", "Pool"],
-    "numberOfBalconies": 1,
-    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
-    "contactInfo": {
-      "agent_name": "Jane Doe",
-      "phone": "+1-555-123-4567",
-      "email": "jane.doe@example.com"
-    },
-    "images": [
-      "https://example.com/images/apartment1_1.jpg",
-      "https://example.com/images/apartment1_2.jpg"
-    ],
-    "description": "A cozy 2-bedroom apartment located in the heart of Anytown. This unit features modern appliances, hardwood floors, and high ceilings, making it both comfortable and stylish. Enjoy the convenience of a private balcony and access to a community pool. Perfect for anyone looking for a charming home in a central location."
-  },
-  {
-    "propertyId": "2",
-    "title": "Spacious 3-bedroom house",
-    "address": {
-      "street": "456 Oak St",
-      "city": "Somewhere",
-      "state": "TX",
-      "zip": "75001"
-    },
-    "price_per_month": 2200,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "square_feet": 1800,
-    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
-    "numberOfBalconies": 0,
-    "features": ["Granite Countertops", "Stainless Steel Appliances", "Large Windows"],
-    "contactInfo": {
-      "agent_name": "John Smith",
-      "phone": "+1-555-987-6543",
-      "email": "john.smith@example.com"
-    },
-    "images": [
-      "https://example.com/images/house1_1.jpg",
-      "https://example.com/images/house1_2.jpg"
-    ],
-    "description": "A spacious 3-bedroom house with a large backyard, perfect for families. The home features granite countertops, stainless steel appliances, and large windows that offer plenty of natural light. The fenced yard and fireplace add extra charm and functionality. Located in a friendly neighborhood with easy access to schools and shopping."
-  },
-  {
-    "propertyId": "3",
-    "title": "Modern 1-bedroom loft",
-    "address": {
-      "street": "789 Pine St",
-      "city": "Elsewhere",
-      "state": "NY",
-      "zip": "10001"
-    },
-    "price_per_month": 1800,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": 700,
-    "amenities": ["Gym", "Rooftop Access", "Doorman"],
-    "numberOfBalconies": 2,
-    "features": ["Open Floor Plan", "Exposed Brick Walls", "High-End Finishes"],
-    "contactInfo": {
-      "agent_name": "Emily Brown",
-      "phone": "+1-555-555-5555",
-      "email": "emily.brown@example.com"
-    },
-    "images": [
-      "https://example.com/images/loft1_1.jpg",
-      "https://example.com/images/loft1_2.jpg"
-    ],
-    "description": "A modern 1-bedroom loft with stunning city views. The open floor plan and exposed brick walls give this space a unique character. High-end finishes and access to a rooftop area make it a perfect urban retreat. The building offers additional amenities including a gym and a doorman for added convenience and security."
+    "description": "An exclusive luxury penthouse suite with breathtaking views and top-tier amenities."
   }
 ]

@@ -56,7 +56,7 @@ const Navbar = ({ children }) => {
             </div>
             <div className="flex-1">
               <Link to="/">
-                <img className="w-16" src={logo} alt="Logo" />
+                <img className="w-20" src={logo} alt="Logo" />
               </Link>
             </div>
             <div className="hidden lg:flex items-center justify-between">
