@@ -56,7 +56,6 @@ const RegisterPage = () => {
       });
 
       const photoURL = res.data.data.display_url;
-      console.log(photoURL)
 
       if (res?.data?.success) {
         try {
@@ -69,7 +68,7 @@ const RegisterPage = () => {
             phone: formData?.phone,
           };
           const res = await axiosPublic.post("/auth/register", userData);
-          console.log(res.data);
+
           if (res.data?.success) {
             toast.success("You have registered successfully.");
             setLoading(false);
