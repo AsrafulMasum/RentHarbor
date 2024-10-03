@@ -103,7 +103,7 @@ const RegisterPage = () => {
       <div className="flex flex-col justify-center gap-4 w-4/5 lg:w-1/2 px-40 bg-black min-h-screen">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center gap-10"
+          className="flex flex-col items-center gap-4 2xl:gap-10"
         >
           <input
             className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"

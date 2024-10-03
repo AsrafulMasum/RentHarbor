@@ -26,9 +26,9 @@ const Slider = () => {
       >
         <motion.h1
           variants={variants}
-          className="mb-16 text-2xl font-bold text-primary uppercase"
+          className="mb-16 text-2xl font-bold uppercase"
         >
-          WELCOME TO OUR Rent Harbor
+          WELCOME TO <span className="ml-2 text-4xl text-primary tracking-widest">Rent Harbor</span>
         </motion.h1>
         <motion.p variants={variants} className="mb-16 text-7xl max-w-3xl">
           Bringing Your Dream Home Vision to Life.

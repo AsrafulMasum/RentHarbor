@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   return (
     <div className="flex">
-      <aside className="flex flex-col w-64 h-screen px-4 py-20 overflow-y-auto bg-black">
+      <aside className="flex flex-col w-64 h-screen px-4 py-5 2xl:py-20 overflow-y-auto bg-black">
         <div className="flex flex-col items-center -mx-2">
           <img
             className="object-cover w-24 h-24 mx-2 rounded-full"

@@ -3,7 +3,6 @@ import { MdApartment } from "react-icons/md";
 import { FaWarehouse } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import Title from "../Title";
-import Button from "../Button";
 
 const Category = () => {
   return (
