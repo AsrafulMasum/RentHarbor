@@ -9,7 +9,7 @@ import Slider from "./Slider";
 
 const Banner = () => {
   return (
-    <div className="max-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden">
       <Swiper
         slidesPerView={1}
         cssMode={true}

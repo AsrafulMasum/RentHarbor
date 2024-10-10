@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const FeaturedProperties = () => {
   const [properties, setProperties] = useState([]);
@@ -30,10 +31,15 @@ const FeaturedProperties = () => {
       />
       <div className="flex justify-center items-center flex-wrap gap-10 mt-16 w-full">
         <Swiper
+        style={{
+          '--swiper-pagination-color': '#FD6C23',
+        }}
           slidesPerView={1}
           spaceBetween={30}
+          modules={[Pagination]}
           pagination={{
             clickable: true,
+            dynamicBullets: true,
           }}
           breakpoints={{
             640: {
@@ -51,7 +57,7 @@ const FeaturedProperties = () => {
           }}
         >
           {properties?.map((property) => (
-            <SwiperSlide key={property?.propertyId} className="overflow-hidden">
+            <SwiperSlide key={property?.propertyId} className="overflow-hidden pb-10">
               <Link className="duration-700 group overflow-hidden h-96">
                 <img
                   className="group-hover:scale-105 duration-700"

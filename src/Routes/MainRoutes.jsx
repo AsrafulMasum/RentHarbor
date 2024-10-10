@@ -9,6 +9,7 @@ import UserDashboard from "../Components/Dashboard/UserDashboard";
 import Accounts from "../Components/Dashboard/Accounts";
 import Properties from "../Components/Dashboard/Properties";
 import Payments from "../Components/Dashboard/Payments";
+import PropertiesPage from "../Pages/PropertiesPage";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -21,10 +22,13 @@ const MainRoutes = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        path: "properties",
+        element: <PropertiesPage />,
+      },
+      {
         path: "register",
         element: <RegisterPage />,
       },
-    
       {
         path: "login",
         element: <LoginPage />,
@@ -42,16 +46,16 @@ const MainRoutes = createBrowserRouter([
       },
       {
         path: "accounts",
-        element: <Accounts />
+        element: <Accounts />,
       },
       {
         path: "properties",
-        element: <Properties />
+        element: <Properties />,
       },
       {
         path: "payments",
-        element: <Payments />
-      }
+        element: <Payments />,
+      },
     ],
   },
 ]);
