@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../Components/Button";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 import { toast } from "react-toastify";
+// import PhoneInput from "react-phone-input-2";
 
 const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
@@ -34,6 +35,7 @@ const RegisterPage = () => {
   };
 
   const [passwordMatch, setPasswordMatch] = useState(true);
+  // const [phone, setPhone] = useState("");
 
   // matching password
   useEffect(() => {
@@ -100,7 +102,7 @@ const RegisterPage = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col justify-center gap-4 w-4/5 lg:w-1/2 px-40 bg-black min-h-screen">
+      <div className="flex flex-col justify-center gap-4 w-4/5 lg:w-1/2 px-40 bg-black min-h-screen pt-10">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col items-center gap-4 2xl:gap-10"
@@ -122,6 +124,16 @@ const RegisterPage = () => {
             value={formData.phone}
             onChange={handleChange}
           />
+            {/* <PhoneInput
+              inputProps={{
+                required: true,
+              }}
+              containerClass="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
+              inputClass="bg-transparent w-full outline-none"
+              country={"bd"}
+              value={phone}
+              onChange={setPhone}
+            /> */}
           <input
             className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             placeholder="Email"

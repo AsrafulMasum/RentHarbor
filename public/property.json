@@ -1,642 +1,802 @@
 [
   {
     "propertyId": "1",
-    "title": "Cozy 2-bedroom apartment",
-    "category": "Apartment",
+    "title": "Luxury Penthouse",
+    "category": "Penthouse",
+    "location": "City Center",
     "address": {
-      "street": "123 Main St",
-      "city": "Anytown",
-      "state": "CA",
-      "zip": "90210"
-    },
-    "price_per_month": 1500,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "square_feet": 900,
-    "master_room": 1,
-    "child_room": 1,
-    "amenities": ["Parking", "Pool"],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Modern Appliances", "Hardwood Floors", "High Ceilings"],
-    "host": {
-      "host_name": "Jane Doe",
-      "phone": "+1-555-123-4567",
-      "email": "jane.doe@example.com",
-      "rating": 4.5
-    },
-    "images": [
-      "https://example.com/images/apartment1_1.jpg",
-      "https://example.com/images/apartment1_2.jpg"
-    ],
-    "description": "A cozy 2-bedroom apartment located in the heart of Anytown."
-  },
-  {
-    "propertyId": "2",
-    "title": "Spacious 3-bedroom house",
-    "category": "House",
-    "address": {
-      "street": "456 Oak St",
-      "city": "Somewhere",
-      "state": "TX",
-      "zip": "75001"
-    },
-    "price_per_month": 2200,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "square_feet": 1800,
-    "master_room": 1,
-    "child_room": 2,
-    "amenities": ["Garage", "Fenced Yard", "Fireplace"],
-    "numberOfBalconies": 0,
-    "kitchen": 1,
-    "features": ["Granite Countertops", "Stainless Steel Appliances"],
-    "host": {
-      "host_name": "John Smith",
-      "phone": "+1-555-987-6543",
-      "email": "john.smith@example.com",
-      "rating": 4.7
-    },
-    "images": [
-      "https://example.com/images/house1_1.jpg",
-      "https://example.com/images/house1_2.jpg"
-    ],
-    "description": "A spacious 3-bedroom house with a large backyard, perfect for families."
-  },
-  {
-    "propertyId": "3",
-    "title": "Modern 1-bedroom loft",
-    "category": "Loft",
-    "address": {
-      "street": "789 Pine St",
-      "city": "Elsewhere",
+      "street": "1 Main St",
+      "city": "Metropolis",
       "state": "NY",
       "zip": "10001"
     },
-    "price_per_month": 1800,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "square_feet": 700,
-    "master_room": 1,
-    "child_room": 0,
-    "amenities": ["Gym", "Rooftop Access", "Doorman"],
+    "pricePerDay": 500,
+    "squareFeet": 3000,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "masterRoom": 1,
+    "childRoom": 2,
+    "amenities": [
+      "Swimming Pool",
+      "Gym"
+    ],
     "numberOfBalconies": 2,
     "kitchen": 1,
-    "features": ["Open Floor Plan", "Exposed Brick Walls"],
+    "features": ["City View", "Modern Amenities"],
     "host": {
-      "host_name": "Emily Brown",
-      "phone": "+1-555-555-5555",
-      "email": "emily.brown@example.com",
+      "hostName": "Clark Kent",
+      "phone": "+1-555-123-4567",
+      "email": "clark.kent@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-10"
+    ]
+  },
+  {
+    "propertyId": "2",
+    "title": "Cozy Cottage",
+    "category": "Cottage",
+    "location": "Rural Area",
+    "address": {
+      "street": "10 Countryside Rd",
+      "city": "Green Valley",
+      "state": "CA",
+      "zip": "90210"
+    },
+    "pricePerDay": 150,
+    "squareFeet": 1200,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Fireplace",
+      "Garden"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Secluded", "Rustic"],
+    "host": {
+      "hostName": "Diana Prince",
+      "phone": "+1-555-987-6543",
+      "email": "diana.prince@example.com",
       "rating": 4.8
     },
     "images": [
-      "https://example.com/images/loft1_1.jpg",
-      "https://example.com/images/loft1_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "A modern 1-bedroom loft with stunning city views."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-10",
+      "2024-10-20"
+    ]
+  },
+  {
+    "propertyId": "3",
+    "title": "Spacious Family Home",
+    "category": "House",
+    "location": "Suburban Area",
+    "address": {
+      "street": "20 Family Ln",
+      "city": "Family Town",
+      "state": "TX",
+      "zip": "75001"
+    },
+    "pricePerDay": 250,
+    "squareFeet": 2500,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "masterRoom": 2,
+    "childRoom": 2,
+    "amenities": [
+      "Backyard",
+      "Playground"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Family-Friendly", "Spacious"],
+    "host": {
+      "hostName": "Bruce Wayne",
+      "phone": "+1-555-555-5555",
+      "email": "bruce.wayne@example.com",
+      "rating": 4.6
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-15",
+      "2024-10-30"
+    ]
   },
   {
     "propertyId": "4",
-    "title": "Large commercial warehouse",
-    "category": "Warehouse",
+    "title": "Beachfront Villa",
+    "category": "Villa",
+    "location": "Coastal City",
     "address": {
-      "street": "432 Industrial Dr",
-      "city": "Metropolis",
-      "state": "IL",
-      "zip": "62960"
+      "street": "5 Ocean View Dr",
+      "city": "Beach City",
+      "state": "FL",
+      "zip": "32101"
     },
-    "price_per_month": 5000,
-    "bedrooms": 0,
-    "bathrooms": 2,
-    "square_feet": 10000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Loading Dock", "Parking"],
-    "numberOfBalconies": 0,
-    "kitchen": 0,
-    "features": ["High Ceilings", "Industrial Power"],
+    "pricePerDay": 800,
+    "squareFeet": 4000,
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "masterRoom": 3,
+    "childRoom": 2,
+    "amenities": [
+      "Private Beach",
+      "Infinity Pool"
+    ],
+    "numberOfBalconies": 2,
+    "kitchen": 2,
+    "features": ["Luxurious", "Stunning Views"],
     "host": {
-      "host_name": "Clark Kent",
-      "phone": "+1-555-999-1234",
-      "email": "clark.kent@example.com",
-      "rating": 4.9
+      "hostName": "Wade Wilson",
+      "phone": "+1-555-222-1111",
+      "email": "wade.wilson@example.com",
+      "rating": 4.7
     },
     "images": [
-      "https://example.com/images/warehouse1_1.jpg",
-      "https://example.com/images/warehouse1_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "A spacious commercial warehouse with high ceilings and industrial power."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-10",
+      "2024-10-20"
+    ]
   },
   {
     "propertyId": "5",
-    "title": "Downtown office space",
-    "category": "Office",
+    "title": "Modern Apartment",
+    "category": "Apartment",
+    "location": "City Center",
     "address": {
-      "street": "789 Business Blvd",
-      "city": "Finance City",
+      "street": "15 Urban St",
+      "city": "Metro City",
       "state": "NY",
       "zip": "10002"
     },
-    "price_per_month": 7500,
-    "bedrooms": 0,
+    "pricePerDay": 300,
+    "squareFeet": 1800,
+    "bedrooms": 2,
     "bathrooms": 2,
-    "square_feet": 5000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Conference Rooms", "24/7 Security"],
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Gym",
+      "Rooftop Deck"
+    ],
     "numberOfBalconies": 1,
-    "kitchen": 0,
-    "features": ["High-Speed Internet", "Central Air"],
+    "kitchen": 1,
+    "features": ["Modern", "Central Location"],
     "host": {
-      "host_name": "Bruce Wayne",
-      "phone": "+1-555-123-9876",
-      "email": "bruce.wayne@example.com",
+      "hostName": "Tony Stark",
+      "phone": "+1-555-000-0000",
+      "email": "tony.stark@example.com",
       "rating": 4.8
     },
     "images": [
-      "https://example.com/images/office1_1.jpg",
-      "https://example.com/images/office1_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "A premium office space located in the financial district with state-of-the-art facilities."
+    "availableDates": [
+      "2024-10-05",
+      "2024-10-15",
+      "2024-10-30"
+    ]
   },
   {
     "propertyId": "6",
-    "title": "Suburban warehouse with office",
-    "category": "Warehouse",
+    "title": "Rustic Lodge",
+    "category": "Cabin",
+    "location": "Mountain Area",
     "address": {
-      "street": "321 Logistics Ln",
-      "city": "Suburbia",
-      "state": "OH",
-      "zip": "43123"
+      "street": "40 Alpine Rd",
+      "city": "Snowtown",
+      "state": "CO",
+      "zip": "80201"
     },
-    "price_per_month": 6000,
-    "bedrooms": 0,
+    "pricePerDay": 200,
+    "squareFeet": 2200,
+    "bedrooms": 3,
     "bathrooms": 2,
-    "square_feet": 12000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Office Space", "Parking Lot"],
-    "numberOfBalconies": 0,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Fire Pit",
+      "Hiking Trails"
+    ],
+    "numberOfBalconies": 1,
     "kitchen": 1,
-    "features": ["Private Office", "Loading Bay"],
+    "features": ["Secluded", "Nature"],
     "host": {
-      "host_name": "Tony Stark",
-      "phone": "+1-555-456-7890",
-      "email": "tony.stark@example.com",
-      "rating": 4.7
+      "hostName": "Natasha Romanoff",
+      "phone": "+1-555-777-8888",
+      "email": "natasha.romanoff@example.com",
+      "rating": 4.5
     },
     "images": [
-      "https://example.com/images/warehouse2_1.jpg",
-      "https://example.com/images/warehouse2_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "A suburban warehouse with integrated office space, ideal for logistics businesses."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-10",
+      "2024-10-20"
+    ]
   },
   {
     "propertyId": "7",
-    "title": "Downtown retail space",
-    "category": "Commercial",
+    "title": "Charming Bungalow",
+    "category": "Bungalow",
+    "location": "Countryside",
     "address": {
-      "street": "555 Market St",
-      "city": "Big City",
-      "state": "TX",
-      "zip": "75002"
+      "street": "25 Green Rd",
+      "city": "Lush Valley",
+      "state": "CA",
+      "zip": "90003"
     },
-    "price_per_month": 10000,
-    "bedrooms": 0,
+    "pricePerDay": 175,
+    "squareFeet": 1400,
+    "bedrooms": 2,
     "bathrooms": 1,
-    "square_feet": 3500,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Display Windows", "Customer Parking"],
-    "numberOfBalconies": 0,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Garden",
+      "BBQ Grill"
+    ],
+    "numberOfBalconies": 1,
     "kitchen": 1,
-    "features": ["Prime Location", "High Foot Traffic"],
+    "features": ["Peaceful", "Cozy"],
     "host": {
-      "host_name": "Selina Kyle",
-      "phone": "+1-555-123-3210",
-      "email": "selina.kyle@example.com",
-      "rating": 4.6
+      "hostName": "Steve Rogers",
+      "phone": "+1-555-333-4444",
+      "email": "steve.rogers@example.com",
+      "rating": 4.4
     },
     "images": [
-      "https://example.com/images/retail1_1.jpg",
-      "https://example.com/images/retail1_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "Prime downtown retail space with large display windows and high foot traffic."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-15"
+    ]
   },
   {
     "propertyId": "8",
-    "title": "Corporate office building",
-    "category": "Office",
+    "title": "Luxury Villa",
+    "category": "Villa",
+    "location": "Seaside",
     "address": {
-      "street": "100 Executive Dr",
-      "city": "Capital City",
-      "state": "DC",
-      "zip": "20001"
+      "street": "7 Ocean Breeze Ave",
+      "city": "Sunny Beach",
+      "state": "CA",
+      "zip": "92005"
     },
-    "price_per_month": 25000,
-    "bedrooms": 0,
-    "bathrooms": 10,
-    "square_feet": 20000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Conference Halls", "Parking Garage"],
-    "numberOfBalconies": 5,
-    "kitchen": 2,
-    "features": ["Elevators", "Security System"],
+    "pricePerDay": 700,
+    "squareFeet": 3500,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "masterRoom": 2,
+    "childRoom": 2,
+    "amenities": [
+      "Private Pool",
+      "Ocean View"
+    ],
+    "numberOfBalconies": 3,
+    "kitchen": 1,
+    "features": ["Luxurious", "Relaxing"],
     "host": {
-      "host_name": "Lex Luthor",
-      "phone": "+1-555-888-1111",
-      "email": "lex.luthor@example.com",
+      "hostName": "Thor Odinson",
+      "phone": "+1-555-888-2222",
+      "email": "thor.odinson@example.com",
       "rating": 4.9
     },
     "images": [
-      "https://example.com/images/office2_1.jpg",
-      "https://example.com/images/office2_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "A corporate office building with state-of-the-art facilities, perfect for large enterprises."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-15"
+    ]
   },
   {
     "propertyId": "9",
-    "title": "Seaside villa",
-    "category": "House",
+    "title": "Elegant Studio",
+    "category": "Studio",
+    "location": "Downtown",
     "address": {
-      "street": "999 Oceanview Rd",
-      "city": "Beach City",
-      "state": "FL",
-      "zip": "33101"
-    },
-    "price_per_month": 8000,
-    "bedrooms": 5,
-    "bathrooms": 4,
-    "square_feet": 4000,
-    "master_room": 1,
-    "child_room": 3,
-    "amenities": ["Private Pool", "Beach Access"],
-    "numberOfBalconies": 3,
-    "kitchen": 2,
-    "features": ["Ocean View", "Modern Design"],
-    "host": {
-      "host_name": "Aquaman",
-      "phone": "+1-555-000-9876",
-      "email": "aquaman@example.com",
-      "rating": 4.8
-    },
-    "images": [
-      "https://example.com/images/villa1_1.jpg",
-      "https://example.com/images/villa1_2.jpg"
-    ],
-    "description": "A luxurious seaside villa with private beach access and modern design."
-  },
-  {
-    "propertyId": "10",
-    "title": "High-rise penthouse",
-    "category": "Apartment",
-    "address": {
-      "street": "101 Skyscraper Blvd",
-      "city": "City Heights",
-      "state": "CA",
-      "zip": "90001"
-    },
-    "price_per_month": 12000,
-    "bedrooms": 3,
-    "bathrooms": 3,
-    "square_feet": 2500,
-    "master_room": 1,
-    "child_room": 2,
-    "amenities": ["Rooftop Pool", "Gym"],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["Panoramic City Views", "High Ceilings"],
-    "host": {
-      "host_name": "Diana Prince",
-      "phone": "+1-555-123-7890",
-      "email": "diana.prince@example.com",
-      "rating": 5.0
-    },
-    "images": [
-      "https://example.com/images/penthouse1_1.jpg",
-      "https://example.com/images/penthouse1_2.jpg"
-    ],
-    "description": "A high-rise penthouse with breathtaking city views and luxurious amenities."
-  },
-  {
-    "propertyId": "11",
-    "title": "Luxury downtown condo",
-    "category": "Apartment",
-    "address": {
-      "street": "202 Luxury Ln",
-      "city": "Big City",
+      "street": "30 City Plaza",
+      "city": "Urban City",
       "state": "NY",
       "zip": "10003"
     },
-    "price_per_month": 8500,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "square_feet": 1500,
-    "master_room": 1,
-    "child_room": 1,
-    "amenities": ["Concierge", "Fitness Center"],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["High-End Finishes", "City Views"],
-    "host": {
-      "host_name": "Oliver Queen",
-      "phone": "+1-555-987-4321",
-      "email": "oliver.queen@example.com",
-      "rating": 4.7
-    },
-    "images": [
-      "https://example.com/images/condo1_1.jpg",
-      "https://example.com/images/condo1_2.jpg"
-    ],
-    "description": "A luxury downtown condo with high-end finishes and city views."
-  },
-  {
-    "propertyId": "12",
-    "title": "Country estate",
-    "category": "House",
-    "address": {
-      "street": "789 Country Rd",
-      "city": "Countryside",
-      "state": "VT",
-      "zip": "05602"
-    },
-    "price_per_month": 10000,
-    "bedrooms": 6,
-    "bathrooms": 5,
-    "square_feet": 5000,
-    "master_room": 1,
-    "child_room": 4,
-    "amenities": ["Private Lake", "Horse Stables"],
-    "numberOfBalconies": 2,
-    "kitchen": 2,
-    "features": ["Spacious Grounds", "Fireplaces"],
-    "host": {
-      "host_name": "Clark Kent",
-      "phone": "+1-555-222-4444",
-      "email": "clark.kent@example.com",
-      "rating": 4.9
-    },
-    "images": [
-      "https://example.com/images/estate1_1.jpg",
-      "https://example.com/images/estate1_2.jpg"
-    ],
-    "description": "A sprawling country estate with private lake and horse stables, perfect for retreat."
-  },
-  {
-    "propertyId": "13",
-    "title": "Luxury retail outlet",
-    "category": "Commercial",
-    "address": {
-      "street": "555 Luxury St",
-      "city": "Fashion Town",
-      "state": "CA",
-      "zip": "90210"
-    },
-    "price_per_month": 15000,
-    "bedrooms": 0,
-    "bathrooms": 2,
-    "square_feet": 3000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Prime Location", "Customer Parking"],
-    "numberOfBalconies": 0,
-    "kitchen": 0,
-    "features": ["Glass Display Windows", "High-End Fixtures"],
-    "host": {
-      "host_name": "Selina Kyle",
-      "phone": "+1-555-333-7777",
-      "email": "selina.kyle@example.com",
-      "rating": 4.8
-    },
-    "images": [
-      "https://example.com/images/retail2_1.jpg",
-      "https://example.com/images/retail2_2.jpg"
-    ],
-    "description": "A luxury retail outlet with high-end finishes and prime location in the heart of the shopping district."
-  },
-  {
-    "propertyId": "14",
-    "title": "Rural warehouse",
-    "category": "Warehouse",
-    "address": {
-      "street": "800 Industrial Blvd",
-      "city": "Rural Town",
-      "state": "KS",
-      "zip": "66101"
-    },
-    "price_per_month": 3000,
-    "bedrooms": 0,
+    "pricePerDay": 250,
+    "squareFeet": 900,
+    "bedrooms": 1,
     "bathrooms": 1,
-    "square_feet": 8000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Loading Docks", "On-Site Security"],
-    "numberOfBalconies": 0,
-    "kitchen": 0,
-    "features": ["High Ceilings", "Open Space"],
-    "host": {
-      "host_name": "Clark Kent",
-      "phone": "+1-555-444-2222",
-      "email": "clark.kent@example.com",
-      "rating": 4.7
-    },
-    "images": [
-      "https://example.com/images/warehouse3_1.jpg",
-      "https://example.com/images/warehouse3_2.jpg"
+    "masterRoom": 1,
+    "childRoom": 0,
+    "amenities": [
+      "WiFi",
+      "Laundry"
     ],
-    "description": "A rural warehouse with large open spaces and on-site security, perfect for industrial use."
-  },
-  {
-    "propertyId": "15",
-    "title": "Modern city apartment",
-    "category": "Apartment",
-    "address": {
-      "street": "404 Skyline Blvd",
-      "city": "Urban City",
-      "state": "IL",
-      "zip": "60601"
-    },
-    "price_per_month": 4500,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "square_feet": 1600,
-    "master_room": 1,
-    "child_room": 2,
-    "amenities": ["Rooftop Lounge", "Gym"],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["Panoramic Views", "Hardwood Floors"],
-    "host": {
-      "host_name": "Diana Prince",
-      "phone": "+1-555-111-5555",
-      "email": "diana.prince@example.com",
-      "rating": 5.0
-    },
-    "images": [
-      "https://example.com/images/apartment2_1.jpg",
-      "https://example.com/images/apartment2_2.jpg"
-    ],
-    "description": "A modern city apartment with panoramic skyline views and luxurious finishes."
-  },
-  {
-    "propertyId": "16",
-    "title": "Industrial warehouse",
-    "category": "Warehouse",
-    "address": {
-      "street": "900 Factory Rd",
-      "city": "Manufacturing Hub",
-      "state": "MI",
-      "zip": "48201"
-    },
-    "price_per_month": 7000,
-    "bedrooms": 0,
-    "bathrooms": 2,
-    "square_feet": 15000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Loading Bays", "Forklift Access"],
-    "numberOfBalconies": 0,
-    "kitchen": 1,
-    "features": ["Reinforced Floors", "Heavy Machinery Access"],
-    "host": {
-      "host_name": "Tony Stark",
-      "phone": "+1-555-777-0000",
-      "email": "tony.stark@example.com",
-      "rating": 4.9
-    },
-    "images": [
-      "https://example.com/images/warehouse4_1.jpg",
-      "https://example.com/images/warehouse4_2.jpg"
-    ],
-    "description": "An industrial warehouse with specialized facilities for heavy machinery and logistics."
-  },
-  {
-    "propertyId": "17",
-    "title": "Luxury mountain retreat",
-    "category": "House",
-    "address": {
-      "street": "777 Mountain Trail",
-      "city": "Highlands",
-      "state": "CO",
-      "zip": "80439"
-    },
-    "price_per_month": 12000,
-    "bedrooms": 4,
-    "bathrooms": 3,
-    "square_feet": 3500,
-    "master_room": 1,
-    "child_room": 3,
-    "amenities": ["Private Hot Tub", "Hiking Trails"],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["Stone Fireplace", "Rustic Design"],
-    "host": {
-      "host_name": "Steve Rogers",
-      "phone": "+1-555-999-6666",
-      "email": "steve.rogers@example.com",
-      "rating": 4.8
-    },
-    "images": [
-      "https://example.com/images/retreat1_1.jpg",
-      "https://example.com/images/retreat1_2.jpg"
-    ],
-    "description": "A luxury mountain retreat with breathtaking views and rustic charm."
-  },
-  {
-    "propertyId": "18",
-    "title": "Urban retail space",
-    "category": "Commercial",
-    "address": {
-      "street": "888 Retail Ave",
-      "city": "Metro City",
-      "state": "NY",
-      "zip": "10004"
-    },
-    "price_per_month": 20000,
-    "bedrooms": 0,
-    "bathrooms": 2,
-    "square_feet": 5000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Prime Location", "Customer Parking"],
-    "numberOfBalconies": 0,
-    "kitchen": 1,
-    "features": ["Display Windows", "High Ceilings"],
-    "host": {
-      "host_name": "Bruce Wayne",
-      "phone": "+1-555-111-4444",
-      "email": "bruce.wayne@example.com",
-      "rating": 4.7
-    },
-    "images": [
-      "https://example.com/images/retail3_1.jpg",
-      "https://example.com/images/retail3_2.jpg"
-    ],
-    "description": "An urban retail space located in the heart of Metro City with excellent visibility."
-  },
-  {
-    "propertyId": "19",
-    "title": "Suburban office building",
-    "category": "Office",
-    "address": {
-      "street": "222 Corporate Ave",
-      "city": "Suburbia",
-      "state": "TX",
-      "zip": "75003"
-    },
-    "price_per_month": 6000,
-    "bedrooms": 0,
-    "bathrooms": 4,
-    "square_feet": 8000,
-    "master_room": 0,
-    "child_room": 0,
-    "amenities": ["Conference Rooms", "Free Parking"],
     "numberOfBalconies": 1,
-    "kitchen": 2,
-    "features": ["Open Layout", "Meeting Rooms"],
+    "kitchen": 1,
+    "features": ["Modern", "Central"],
     "host": {
-      "host_name": "Lex Luthor",
-      "phone": "+1-555-222-1111",
-      "email": "lex.luthor@example.com",
+      "hostName": "Peter Parker",
+      "phone": "+1-555-444-5555",
+      "email": "peter.parker@example.com",
       "rating": 4.6
     },
     "images": [
-      "https://example.com/images/office3_1.jpg",
-      "https://example.com/images/office3_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "A modern suburban office building with open layouts and professional conference facilities."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-10"
+    ]
+  },
+  {
+    "propertyId": "10",
+    "title": "Sunny Apartment",
+    "category": "Apartment",
+    "location": "Uptown",
+    "address": {
+      "street": "9 Bright St",
+      "city": "Sunny City",
+      "state": "CA",
+      "zip": "90004"
+    },
+    "pricePerDay": 300,
+    "squareFeet": 1300,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Balcony",
+      "Parking"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Bright", "Modern"],
+    "host": {
+      "hostName": "Tony Stark",
+      "phone": "+1-555-333-2222",
+      "email": "tony.stark@example.com",
+      "rating": 4.7
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-15",
+      "2024-10-20"
+    ]
+  },
+  {
+    "propertyId": "11",
+    "title": "Grand Mansion",
+    "category": "Mansion",
+    "location": "Suburban Area",
+    "address": {
+      "street": "8 Rich St",
+      "city": "Opulent City",
+      "state": "CA",
+      "zip": "90211"
+    },
+    "pricePerDay": 1200,
+    "squareFeet": 6000,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "masterRoom": 3,
+    "childRoom": 2,
+    "amenities": [
+      "Pool",
+      "Tennis Court"
+    ],
+    "numberOfBalconies": 4,
+    "kitchen": 2,
+    "features": ["Luxury", "Spacious"],
+    "host": {
+      "hostName": "Lex Luthor",
+      "phone": "+1-555-999-8888",
+      "email": "lex.luthor@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-05",
+      "2024-10-15",
+      "2024-10-20"
+    ]
+  },
+  {
+    "propertyId": "12",
+    "title": "Chic Loft",
+    "category": "Loft",
+    "location": "Art District",
+    "address": {
+      "street": "35 Artsy Blvd",
+      "city": "Art City",
+      "state": "IL",
+      "zip": "60001"
+    },
+    "pricePerDay": 350,
+    "squareFeet": 2000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "WiFi",
+      "Gallery"
+    ],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Stylish", "Cultural"],
+    "host": {
+      "hostName": "Natasha Romanoff",
+      "phone": "+1-555-666-4444",
+      "email": "natasha.romanoff@example.com",
+      "rating": 4.5
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-10",
+      "2024-10-20"
+    ]
+  },
+  {
+    "propertyId": "13",
+    "title": "Mountain Cabin",
+    "category": "Cabin",
+    "location": "Mountain Area",
+    "address": {
+      "street": "15 Snowy Rd",
+      "city": "Wintertown",
+      "state": "CO",
+      "zip": "80202"
+    },
+    "pricePerDay": 250,
+    "squareFeet": 1600,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 2,
+    "amenities": [
+      "Fireplace",
+      "Ski Access"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Cozy", "Scenic Views"],
+    "host": {
+      "hostName": "Clint Barton",
+      "phone": "+1-555-777-9999",
+      "email": "clint.barton@example.com",
+      "rating": 4.4
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-05",
+      "2024-10-15",
+      "2024-10-25"
+    ]
+  },
+  {
+    "propertyId": "14",
+    "title": "Elegant Apartment",
+    "category": "Apartment",
+    "location": "Downtown",
+    "address": {
+      "street": "12 Elegant Rd",
+      "city": "Downtown City",
+      "state": "NY",
+      "zip": "10004"
+    },
+    "pricePerDay": 400,
+    "squareFeet": 1400,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "WiFi",
+      "Gym"
+    ],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Chic", "Central Location"],
+    "host": {
+      "hostName": "Vision",
+      "phone": "+1-555-123-4567",
+      "email": "vision@example.com",
+      "rating": 4.6
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-10",
+      "2024-10-20"
+    ]
+  },
+  {
+    "propertyId": "15",
+    "title": "Luxury Retreat",
+    "category": "Retreat",
+    "location": "Forest Area",
+    "address": {
+      "street": "17 Peaceful Rd",
+      "city": "Calm Town",
+      "state": "OR",
+      "zip": "97001"
+    },
+    "pricePerDay": 600,
+    "squareFeet": 3500,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "masterRoom": 2,
+    "childRoom": 2,
+    "amenities": [
+      "Hot Tub",
+      "Yoga Studio"
+    ],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Relaxing", "Nature"],
+    "host": {
+      "hostName": "Gamora",
+      "phone": "+1-555-555-0000",
+      "email": "gamora@example.com",
+      "rating": 4.9
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-15",
+      "2024-10-30"
+    ]
+  },
+  {
+    "propertyId": "16",
+    "title": "Historical Mansion",
+    "category": "Mansion",
+    "location": "Historic District",
+    "address": {
+      "street": "22 Old Town Rd",
+      "city": "Heritage City",
+      "state": "MA",
+      "zip": "02101"
+    },
+    "pricePerDay": 1100,
+    "squareFeet": 5500,
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "masterRoom": 2,
+    "childRoom": 2,
+    "amenities": [
+      "Gardens",
+      "Library"
+    ],
+    "numberOfBalconies": 3,
+    "kitchen": 2,
+    "features": ["Classic", "Charming"],
+    "host": {
+      "hostName": "Tony Stark",
+      "phone": "+1-555-777-2222",
+      "email": "tony.stark@example.com",
+      "rating": 4.8
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-10"
+    ]
+  },
+  {
+    "propertyId": "17",
+    "title": "Charming Townhouse",
+    "category": "Townhouse",
+    "location": "Suburban Area",
+    "address": {
+      "street": "5 Cozy Lane",
+      "city": "Neighborhood",
+      "state": "CA",
+      "zip": "90212"
+    },
+    "pricePerDay": 350,
+    "squareFeet": 2000,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Parking",
+      "Backyard"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Family-Friendly", "Comfortable"],
+    "host": {
+      "hostName": "Peter Parker",
+      "phone": "+1-555-222-8888",
+      "email": "peter.parker@example.com",
+      "rating": 4.5
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-10"
+    ]
+  },
+  {
+    "propertyId": "18",
+    "title": "Urban Loft",
+    "category": "Loft",
+    "location": "City Center",
+    "address": {
+      "street": "22 Urban St",
+      "city": "Metropolis",
+      "state": "NY",
+      "zip": "10005"
+    },
+    "pricePerDay": 450,
+    "squareFeet": 1800,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "WiFi",
+      "Parking"
+    ],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Modern", "City Views"],
+    "host": {
+      "hostName": "Natasha Romanoff",
+      "phone": "+1-555-333-4444",
+      "email": "natasha.romanoff@example.com",
+      "rating": 4.6
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-10",
+      "2024-10-20"
+    ]
+  },
+  {
+    "propertyId": "19",
+    "title": "Rustic Farmhouse",
+    "category": "Farmhouse",
+    "location": "Rural Area",
+    "address": {
+      "street": "10 Farm Rd",
+      "city": "Farm City",
+      "state": "TX",
+      "zip": "75002"
+    },
+    "pricePerDay": 300,
+    "squareFeet": 2200,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "masterRoom": 2,
+    "childRoom": 2,
+    "amenities": [
+      "Fire Pit",
+      "Fenced Yard"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Rustic", "Family-Friendly"],
+    "host": {
+      "hostName": "Thor Odinson",
+      "phone": "+1-555-555-1111",
+      "email": "thor.odinson@example.com",
+      "rating": 4.7
+    },
+    "images": [
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
+    ],
+    "availableDates": [
+      "2024-10-05",
+      "2024-10-10",
+      "2024-10-20"
+    ]
   },
   {
     "propertyId": "20",
-    "title": "Luxury penthouse suite",
+    "title": "Sleek City Apartment",
     "category": "Apartment",
+    "location": "Urban Area",
     "address": {
-      "street": "123 Skyline Blvd",
-      "city": "High Town",
-      "state": "CA",
-      "zip": "90210"
+      "street": "5 High St",
+      "city": "Metro City",
+      "state": "NY",
+      "zip": "10006"
     },
-    "price_per_month": 25000,
-    "bedrooms": 4,
-    "bathrooms": 4,
-    "square_feet": 4000,
-    "master_room": 2,
-    "child_room": 2,
-    "amenities": ["Rooftop Pool", "Private Gym"],
-    "numberOfBalconies": 4,
-    "kitchen": 2,
-    "features": ["Panoramic Views", "Luxury Finishes"],
+    "pricePerDay": 350,
+    "squareFeet": 1600,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": [
+      "Rooftop Access",
+      "Gym"
+    ],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Sleek", "Modern"],
     "host": {
-      "host_name": "Tony Stark",
-      "phone": "+1-555-777-9999",
-      "email": "tony.stark@example.com",
-      "rating": 5.0
+      "hostName": "Bruce Wayne",
+      "phone": "+1-555-999-2222",
+      "email": "bruce.wayne@example.com",
+      "rating": 4.8
     },
     "images": [
-      "https://example.com/images/penthouse2_1.jpg",
-      "https://example.com/images/penthouse2_2.jpg"
+      "https://i.postimg.cc/vH85pqCm/house.jpg",
+      "https://i.postimg.cc/vH85pqCm/house.jpg"
     ],
-    "description": "An exclusive luxury penthouse suite with breathtaking views and top-tier amenities."
+    "availableDates": [
+      "2024-10-01",
+      "2024-10-05",
+      "2024-10-10"
+    ]
   }
 ]
