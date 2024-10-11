@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../../Button";
 
 const BookingSec = () => {
   return (
@@ -23,7 +23,7 @@ const BookingSec = () => {
         </p>
         <Button
           text="Start Booking"
-          style="bg-secondary btn-wide border-none text-white"
+          style="bg-primary btn-wide border-none text-white"
         />
       </div>
     </div>

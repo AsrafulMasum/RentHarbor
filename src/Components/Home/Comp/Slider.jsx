@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../../Button";
 import { motion } from "framer-motion";
 
 const Slider = () => {
@@ -39,7 +39,7 @@ const Slider = () => {
         >
           <Button
             text="Property"
-            style="btn-wide bg-secondary border-none text-white"
+            style="btn-wide bg-primary border-none text-white"
           ></Button>
           <Button
             text="Contact Us"

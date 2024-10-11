@@ -196,7 +196,7 @@ const RegisterPage = () => {
 
           <Button
             text="Register"
-            style="w-full bg-secondary font-bold text-base text-white border-0"
+            style="w-full bg-primary font-bold text-base text-white border-0"
             loading={loading}
           />
         </form>
