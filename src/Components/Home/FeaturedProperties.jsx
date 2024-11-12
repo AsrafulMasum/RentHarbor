@@ -8,20 +8,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import useLoadPublicData from "../../Hooks/useLoadPublicData";
 
 const FeaturedProperties = () => {
-  const [properties, setProperties] = useState([]);
+  const { data } = useLoadPublicData("/properties/allProperties");
+  const properties = data?.properties;
 
-  useEffect(() => {
-    const getProperties = async () => {
-      const res = await fetch("./property.json");
-      const data = await res.json();
-      setProperties(data);
-    };
-
-    getProperties();
-  }, []);
-  console.log(properties);
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto my-20">
       <Title
@@ -31,9 +23,9 @@ const FeaturedProperties = () => {
       />
       <div className="flex justify-center items-center flex-wrap gap-10 mt-16 w-full">
         <Swiper
-        style={{
-          '--swiper-pagination-color': '#FD6C23',
-        }}
+          style={{
+            "--swiper-pagination-color": "#FD6C23",
+          }}
           slidesPerView={1}
           spaceBetween={30}
           modules={[Pagination]}
@@ -57,7 +49,10 @@ const FeaturedProperties = () => {
           }}
         >
           {properties?.map((property) => (
-            <SwiperSlide key={property?.propertyId} className="overflow-hidden pb-10">
+            <SwiperSlide
+              key={property?.propertyId}
+              className="overflow-hidden pb-10"
+            >
               <Link className="duration-700 group overflow-hidden h-96">
                 <img
                   className="group-hover:scale-105 duration-700"
@@ -69,7 +64,9 @@ const FeaturedProperties = () => {
                     <h4 className="text-xl font-semibold text-primary">
                       {property?.title}
                     </h4>
-                    <p className="text-primary font-semibold">$ {property?.pricePerDay}</p>
+                    <p className="text-primary font-semibold">
+                      $ {property?.pricePerDay}
+                    </p>
                   </div>
                   <p className="text-white">
                     <span className="font-semibold">Location: </span>
