@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import Title from "../Title";
-// import img from "./../../assets/houses/house.jpg";
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -13,6 +11,7 @@ import useLoadPublicData from "../../Hooks/useLoadPublicData";
 const FeaturedProperties = () => {
   const { data } = useLoadPublicData("/properties/allProperties");
   const properties = data?.properties;
+  console.log(properties)
 
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto my-20">
@@ -50,10 +49,10 @@ const FeaturedProperties = () => {
         >
           {properties?.map((property) => (
             <SwiperSlide
-              key={property?.propertyId}
+              key={property?._id}
               className="overflow-hidden pb-10"
             >
-              <Link className="duration-700 group overflow-hidden h-96">
+              <Link to={`properties/${property?._id}`} className="duration-700 group overflow-hidden h-96">
                 <img
                   className="group-hover:scale-105 duration-700"
                   src={property?.images?.[0]}

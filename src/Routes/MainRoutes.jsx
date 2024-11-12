@@ -10,6 +10,7 @@ import Accounts from "../Components/Dashboard/Accounts";
 import Properties from "../Components/Dashboard/Properties";
 import Payments from "../Components/Dashboard/Payments";
 import PropertiesPage from "../Pages/PropertiesPage";
+import PropertyDetailsPage from "../Pages/PropertyDetailsPage";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -22,8 +23,12 @@ const MainRoutes = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "properties",
+        path: "allProperties",
         element: <PropertiesPage />,
+      },
+      {
+        path: "properties/:id",
+        element: <PropertyDetailsPage />,
       },
       {
         path: "register",
