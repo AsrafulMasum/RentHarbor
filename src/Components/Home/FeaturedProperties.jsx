@@ -11,7 +11,6 @@ import useLoadPublicData from "../../Hooks/useLoadPublicData";
 const FeaturedProperties = () => {
   const { data } = useLoadPublicData("/properties/allProperties");
   const properties = data?.properties;
-  console.log(properties)
 
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto my-20">

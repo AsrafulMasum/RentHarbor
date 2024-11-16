@@ -43,7 +43,7 @@ const Navbar = ({ children }) => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="inline-block w-6 h-6 stroke-current"
+                  className="inline-block w-6 h-6 stroke-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -114,9 +114,9 @@ const Navbar = ({ children }) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-gray-700">
+        <ul className="menu p-4 w-80 min-h-full bg-secondary">
           {/* Sidebar content here */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center mb-5">
             <input
               className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300 "
               type="text"
