@@ -6,8 +6,9 @@ import MainRoutes from "./Routes/MainRoutes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AuthProvider from "./Provider/AuthProvider";
 // import AuthProvider from "./Provider/AuthProvider";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ScrollToTopButton from "./Components/ScrollToTopButton";
 
 const queryClient = new QueryClient();
 
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </AuthProvider>
     </QueryClientProvider>
     <ToastContainer />
+    <ScrollToTopButton />
   </React.StrictMode>
 );

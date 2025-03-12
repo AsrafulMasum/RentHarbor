@@ -57,7 +57,7 @@ const FeaturedProperties = () => {
                   src={property?.images?.[0]}
                   alt="Image"
                 />
-                <div className="py-6 px-6 flex flex-col gap-2 bg-secondary">
+                <div className="py-6 px-6 flex flex-col gap-2 bg-white border">
                   <div className="flex justify-between items-center">
                     <h4 className="text-xl font-semibold text-primary">
                       {property?.title}
@@ -66,13 +66,13 @@ const FeaturedProperties = () => {
                       $ {property?.pricePerDay}
                     </p>
                   </div>
-                  <p className="text-white">
+                  <p className="text-secondary">
                     <span className="font-semibold">Location: </span>
                     {property?.location}, {property?.address?.city},{" "}
                     {property?.address?.state}
                   </p>
 
-                  <p className="text-white">{property?.features?.join(", ")}</p>
+                  <p className="text-secondary">{property?.features?.join(", ")}</p>
                 </div>
                 {/* <span className="text-white w-14 bg-secondary px-2 py-1 rounded-full font-semibold absolute top-56 right-10">
                   $ 117
