@@ -9,6 +9,7 @@ import AuthProvider from "./Provider/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
+import 'leaflet/dist/leaflet.css';
 
 const queryClient = new QueryClient();
 

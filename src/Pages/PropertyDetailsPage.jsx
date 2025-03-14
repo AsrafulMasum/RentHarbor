@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useLoadPublicData from "../Hooks/useLoadPublicData";
 import { Swiper, SwiperSlide } from "swiper/react";
+import MapComponent from "../Components/MapComponent";
 import {
   MdOutlineBedroomParent,
   MdOutlineBedroomChild,
@@ -149,6 +150,9 @@ function PropertyDetailsPage() {
           mollitia maiores quisquam, excepturi magni, repellendus ullam,
           laudantium in numquam vero reprehenderit.
         </p>
+      </div>
+      <div>
+        <MapComponent />
       </div>
     </div>
   );
