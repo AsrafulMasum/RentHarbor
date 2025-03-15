@@ -5,7 +5,7 @@ const MapComponent = () => {
   const position = [37.7749, -122.4194]; // Latitude and Longitude (San Francisco)
 
   return (
-    <MapContainer center={position} zoom={13} style={{ height: '400px', width: '100%' }}>
+    <MapContainer center={position} zoom={30} style={{ height: '600px', width: '100%' }}>
       {/* TileLayer for OpenStreetMap */}
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -23,3 +23,4 @@ const MapComponent = () => {
 };
 
 export default MapComponent;
+

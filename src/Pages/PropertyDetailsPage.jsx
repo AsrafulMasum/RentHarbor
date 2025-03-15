@@ -17,6 +17,7 @@ import ReactStars from "react-rating-stars-component";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
+import AvailableDateSelector from "../Components/AvailableDateSelector";
 
 function PropertyDetailsPage() {
   const { id } = useParams();
@@ -151,8 +152,13 @@ function PropertyDetailsPage() {
           laudantium in numquam vero reprehenderit.
         </p>
       </div>
-      <div>
-        <MapComponent />
+      <div className="mb-10 mt-20 grid grid-cols-3 gap-10">
+        <div className="col-span-2">
+          <MapComponent />
+        </div>
+        <div>
+          <AvailableDateSelector availableDates={property?.availableDates} />
+        </div>
       </div>
     </div>
   );
