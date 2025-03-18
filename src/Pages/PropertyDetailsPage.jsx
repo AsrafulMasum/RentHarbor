@@ -22,7 +22,7 @@ import AvailableDateSelector from "../Components/AvailableDateSelector";
 function PropertyDetailsPage() {
   const { id } = useParams();
 
-  const { data } = useLoadPublicData(`properties/${id}`);
+  const { data } = useLoadPublicData(`/properties/${id}`);
   const property = data?.property;
   console.log(property);
 

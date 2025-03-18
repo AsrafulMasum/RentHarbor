@@ -1,11 +1,11 @@
-import Button from "../../Button";
+import Button from "../Button";
+import bg from "../../assets/booking_bg.png";
 
 const BookingSec = () => {
   return (
     <div
       style={{
-        backgroundImage:
-          "url(https://i.postimg.cc/gkSqHN5j/Bespoke-Partnerships.png)",
+        backgroundImage: `url(${bg})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
