@@ -134,6 +134,7 @@ function PropertyDetailsPage() {
               count={5}
               value={4.9}
               isHalf={true}
+              edit={false}
               // onChange={ratingChanged}
               size={24}
               activeColor="#FD6C23"
