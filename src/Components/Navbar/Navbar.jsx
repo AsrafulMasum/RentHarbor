@@ -31,7 +31,7 @@ const Navbar = ({ children }) => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full bg-secondary fixed z-50">
+        <div className="w-full bg-secondary fixed shadow-2xl shadow-gray-950 z-50">
           <div className="navbar max-w-screen-xl mx-auto">
             <div className="flex-none lg:hidden">
               <label

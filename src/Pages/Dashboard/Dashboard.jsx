@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { RiDashboardLine } from "react-icons/ri";
@@ -7,6 +7,7 @@ import { LuTableProperties } from "react-icons/lu";
 import { IoLogOutOutline, IoHomeOutline } from "react-icons/io5";
 
 const Dashboard = () => {
+  const [isGuestMode, setIsGuestMode] = useState(false);
   const { user, logoutUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -16,9 +17,14 @@ const Dashboard = () => {
     navigate("/");
   };
 
+  const handleMode = (mode) => {
+    setIsGuestMode(mode);
+  };
+
+  console.log(user);
   return (
     <div className="flex">
-      <aside className="flex flex-col w-64 h-screen px-4 py-5 2xl:py-20 overflow-y-auto bg-black">
+      <aside className="flex flex-col w-64 h-screen px-4 py-5 2xl:py-20 overflow-y-auto bg-secondary">
         <div className="flex flex-col items-center -mx-2">
           <img
             className="object-cover w-24 h-24 mx-2 rounded-full"
@@ -31,13 +37,37 @@ const Dashboard = () => {
           </p>
         </div>
 
+        {user?.role === "Host" && (
+          <div className="text-sm font-medium text-center border-b border-gray-600">
+            <ul className="flex justify-center">
+              <li className="me-2">
+                <a
+                  onClick={() => handleMode(true)}
+                  className={`inline-block p-4 ${isGuestMode && "active"}`}
+                >
+                  Guest
+                </a>
+              </li>
+              <li className="me-2">
+                <a
+                  onClick={() => handleMode(false)}
+                  className={`inline-block p-4 ${!isGuestMode && "active"}`}
+                  aria-current="page"
+                >
+                  Host
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+
         <nav className="flex flex-col justify-between h-full">
-          <ul className="flex flex-col mt-12">
+          <ul className="flex flex-col mt-4">
             <Link
               to="/dashboard"
               className={`flex items-center px-4 py-2 rounded-lg  text-gray-200 ${
                 location?.pathname === "/dashboard"
-                  ? "bg-secondary hover:bg-secondary"
+                  ? "bg-primary hover:bg-primary text-secondary"
                   : "hover:bg-gray-800"
               }`}
             >
@@ -50,7 +80,7 @@ const Dashboard = () => {
               to="/dashboard/accounts"
               className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
                 location?.pathname === "/dashboard/accounts"
-                  ? "bg-secondary hover:bg-secondary"
+                  ? "bg-primary hover:bg-primary text-secondary"
                   : "hover:bg-gray-800"
               }`}
             >
@@ -63,7 +93,7 @@ const Dashboard = () => {
               to="/dashboard/properties"
               className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
                 location?.pathname === "/dashboard/properties"
-                  ? "bg-secondary hover:bg-secondary"
+                  ? "bg-primary hover:bg-primary text-secondary"
                   : "hover:bg-gray-800"
               }`}
             >
@@ -76,7 +106,7 @@ const Dashboard = () => {
               to="/dashboard/payments"
               className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
                 location?.pathname === "/dashboard/payments"
-                  ? "bg-secondary hover:bg-secondary"
+                  ? "bg-primary hover:bg-primary text-secondary"
                   : "hover:bg-gray-800"
               }`}
             >

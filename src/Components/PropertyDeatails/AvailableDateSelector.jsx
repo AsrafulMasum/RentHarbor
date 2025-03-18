@@ -35,7 +35,7 @@ const AvailableDateSelector = ({ availableDates = [] }) => {
       />
       <Button
         text="Book Now"
-        style="btn-wide bg-primary text-white border"
+        style="btn-wide bg-primary text-white border border-primary"
       />
     </div>
   );

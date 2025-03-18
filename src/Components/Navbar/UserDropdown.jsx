@@ -29,7 +29,7 @@ const UserDropdown = () => {
           <li>
             <Link to="/dashboard" className="text-white mt-1 px-[14px]">
               Dashboard
-              <span className="badge">{user?.role}</span>
+              <span className="badge bg-primary border-none text-secondary">{user?.role}</span>
             </Link>
           </li>
 
