@@ -1,6 +1,6 @@
-import City from "../City";
 import Title from "../Title";
 import { Link } from "react-router-dom";
+import City from "./Comp/City";
 
 const Recommended = () => {
   return (

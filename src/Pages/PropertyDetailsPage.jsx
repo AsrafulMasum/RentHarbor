@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import useLoadPublicData from "../Hooks/useLoadPublicData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import MapComponent from "../Components/MapComponent";
 import {
   MdOutlineBedroomParent,
   MdOutlineBedroomChild,
@@ -17,7 +16,8 @@ import ReactStars from "react-rating-stars-component";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
-import AvailableDateSelector from "../Components/AvailableDateSelector";
+import AvailableDateSelector from "../Components/PropertyDeatails/AvailableDateSelector";
+import MapComponent from "../Components/PropertyDeatails/MapComponent";
 
 function PropertyDetailsPage() {
   const { id } = useParams();
@@ -59,14 +59,14 @@ function PropertyDetailsPage() {
 
         {/* Property details */}
         <div className="lg:col-span-1">
-          <h2 className="text-3xl font-medium text-secondary">
+          <h2 className="text-3xl font-medium text-primary">
             {property?.title}{" "}
           </h2>
           <p className="text-gray-700 mt-2">
             {property?.address?.street}, {property?.address?.state},{" "}
             {property?.address?.city} - {property?.address?.zip}
           </p>
-          <p className="text-lg mt-2">
+          <p className="text-lg mt-2 text-secondary">
             {property?.location}{" "}
             <span className="text-sm">({property?.category})</span>
           </p>
@@ -117,7 +117,7 @@ function PropertyDetailsPage() {
               </p>
             </div>
           </div>
-          <p className="mt-5 text-lg font-bold">
+          <p className="mt-5 text-lg font-bold text-secondary">
             {property?.amenities?.join(", ")}, {property?.features?.join(", ")}.
           </p>
         </div>
