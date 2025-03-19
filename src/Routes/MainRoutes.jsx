@@ -11,6 +11,11 @@ import Properties from "../Components/Dashboard/Properties";
 import Payments from "../Components/Dashboard/Payments";
 import PropertiesPage from "../Pages/PropertiesPage";
 import PropertyDetailsPage from "../Pages/PropertyDetailsPage";
+import AddProperties from "../Components/Dashboard/AddProperties";
+import MyListings from "../Components/Dashboard/MyListings";
+import AllListings from "../Components/Dashboard/AllListings";
+import Messages from "../Components/Dashboard/Messages";
+import Users from "../Components/Dashboard/Users";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -60,6 +65,26 @@ const MainRoutes = createBrowserRouter([
       {
         path: "payments",
         element: <Payments />,
+      },
+      {
+        path: "addProperties",
+        element: <AddProperties />,
+      },
+      {
+        path: "myListings",
+        element: <MyListings />,
+      },
+      {
+        path: "allListings",
+        element: <AllListings />,
+      },
+      {
+        path: "messages",
+        element: <Messages />,
+      },
+      {
+        path: "users",
+        element: <Users />,
       },
     ],
   },

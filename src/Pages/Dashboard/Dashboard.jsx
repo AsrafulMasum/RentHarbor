@@ -43,7 +43,9 @@ const Dashboard = () => {
               <li className="me-2">
                 <a
                   onClick={() => handleMode(true)}
-                  className={`inline-block p-4 ${isGuestMode && "active"}`}
+                  className={`inline-block p-4 cursor-pointer ${
+                    isGuestMode && "active"
+                  }`}
                 >
                   Guest
                 </a>
@@ -51,7 +53,9 @@ const Dashboard = () => {
               <li className="me-2">
                 <a
                   onClick={() => handleMode(false)}
-                  className={`inline-block p-4 ${!isGuestMode && "active"}`}
+                  className={`inline-block p-4 cursor-pointer ${
+                    !isGuestMode && "active"
+                  }`}
                   aria-current="page"
                 >
                   Host
@@ -62,59 +66,229 @@ const Dashboard = () => {
         )}
 
         <nav className="flex flex-col justify-between h-full">
-          <ul className="flex flex-col mt-4">
-            <Link
-              to="/dashboard"
-              className={`flex items-center px-4 py-2 rounded-lg  text-gray-200 ${
-                location?.pathname === "/dashboard"
-                  ? "bg-primary hover:bg-primary text-secondary"
-                  : "hover:bg-gray-800"
-              }`}
-            >
-              <RiDashboardLine className="text-lg" />
+          {user?.role === "Guest" && (
+            <ul className="flex flex-col mt-4">
+              <Link
+                to="/dashboard"
+                className={`flex items-center px-4 py-2 rounded-lg  text-gray-200 ${
+                  location?.pathname === "/dashboard"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <RiDashboardLine className="text-lg" />
 
-              <span className="mx-4 font-medium">Dashboard</span>
-            </Link>
+                <span className="mx-4 font-medium">Dashboard</span>
+              </Link>
 
-            <Link
-              to="/dashboard/accounts"
-              className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
-                location?.pathname === "/dashboard/accounts"
-                  ? "bg-primary hover:bg-primary text-secondary"
-                  : "hover:bg-gray-800"
-              }`}
-            >
-              <MdOutlineManageAccounts className="text-xl" />
+              <Link
+                to="/dashboard/accounts"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/accounts"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlineManageAccounts className="text-xl" />
 
-              <span className="mx-4 font-medium">Accounts</span>
-            </Link>
+                <span className="mx-4 font-medium">Accounts</span>
+              </Link>
 
-            <Link
-              to="/dashboard/properties"
-              className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
-                location?.pathname === "/dashboard/properties"
-                  ? "bg-primary hover:bg-primary text-secondary"
-                  : "hover:bg-gray-800"
-              }`}
-            >
-              <LuTableProperties className="text-xl" />
+              <Link
+                to="/dashboard/properties"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/properties"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <LuTableProperties className="text-xl" />
 
-              <span className="mx-4 font-medium">Properties</span>
-            </Link>
+                <span className="mx-4 font-medium">Properties</span>
+              </Link>
 
-            <Link
-              to="/dashboard/payments"
-              className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
-                location?.pathname === "/dashboard/payments"
-                  ? "bg-primary hover:bg-primary text-secondary"
-                  : "hover:bg-gray-800"
-              }`}
-            >
-              <MdOutlinePayments className="text-xl" />
+              <Link
+                to="/dashboard/payments"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/payments"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlinePayments className="text-xl" />
 
-              <span className="mx-4 font-medium">Payments</span>
-            </Link>
-          </ul>
+                <span className="mx-4 font-medium">Payments</span>
+              </Link>
+            </ul>
+          )}
+
+          {user?.role === "Host" && !isGuestMode && (
+            <ul className="flex flex-col mt-4">
+              <Link
+                to="/dashboard"
+                className={`flex items-center px-4 py-2 rounded-lg  text-gray-200 ${
+                  location?.pathname === "/dashboard"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <RiDashboardLine className="text-lg" />
+
+                <span className="mx-4 font-medium">Dashboard</span>
+              </Link>
+
+              <Link
+                to="/dashboard/addProperties"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/addProperties"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlinePayments className="text-xl" />
+
+                <span className="mx-4 font-medium">Add Properties</span>
+              </Link>
+
+              <Link
+                to="/dashboard/myListings"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/myListings"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <LuTableProperties className="text-xl" />
+
+                <span className="mx-4 font-medium">My Listings</span>
+              </Link>
+            </ul>
+          )}
+
+          {user?.role === "Host" && isGuestMode && (
+            <ul className="flex flex-col mt-4">
+              <Link
+                to="/dashboard"
+                className={`flex items-center px-4 py-2 rounded-lg  text-gray-200 ${
+                  location?.pathname === "/dashboard"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <RiDashboardLine className="text-lg" />
+
+                <span className="mx-4 font-medium">Dashboard</span>
+              </Link>
+
+              <Link
+                to="/dashboard/accounts"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/accounts"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlineManageAccounts className="text-xl" />
+
+                <span className="mx-4 font-medium">Accounts</span>
+              </Link>
+
+              <Link
+                to="/dashboard/properties"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/properties"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <LuTableProperties className="text-xl" />
+
+                <span className="mx-4 font-medium">Properties</span>
+              </Link>
+
+              <Link
+                to="/dashboard/payments"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/payments"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlinePayments className="text-xl" />
+
+                <span className="mx-4 font-medium">Payments</span>
+              </Link>
+            </ul>
+          )}
+
+          {user?.role === "Admin" && (
+            <ul className="flex flex-col mt-4">
+              <Link
+                to="/dashboard"
+                className={`flex items-center px-4 py-2 rounded-lg  text-gray-200 ${
+                  location?.pathname === "/dashboard"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <RiDashboardLine className="text-lg" />
+
+                <span className="mx-4 font-medium">Dashboard</span>
+              </Link>
+
+              <Link
+                to="/dashboard/accounts"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/accounts"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlineManageAccounts className="text-xl" />
+
+                <span className="mx-4 font-medium">Accounts</span>
+              </Link>
+
+              <Link
+                to="/dashboard/allListings"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/allListings"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <LuTableProperties className="text-xl" />
+
+                <span className="mx-4 font-medium">All Listings</span>
+              </Link>
+
+              <Link
+                to="/dashboard/messages"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/messages"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlinePayments className="text-xl" />
+
+                <span className="mx-4 font-medium">Massages</span>
+              </Link>
+
+              <Link
+                to="/dashboard/users"
+                className={`flex items-center px-4 py-2 mt-5 text-gray-200 transition-colors duration-300 transform rounded-lg ${
+                  location?.pathname === "/dashboard/users"
+                    ? "bg-primary hover:bg-primary text-white"
+                    : "hover:bg-gray-800"
+                }`}
+              >
+                <MdOutlinePayments className="text-xl" />
+
+                <span className="mx-4 font-medium">Users</span>
+              </Link>
+            </ul>
+          )}
 
           <ul>
             <Link
