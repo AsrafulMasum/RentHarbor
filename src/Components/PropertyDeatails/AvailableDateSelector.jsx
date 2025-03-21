@@ -24,7 +24,7 @@ const AvailableDateSelector = ({ availableDates = [] }) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center -mt-12">
       <h2 className="text-xl font-semibold mb-4">Select Your Stay</h2>
       <DateRange
         rangeColors={["#FD6C23"]}
