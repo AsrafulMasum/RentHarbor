@@ -1,11 +1,20 @@
 import { FaImage } from "react-icons/fa";
 import Button from "../Button";
 import { useState } from "react";
+import { DateRange } from "react-date-range";
 
 const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
 
 function AddProperties() {
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: "selection",
+    },
+  ]);
+
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -77,6 +86,7 @@ function AddProperties() {
       numberOfBalconies: parseFloat(formData.numberOfBalconies) || 0,
       kitchen: parseFloat(formData.kitchen) || 0,
       amenities: amenitiesArray,
+      availableDates: state?.[0],
     };
 
     console.log(finalPropertyData);
@@ -142,14 +152,14 @@ function AddProperties() {
                 </p>
               </div>
 
-              <div className="col-span-full">
+              <div className="sm:col-span-3">
                 <label
                   htmlFor="productPhoto"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Property Photo
                 </label>
-                <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+                <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-32">
                   <div className="text-center">
                     <FaImage
                       aria-hidden="true"
@@ -176,6 +186,20 @@ function AddProperties() {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              <div className="sm:col-span-3 sm:ml-10">
+                <p className="mb-3 text-sm font-medium leading-6 text-gray-900">
+                  Available Dates
+                </p>
+                <DateRange
+                  rangeColors={["#FD6C23"]}
+                  editableDateInputs={true}
+                  onChange={(date) => setState([date.selection])}
+                  moveRangeOnFirstSelection={false}
+                  ranges={state}
+                  minDate={new Date()}
+                />
               </div>
             </div>
 
