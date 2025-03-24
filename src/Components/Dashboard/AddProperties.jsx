@@ -122,6 +122,7 @@ function AddProperties() {
                       id="title"
                       name="title"
                       type="text"
+                      required
                       value={formData.title}
                       onChange={handleChange}
                       className="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
@@ -141,6 +142,7 @@ function AddProperties() {
                   <textarea
                     id="description"
                     name="description"
+                    required
                     rows={3}
                     value={formData.description}
                     onChange={handleChange}
@@ -175,8 +177,10 @@ function AddProperties() {
                           id="propertyPhoto"
                           name="propertyPhoto"
                           type="file"
+                          multiple
                           onChange={handleChange}
                           className="sr-only"
+                          required
                         />
                       </label>
                       <p className="pl-1">or drag and drop</p>
@@ -216,6 +220,7 @@ function AddProperties() {
                     id="price"
                     name="price"
                     type="number"
+                    required
                     value={formData.price}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -235,6 +240,7 @@ function AddProperties() {
                     id="bedrooms"
                     name="bedrooms"
                     type="number"
+                    required
                     value={formData.bedrooms}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -254,6 +260,7 @@ function AddProperties() {
                     id="bathrooms"
                     name="bathrooms"
                     type="number"
+                    required
                     value={formData.bathrooms}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -273,6 +280,7 @@ function AddProperties() {
                     id="masterRoom"
                     name="masterRoom"
                     type="number"
+                    required
                     value={formData.masterRoom}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -292,6 +300,7 @@ function AddProperties() {
                     id="childRoom"
                     name="childRoom"
                     type="number"
+                    required
                     value={formData.childRoom}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -311,6 +320,7 @@ function AddProperties() {
                     id="numberOfBalconies"
                     name="numberOfBalconies"
                     type="number"
+                    required
                     value={formData.numberOfBalconies}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -330,6 +340,7 @@ function AddProperties() {
                     id="kitchen"
                     name="kitchen"
                     type="number"
+                    required
                     value={formData.kitchen}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -349,6 +360,7 @@ function AddProperties() {
                     id="location"
                     name="location"
                     type="text"
+                    required
                     value={formData.location}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -368,6 +380,7 @@ function AddProperties() {
                     id="category"
                     name="category"
                     type="text"
+                    required
                     value={formData.category}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -387,6 +400,7 @@ function AddProperties() {
                     id="amenities"
                     name="amenities"
                     type="text"
+                    required
                     value={formData.amenities}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -406,6 +420,7 @@ function AddProperties() {
                     id="squareFeet"
                     name="squareFeet"
                     type="number"
+                    required
                     value={formData.squareFeet}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
@@ -429,6 +444,7 @@ function AddProperties() {
                     id="street"
                     name="street"
                     type="text"
+                    required
                     value={formData.street}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -448,6 +464,7 @@ function AddProperties() {
                     id="city"
                     name="city"
                     type="text"
+                    required
                     value={formData.city}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -467,6 +484,7 @@ function AddProperties() {
                     id="state"
                     name="state"
                     type="text"
+                    required
                     value={formData.state}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
@@ -486,6 +504,7 @@ function AddProperties() {
                     id="zip"
                     name="zip"
                     type="number"
+                    required
                     value={formData.zip}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
