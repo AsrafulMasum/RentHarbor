@@ -21,7 +21,6 @@ const Dashboard = () => {
     setIsGuestMode(mode);
   };
 
-  console.log(user);
   return (
     <div className="flex">
       <aside className="flex flex-col w-64 h-screen px-4 py-5 2xl:py-20 overflow-y-auto bg-secondary">

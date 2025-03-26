@@ -1,13 +1,21 @@
 import { FaImage } from "react-icons/fa";
 import Button from "../Button";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { DateRange } from "react-date-range";
 import axios from "axios";
+import { toast } from "react-toastify";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
 
 function AddProperties() {
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
+  const [loading, setLoading] = useState(false);
   const [state, setState] = useState([
     {
       startDate: new Date(),
@@ -29,12 +37,15 @@ function AddProperties() {
     masterRoom: "",
     childRoom: "",
     amenities: "",
+    features: "",
     numberOfBalconies: "",
     kitchen: "",
     street: "",
     city: "",
     state: "",
     zip: "",
+    latitude: "",
+    longitude: "",
   });
 
   const [imageUrl, setImageUrl] = useState([]);
@@ -47,11 +58,14 @@ function AddProperties() {
 
       if (imgFiles.length > 0) {
         try {
+          setLoading(true);
           const uploadedUrls = await Promise.all(imgFiles.map(uploadToImgBB));
 
           setImageUrl(uploadedUrls);
+          setLoading(false);
         } catch (error) {
           console.error("Error uploading images:", error);
+          setLoading(false);
         }
       }
     } else {
@@ -64,39 +78,66 @@ function AddProperties() {
     formData.append("image", file);
 
     try {
-      const res = await axios.post( imgHostingApi , formData);
-      return res.data.success
-        ? res.data.data.url
-        : null;
+      const res = await axios.post(imgHostingApi, formData);
+      return res.data.success ? res.data.data.url : null;
     } catch (error) {
       console.error("Error uploading to ImgBB:", error);
+      toast.error("Error uploading images. Try again!");
       return null;
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    const amenitiesArray = formData.amenities
-      .split(",")
-      .map((amenity) => amenity.trim());
+    try {
+      const amenitiesArray = formData.amenities
+        .split(",")
+        .map((amenity) => amenity.trim());
 
-    const finalPropertyData = {
-      ...formData,
-      propertyPhoto: imageUrl,
-      price: parseFloat(formData.price) || 0,
-      squareFeet: parseFloat(formData.squareFeet) || 0,
-      bedrooms: parseFloat(formData.bedrooms) || 0,
-      bathrooms: parseFloat(formData.bathrooms) || 0,
-      masterRoom: parseFloat(formData.masterRoom) || 0,
-      childRoom: parseFloat(formData.childRoom) || 0,
-      numberOfBalconies: parseFloat(formData.numberOfBalconies) || 0,
-      kitchen: parseFloat(formData.kitchen) || 0,
-      amenities: amenitiesArray,
-      availableDates: state?.[0],
-    };
+      const featuresArray = formData.features
+        .split(",")
+        .map((amenity) => amenity.trim());
 
-    console.log(finalPropertyData);
+      const finalPropertyData = {
+        ...formData,
+        propertyPhoto: imageUrl,
+        price: parseFloat(formData.price) || 0,
+        squareFeet: parseFloat(formData.squareFeet) || 0,
+        bedrooms: parseFloat(formData.bedrooms) || 0,
+        bathrooms: parseFloat(formData.bathrooms) || 0,
+        masterRoom: parseFloat(formData.masterRoom) || 0,
+        childRoom: parseFloat(formData.childRoom) || 0,
+        numberOfBalconies: parseFloat(formData.numberOfBalconies) || 0,
+        kitchen: parseFloat(formData.kitchen) || 0,
+        latitude: parseFloat(formData.latitude) || 0,
+        longitude: parseFloat(formData.longitude) || 0,
+        amenities: amenitiesArray,
+        features: featuresArray,
+        availableDates: state?.[0],
+        host: {
+          hostName: user?.name,
+          email: user?.email,
+          phone: user?.phone,
+          photoURL: user?.photo_url,
+        },
+      };
+
+      const res = await axiosSecure.post(
+        "/properties/addProperty",
+        finalPropertyData
+      );
+
+      if (res?.data?.success) {
+        toast.success("Your property added successfully.");
+        setLoading(false);
+        navigate("/dashboard/myListings");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error?.message);
+    }
   };
 
   return (
@@ -397,6 +438,26 @@ function AddProperties() {
 
               <div className="sm:col-span-3">
                 <label
+                  htmlFor="features"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Features
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="features"
+                    name="features"
+                    type="text"
+                    required
+                    value={formData.features}
+                    onChange={handleChange}
+                    className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-3">
+                <label
                   htmlFor="amenities"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
@@ -518,12 +579,53 @@ function AddProperties() {
                   />
                 </div>
               </div>
+
+              <div className="sm:col-span-3">
+                <label
+                  htmlFor="latitude"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Latitude
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="latitude"
+                    name="latitude"
+                    type="text"
+                    required
+                    value={formData.latitude}
+                    onChange={handleChange}
+                    className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div className="sm:col-span-3">
+                <label
+                  htmlFor="longitude"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Longitude
+                </label>
+                <div className="mt-2">
+                  <input
+                    id="longitude"
+                    name="longitude"
+                    type="number"
+                    required
+                    value={formData.longitude}
+                    onChange={handleChange}
+                    className="block w-full rounded-md border-0 py-1.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-6 flex items-center justify-end gap-x-6">
           <Button
+            loading={loading}
             text="Add Propertry"
             style="btn-wide bg-primary text-white border border-primary"
           />
