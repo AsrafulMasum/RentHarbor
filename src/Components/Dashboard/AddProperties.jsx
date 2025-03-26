@@ -2,6 +2,7 @@ import { FaImage } from "react-icons/fa";
 import Button from "../Button";
 import { useState } from "react";
 import { DateRange } from "react-date-range";
+import axios from "axios";
 
 const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
@@ -18,7 +19,7 @@ function AddProperties() {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
-    propertyPhoto: null,
+    propertyPhoto: [],
     price: "",
     location: "",
     squareFeet: "",
@@ -36,34 +37,40 @@ function AddProperties() {
     zip: "",
   });
 
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState([]);
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     const { name, value, files } = e.target;
 
     if (name === "propertyPhoto") {
-      const file = files[0];
-      setFormData((prev) => ({ ...prev, [name]: file }));
+      const imgFiles = Array.from(files);
 
-      const formDataToUpload = new FormData();
-      formDataToUpload.append("image", file);
+      if (imgFiles.length > 0) {
+        try {
+          const uploadedUrls = await Promise.all(imgFiles.map(uploadToImgBB));
 
-      fetch(imgHostingApi, {
-        method: "POST",
-        body: formDataToUpload,
-        mode: "cors",
-      })
-        .then((response) => response.json())
-        .then((result) => {
-          if (result.success) {
-            setImageUrl(result.data.url);
-          } else {
-            console.error("Failed to upload image:", result);
-          }
-        })
-        .catch((error) => console.error("Error uploading image:", error));
+          setImageUrl(uploadedUrls);
+        } catch (error) {
+          console.error("Error uploading images:", error);
+        }
+      }
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const uploadToImgBB = async (file) => {
+    const formData = new FormData();
+    formData.append("image", file);
+
+    try {
+      const res = await axios.post( imgHostingApi , formData);
+      return res.data.success
+        ? res.data.data.url
+        : null;
+    } catch (error) {
+      console.error("Error uploading to ImgBB:", error);
+      return null;
     }
   };
 
