@@ -18,9 +18,14 @@ import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import AvailableDateSelector from "../Components/PropertyDeatails/AvailableDateSelector";
 import MapComponent from "../Components/PropertyDeatails/MapComponent";
+import { useEffect } from "react";
 
 function PropertyDetailsPage() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const { data } = useLoadPublicData(`/properties/${id}`);
   const property = data?.property;
@@ -147,15 +152,11 @@ function PropertyDetailsPage() {
         </div>
 
         {/* Property description */}
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          mollitia maiores quisquam, excepturi magni, repellendus ullam,
-          laudantium in numquam vero reprehenderit.
-        </p>
+        <p>{property?.description}</p>
       </div>
       <div className="mb-10 mt-20 grid grid-cols-3 gap-10">
         <div className="col-span-2">
-          <MapComponent />
+          <MapComponent latitude={property?.address?.latitude} longitude={property?.address?.longitude} />
         </div>
         <div>
           <AvailableDateSelector availableDates={property?.availableDates} />

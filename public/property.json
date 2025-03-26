@@ -1,694 +1,16 @@
 [
   {
-    "propertyId": "1",
-    "title": "Luxury Penthouse",
-    "category": "Penthouse",
-    "location": "City Center",
-    "address": {
-      "street": "1 Main St",
-      "city": "Metropolis",
-      "state": "NY",
-      "zip": "10001"
-    },
-    "pricePerDay": 500,
-    "squareFeet": 3000,
-    "bedrooms": 3,
-    "bathrooms": 3,
-    "masterRoom": 1,
-    "childRoom": 2,
-    "amenities": [
-      "Swimming Pool",
-      "Gym"
-    ],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["City View", "Modern Amenities"],
-    "host": {
-      "hostName": "Clark Kent",
-      "phone": "+1-555-123-4567",
-      "email": "clark.kent@example.com",
-      "rating": 4.9
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-10"
-    ]
-  },
-  {
-    "propertyId": "2",
-    "title": "Cozy Cottage",
-    "category": "Cottage",
-    "location": "Rural Area",
-    "address": {
-      "street": "10 Countryside Rd",
-      "city": "Green Valley",
-      "state": "CA",
-      "zip": "90210"
-    },
-    "pricePerDay": 150,
-    "squareFeet": 1200,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "Fireplace",
-      "Garden"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Secluded", "Rustic"],
-    "host": {
-      "hostName": "Diana Prince",
-      "phone": "+1-555-987-6543",
-      "email": "diana.prince@example.com",
-      "rating": 4.8
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-10",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "3",
-    "title": "Spacious Family Home",
-    "category": "House",
-    "location": "Suburban Area",
-    "address": {
-      "street": "20 Family Ln",
-      "city": "Family Town",
-      "state": "TX",
-      "zip": "75001"
-    },
-    "pricePerDay": 250,
-    "squareFeet": 2500,
-    "bedrooms": 4,
-    "bathrooms": 3,
-    "masterRoom": 2,
-    "childRoom": 2,
-    "amenities": [
-      "Backyard",
-      "Playground"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Family-Friendly", "Spacious"],
-    "host": {
-      "hostName": "Bruce Wayne",
-      "phone": "+1-555-555-5555",
-      "email": "bruce.wayne@example.com",
-      "rating": 4.6
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-15",
-      "2024-10-30"
-    ]
-  },
-  {
-    "propertyId": "4",
-    "title": "Beachfront Villa",
-    "category": "Villa",
-    "location": "Coastal City",
-    "address": {
-      "street": "5 Ocean View Dr",
-      "city": "Beach City",
-      "state": "FL",
-      "zip": "32101"
-    },
-    "pricePerDay": 800,
-    "squareFeet": 4000,
-    "bedrooms": 5,
-    "bathrooms": 4,
-    "masterRoom": 3,
-    "childRoom": 2,
-    "amenities": [
-      "Private Beach",
-      "Infinity Pool"
-    ],
-    "numberOfBalconies": 2,
-    "kitchen": 2,
-    "features": ["Luxurious", "Stunning Views"],
-    "host": {
-      "hostName": "Wade Wilson",
-      "phone": "+1-555-222-1111",
-      "email": "wade.wilson@example.com",
-      "rating": 4.7
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-10",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "5",
-    "title": "Modern Apartment",
+    "title": "Modern Urban Loft",
+    "description": "A sleek, contemporary loft in the heart of the city with stunning skyline views.",
     "category": "Apartment",
-    "location": "City Center",
+    "location": "Downtown",
     "address": {
-      "street": "15 Urban St",
+      "street": "25, Skyline Ave",
       "city": "Metro City",
       "state": "NY",
-      "zip": "10002"
-    },
-    "pricePerDay": 300,
-    "squareFeet": 1800,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "Gym",
-      "Rooftop Deck"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Modern", "Central Location"],
-    "host": {
-      "hostName": "Tony Stark",
-      "phone": "+1-555-000-0000",
-      "email": "tony.stark@example.com",
-      "rating": 4.8
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-05",
-      "2024-10-15",
-      "2024-10-30"
-    ]
-  },
-  {
-    "propertyId": "6",
-    "title": "Rustic Lodge",
-    "category": "Cabin",
-    "location": "Mountain Area",
-    "address": {
-      "street": "40 Alpine Rd",
-      "city": "Snowtown",
-      "state": "CO",
-      "zip": "80201"
-    },
-    "pricePerDay": 200,
-    "squareFeet": 2200,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "Fire Pit",
-      "Hiking Trails"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Secluded", "Nature"],
-    "host": {
-      "hostName": "Natasha Romanoff",
-      "phone": "+1-555-777-8888",
-      "email": "natasha.romanoff@example.com",
-      "rating": 4.5
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-10",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "7",
-    "title": "Charming Bungalow",
-    "category": "Bungalow",
-    "location": "Countryside",
-    "address": {
-      "street": "25 Green Rd",
-      "city": "Lush Valley",
-      "state": "CA",
-      "zip": "90003"
-    },
-    "pricePerDay": 175,
-    "squareFeet": 1400,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "Garden",
-      "BBQ Grill"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Peaceful", "Cozy"],
-    "host": {
-      "hostName": "Steve Rogers",
-      "phone": "+1-555-333-4444",
-      "email": "steve.rogers@example.com",
-      "rating": 4.4
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-15"
-    ]
-  },
-  {
-    "propertyId": "8",
-    "title": "Luxury Villa",
-    "category": "Villa",
-    "location": "Seaside",
-    "address": {
-      "street": "7 Ocean Breeze Ave",
-      "city": "Sunny Beach",
-      "state": "CA",
-      "zip": "92005"
-    },
-    "pricePerDay": 700,
-    "squareFeet": 3500,
-    "bedrooms": 4,
-    "bathrooms": 4,
-    "masterRoom": 2,
-    "childRoom": 2,
-    "amenities": [
-      "Private Pool",
-      "Ocean View"
-    ],
-    "numberOfBalconies": 3,
-    "kitchen": 1,
-    "features": ["Luxurious", "Relaxing"],
-    "host": {
-      "hostName": "Thor Odinson",
-      "phone": "+1-555-888-2222",
-      "email": "thor.odinson@example.com",
-      "rating": 4.9
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-15"
-    ]
-  },
-  {
-    "propertyId": "9",
-    "title": "Elegant Studio",
-    "category": "Studio",
-    "location": "Downtown",
-    "address": {
-      "street": "30 City Plaza",
-      "city": "Urban City",
-      "state": "NY",
-      "zip": "10003"
-    },
-    "pricePerDay": 250,
-    "squareFeet": 900,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "masterRoom": 1,
-    "childRoom": 0,
-    "amenities": [
-      "WiFi",
-      "Laundry"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Modern", "Central"],
-    "host": {
-      "hostName": "Peter Parker",
-      "phone": "+1-555-444-5555",
-      "email": "peter.parker@example.com",
-      "rating": 4.6
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-10"
-    ]
-  },
-  {
-    "propertyId": "10",
-    "title": "Sunny Apartment",
-    "category": "Apartment",
-    "location": "Uptown",
-    "address": {
-      "street": "9 Bright St",
-      "city": "Sunny City",
-      "state": "CA",
-      "zip": "90004"
-    },
-    "pricePerDay": 300,
-    "squareFeet": 1300,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "Balcony",
-      "Parking"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Bright", "Modern"],
-    "host": {
-      "hostName": "Tony Stark",
-      "phone": "+1-555-333-2222",
-      "email": "tony.stark@example.com",
-      "rating": 4.7
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-15",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "11",
-    "title": "Grand Mansion",
-    "category": "Mansion",
-    "location": "Suburban Area",
-    "address": {
-      "street": "8 Rich St",
-      "city": "Opulent City",
-      "state": "CA",
-      "zip": "90211"
-    },
-    "pricePerDay": 1200,
-    "squareFeet": 6000,
-    "bedrooms": 6,
-    "bathrooms": 5,
-    "masterRoom": 3,
-    "childRoom": 2,
-    "amenities": [
-      "Pool",
-      "Tennis Court"
-    ],
-    "numberOfBalconies": 4,
-    "kitchen": 2,
-    "features": ["Luxury", "Spacious"],
-    "host": {
-      "hostName": "Lex Luthor",
-      "phone": "+1-555-999-8888",
-      "email": "lex.luthor@example.com",
-      "rating": 4.9
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-05",
-      "2024-10-15",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "12",
-    "title": "Chic Loft",
-    "category": "Loft",
-    "location": "Art District",
-    "address": {
-      "street": "35 Artsy Blvd",
-      "city": "Art City",
-      "state": "IL",
-      "zip": "60001"
-    },
-    "pricePerDay": 350,
-    "squareFeet": 2000,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "WiFi",
-      "Gallery"
-    ],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["Stylish", "Cultural"],
-    "host": {
-      "hostName": "Natasha Romanoff",
-      "phone": "+1-555-666-4444",
-      "email": "natasha.romanoff@example.com",
-      "rating": 4.5
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-10",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "13",
-    "title": "Mountain Cabin",
-    "category": "Cabin",
-    "location": "Mountain Area",
-    "address": {
-      "street": "15 Snowy Rd",
-      "city": "Wintertown",
-      "state": "CO",
-      "zip": "80202"
-    },
-    "pricePerDay": 250,
-    "squareFeet": 1600,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "masterRoom": 1,
-    "childRoom": 2,
-    "amenities": [
-      "Fireplace",
-      "Ski Access"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Cozy", "Scenic Views"],
-    "host": {
-      "hostName": "Clint Barton",
-      "phone": "+1-555-777-9999",
-      "email": "clint.barton@example.com",
-      "rating": 4.4
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-05",
-      "2024-10-15",
-      "2024-10-25"
-    ]
-  },
-  {
-    "propertyId": "14",
-    "title": "Elegant Apartment",
-    "category": "Apartment",
-    "location": "Downtown",
-    "address": {
-      "street": "12 Elegant Rd",
-      "city": "Downtown City",
-      "state": "NY",
-      "zip": "10004"
-    },
-    "pricePerDay": 400,
-    "squareFeet": 1400,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "WiFi",
-      "Gym"
-    ],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["Chic", "Central Location"],
-    "host": {
-      "hostName": "Vision",
-      "phone": "+1-555-123-4567",
-      "email": "vision@example.com",
-      "rating": 4.6
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-10",
-      "2024-10-20"
-    ]
-  },
-  {
-    "propertyId": "15",
-    "title": "Luxury Retreat",
-    "category": "Retreat",
-    "location": "Forest Area",
-    "address": {
-      "street": "17 Peaceful Rd",
-      "city": "Calm Town",
-      "state": "OR",
-      "zip": "97001"
-    },
-    "pricePerDay": 600,
-    "squareFeet": 3500,
-    "bedrooms": 4,
-    "bathrooms": 4,
-    "masterRoom": 2,
-    "childRoom": 2,
-    "amenities": [
-      "Hot Tub",
-      "Yoga Studio"
-    ],
-    "numberOfBalconies": 2,
-    "kitchen": 1,
-    "features": ["Relaxing", "Nature"],
-    "host": {
-      "hostName": "Gamora",
-      "phone": "+1-555-555-0000",
-      "email": "gamora@example.com",
-      "rating": 4.9
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-15",
-      "2024-10-30"
-    ]
-  },
-  {
-    "propertyId": "16",
-    "title": "Historical Mansion",
-    "category": "Mansion",
-    "location": "Historic District",
-    "address": {
-      "street": "22 Old Town Rd",
-      "city": "Heritage City",
-      "state": "MA",
-      "zip": "02101"
-    },
-    "pricePerDay": 1100,
-    "squareFeet": 5500,
-    "bedrooms": 5,
-    "bathrooms": 5,
-    "masterRoom": 2,
-    "childRoom": 2,
-    "amenities": [
-      "Gardens",
-      "Library"
-    ],
-    "numberOfBalconies": 3,
-    "kitchen": 2,
-    "features": ["Classic", "Charming"],
-    "host": {
-      "hostName": "Tony Stark",
-      "phone": "+1-555-777-2222",
-      "email": "tony.stark@example.com",
-      "rating": 4.8
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-10"
-    ]
-  },
-  {
-    "propertyId": "17",
-    "title": "Charming Townhouse",
-    "category": "Townhouse",
-    "location": "Suburban Area",
-    "address": {
-      "street": "5 Cozy Lane",
-      "city": "Neighborhood",
-      "state": "CA",
-      "zip": "90212"
-    },
-    "pricePerDay": 350,
-    "squareFeet": 2000,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "masterRoom": 1,
-    "childRoom": 1,
-    "amenities": [
-      "Parking",
-      "Backyard"
-    ],
-    "numberOfBalconies": 1,
-    "kitchen": 1,
-    "features": ["Family-Friendly", "Comfortable"],
-    "host": {
-      "hostName": "Peter Parker",
-      "phone": "+1-555-222-8888",
-      "email": "peter.parker@example.com",
-      "rating": 4.5
-    },
-    "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
-    ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-10"
-    ]
-  },
-  {
-    "propertyId": "18",
-    "title": "Urban Loft",
-    "category": "Loft",
-    "location": "City Center",
-    "address": {
-      "street": "22 Urban St",
-      "city": "Metropolis",
-      "state": "NY",
-      "zip": "10005"
+      "zip": "10001",
+      "latitude": 40.7128,
+      "longitude": -74.0060
     },
     "pricePerDay": 450,
     "squareFeet": 1800,
@@ -696,107 +18,773 @@
     "bathrooms": 2,
     "masterRoom": 1,
     "childRoom": 1,
-    "amenities": [
-      "WiFi",
-      "Parking"
-    ],
+    "amenities": ["Rooftop Access", "Gym"],
     "numberOfBalconies": 2,
     "kitchen": 1,
-    "features": ["Modern", "City Views"],
+    "features": ["Modern", "Pet-Friendly"],
     "host": {
-      "hostName": "Natasha Romanoff",
-      "phone": "+1-555-333-4444",
-      "email": "natasha.romanoff@example.com",
-      "rating": 4.6
+      "hostName": "Alex",
+      "email": "alex@loft.com",
+      "phone": "1234567890",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
     },
     "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
+      "https://i.ibb.co/def456/loft1.jpg",
+      "https://i.ibb.co/ghi789/loft2.jpg"
     ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-10",
-      "2024-10-20"
-    ]
+    "createdAt": "2025-03-25T10:00:00.000+00:00",
+    "updatedAt": "2025-03-25T10:00:00.000+00:00",
+    "__v": 0
   },
   {
-    "propertyId": "19",
-    "title": "Rustic Farmhouse",
-    "category": "Farmhouse",
-    "location": "Rural Area",
+    "title": "Cozy Mountain Cabin",
+    "description": "A warm wooden cabin nestled in the mountains, perfect for a winter getaway.",
+    "category": "Cabin",
+    "location": "Mountain Range",
     "address": {
-      "street": "10 Farm Rd",
-      "city": "Farm City",
-      "state": "TX",
-      "zip": "75002"
+      "street": "5, Pine Trail",
+      "city": "Alpine",
+      "state": "CO",
+      "zip": "80420",
+      "latitude": 39.5501,
+      "longitude": -105.7821
     },
-    "pricePerDay": 300,
+    "pricePerDay": 250,
+    "squareFeet": 1200,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 2,
+    "amenities": ["Fireplace", "Hot Tub"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Rustic", "Scenic Views"],
+    "host": {
+      "hostName": "Sarah",
+      "email": "sarah@cabin.com",
+      "phone": "9876543210",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/mno345/cabin1.jpg",
+      "https://i.ibb.co/pqr678/cabin2.jpg"
+    ],
+    "createdAt": "2025-03-24T08:30:00.000+00:00",
+    "updatedAt": "2025-03-24T08:30:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Beachfront Villa",
+    "description": "A luxurious villa right on the beach with private access to the shore.",
+    "category": "Villa",
+    "location": "Coastal Area",
+    "address": {
+      "street": "15, Ocean Dr",
+      "city": "Sunset Beach",
+      "state": "CA",
+      "zip": "90210",
+      "latitude": 33.9861,
+      "longitude": -118.4625
+    },
+    "pricePerDay": 600,
+    "squareFeet": 3200,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "masterRoom": 2,
+    "childRoom": 2,
+    "amenities": ["Private Pool", "Beach Access"],
+    "numberOfBalconies": 4,
+    "kitchen": 2,
+    "features": ["Luxury", "Ocean View"],
+    "host": {
+      "hostName": "James",
+      "email": "james@villa.com",
+      "phone": "5551234567",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/vwx234/villa1.jpg",
+      "https://i.ibb.co/yza567/villa2.jpg"
+    ],
+    "createdAt": "2025-03-23T15:45:00.000+00:00",
+    "updatedAt": "2025-03-23T15:45:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Tiny House Retreat",
+    "description": "A minimalist tiny house experience with all the essentials for a peaceful stay.",
+    "category": "Tiny House",
+    "location": "Woods",
+    "address": {
+      "street": "7, Mini Lane",
+      "city": "Smallville",
+      "state": "OR",
+      "zip": "97035",
+      "latitude": 45.5231,
+      "longitude": -122.6765
+    },
+    "pricePerDay": 120,
+    "squareFeet": 400,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "masterRoom": 0,
+    "childRoom": 0,
+    "amenities": ["Compact Kitchen", "Loft Bed"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Minimalist", "Eco-Friendly"],
+    "host": {
+      "hostName": "Taylor",
+      "email": "taylor@tiny.com",
+      "phone": "4445556666",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/efg123/tiny1.jpg",
+      "https://i.ibb.co/hij456/tiny2.jpg"
+    ],
+    "createdAt": "2025-03-22T12:20:00.000+00:00",
+    "updatedAt": "2025-03-22T12:20:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Historic Downtown Apartment",
+    "description": "A charming apartment in a historic building with vintage decor and modern amenities.",
+    "category": "Apartment",
+    "location": "Old Town",
+    "address": {
+      "street": "30, Heritage St",
+      "city": "Old City",
+      "state": "MA",
+      "zip": "02108",
+      "latitude": 42.3601,
+      "longitude": -71.0589
+    },
+    "pricePerDay": 280,
+    "squareFeet": 1500,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": ["High Ceilings", "Antique Furnishings"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Historic", "Walkable Location"],
+    "host": {
+      "hostName": "Emily",
+      "email": "emily@historic.com",
+      "phone": "7778889999",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/nop345/apartment1.jpg",
+      "https://i.ibb.co/qrs678/apartment2.jpg"
+    ],
+    "createdAt": "2025-03-21T09:10:00.000+00:00",
+    "updatedAt": "2025-03-21T09:10:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Lakeside Cottage",
+    "description": "A quaint cottage by the lake with a private dock and serene surroundings.",
+    "category": "Cottage",
+    "location": "Lakefront",
+    "address": {
+      "street": "12, Lakeview Dr",
+      "city": "Laketown",
+      "state": "MN",
+      "zip": "55024",
+      "latitude": 44.9778,
+      "longitude": -93.2650
+    },
+    "pricePerDay": 220,
+    "squareFeet": 1100,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": ["Dock", "Kayaks"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Waterfront", "Peaceful"],
+    "host": {
+      "hostName": "Daniel",
+      "email": "daniel@lake.com",
+      "phone": "3334445555",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/wxy123/cottage1.jpg",
+      "https://i.ibb.co/zab456/cottage2.jpg"
+    ],
+    "createdAt": "2025-03-20T14:50:00.000+00:00",
+    "updatedAt": "2025-03-20T14:50:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Desert Oasis",
+    "description": "A unique adobe-style home in the desert with a private pool and stunning sunsets.",
+    "category": "Unique Stay",
+    "location": "Desert",
+    "address": {
+      "street": "8, Dune Rd",
+      "city": "Palm Springs",
+      "state": "CA",
+      "zip": "92262",
+      "latitude": 33.8303,
+      "longitude": -116.5453
+    },
+    "pricePerDay": 350,
+    "squareFeet": 2000,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 2,
+    "amenities": ["Private Pool", "Outdoor Shower"],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Secluded", "Modern Adobe"],
+    "host": {
+      "hostName": "Maria",
+      "email": "maria@desert.com",
+      "phone": "2223334444",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/fgh012/desert1.jpg",
+      "https://i.ibb.co/ijk345/desert2.jpg"
+    ],
+    "createdAt": "2025-03-19T11:30:00.000+00:00",
+    "updatedAt": "2025-03-19T11:30:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Treehouse Escape",
+    "description": "A magical treehouse nestled in the forest, perfect for a nature retreat.",
+    "category": "Treehouse",
+    "location": "Forest",
+    "address": {
+      "street": "3, Canopy Ln",
+      "city": "Greenwood",
+      "state": "WA",
+      "zip": "98022",
+      "latitude": 47.6062,
+      "longitude": -122.3321
+    },
+    "pricePerDay": 180,
+    "squareFeet": 800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "masterRoom": 0,
+    "childRoom": 0,
+    "amenities": ["Deck", "Hammock"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Nature Immersion", "Romantic"],
+    "host": {
+      "hostName": "Lucas",
+      "email": "lucas@treehouse.com",
+      "phone": "1112223333",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/opq789/treehouse1.jpg",
+      "https://i.ibb.co/rsv012/treehouse2.jpg"
+    ],
+    "createdAt": "2025-03-18T16:15:00.000+00:00",
+    "updatedAt": "2025-03-18T16:15:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Ski Chalet",
+    "description": "A cozy chalet just minutes from the ski slopes, with a fireplace and hot tub.",
+    "category": "Chalet",
+    "location": "Mountain Resort",
+    "address": {
+      "street": "20, Snowpeak Rd",
+      "city": "Aspen",
+      "state": "CO",
+      "zip": "81611",
+      "latitude": 39.1911,
+      "longitude": -106.8175
+    },
+    "pricePerDay": 400,
     "squareFeet": 2200,
     "bedrooms": 4,
     "bathrooms": 3,
-    "masterRoom": 2,
-    "childRoom": 2,
-    "amenities": [
-      "Fire Pit",
-      "Fenced Yard"
-    ],
-    "numberOfBalconies": 1,
+    "masterRoom": 1,
+    "childRoom": 3,
+    "amenities": ["Ski Storage", "Hot Tub"],
+    "numberOfBalconies": 3,
     "kitchen": 1,
-    "features": ["Rustic", "Family-Friendly"],
+    "features": ["Ski-In/Ski-Out", "Mountain View"],
     "host": {
-      "hostName": "Thor Odinson",
-      "phone": "+1-555-555-1111",
-      "email": "thor.odinson@example.com",
-      "rating": 4.7
+      "hostName": "Olivia",
+      "email": "olivia@chalet.com",
+      "phone": "9998887777",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
     },
     "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
+      "https://i.ibb.co/xyz456/chalet1.jpg",
+      "https://i.ibb.co/123789/chalet2.jpg"
     ],
-    "availableDates": [
-      "2024-10-05",
-      "2024-10-10",
-      "2024-10-20"
-    ]
+    "createdAt": "2025-03-17T13:40:00.000+00:00",
+    "updatedAt": "2025-03-17T13:40:00.000+00:00",
+    "__v": 0
   },
   {
-    "propertyId": "20",
-    "title": "Sleek City Apartment",
-    "category": "Apartment",
-    "location": "Urban Area",
+    "title": "Luxury Penthouse",
+    "description": "A high-end penthouse with panoramic city views and top-tier amenities.",
+    "category": "Penthouse",
+    "location": "Uptown",
     "address": {
-      "street": "5 High St",
-      "city": "Metro City",
-      "state": "NY",
-      "zip": "10006"
+      "street": "50, Sky Tower",
+      "city": "Metropolis",
+      "state": "IL",
+      "zip": "60601",
+      "latitude": 41.8781,
+      "longitude": -87.6298
     },
-    "pricePerDay": 350,
+    "pricePerDay": 800,
+    "squareFeet": 3500,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "masterRoom": 1,
+    "childRoom": 2,
+    "amenities": ["Concierge", "Infinity Pool"],
+    "numberOfBalconies": 4,
+    "kitchen": 2,
+    "features": ["Luxury", "City View"],
+    "host": {
+      "hostName": "Michael",
+      "email": "michael@penthouse.com",
+      "phone": "6667778888",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/345678/penthouse1.jpg",
+      "https://i.ibb.co/456789/penthouse2.jpg"
+    ],
+    "createdAt": "2025-03-16T18:25:00.000+00:00",
+    "updatedAt": "2025-03-16T18:25:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Vintage Airstream",
+    "description": "A retro Airstream trailer with modern comforts, parked in a scenic spot.",
+    "category": "Trailer",
+    "location": "RV Park",
+    "address": {
+      "street": "1, Retro Ln",
+      "city": "Vintageville",
+      "state": "AZ",
+      "zip": "85001",
+      "latitude": 33.4484,
+      "longitude": -112.0740
+    },
+    "pricePerDay": 150,
+    "squareFeet": 300,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "masterRoom": 0,
+    "childRoom": 0,
+    "amenities": ["Outdoor Seating", "Portable AC"],
+    "numberOfBalconies": 0,
+    "kitchen": 1,
+    "features": ["Retro", "Compact Living"],
+    "host": {
+      "hostName": "Sophia",
+      "email": "sophia@airstream.com",
+      "phone": "5556667777",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/678901/airstream1.jpg",
+      "https://i.ibb.co/789012/airstream2.jpg"
+    ],
+    "createdAt": "2025-03-15T20:10:00.000+00:00",
+    "updatedAt": "2025-03-15T20:10:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Artist’s Studio",
+    "description": "A bright and airy studio with creative vibes, perfect for artists and writers.",
+    "category": "Studio",
+    "location": "Arts District",
+    "address": {
+      "street": "22, Canvas St",
+      "city": "Creativia",
+      "state": "NM",
+      "zip": "87501",
+      "latitude": 35.6869,
+      "longitude": -105.9378
+    },
+    "pricePerDay": 130,
+    "squareFeet": 900,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "masterRoom": 0,
+    "childRoom": 0,
+    "amenities": ["Skylights", "Art Supplies"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Creative Space", "Inspirational"],
+    "host": {
+      "hostName": "Ethan",
+      "email": "ethan@studio.com",
+      "phone": "4445556666",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/901234/studio1.jpg",
+      "https://i.ibb.co/012345/studio2.jpg"
+    ],
+    "createdAt": "2025-03-14T09:55:00.000+00:00",
+    "updatedAt": "2025-03-14T09:55:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Countryside Barn",
+    "description": "A converted barn with rustic charm and modern amenities, set in rolling fields.",
+    "category": "Barn",
+    "location": "Countryside",
+    "address": {
+      "street": "40, Harvest Ln",
+      "city": "Farmland",
+      "state": "VT",
+      "zip": "05001",
+      "latitude": 43.6445,
+      "longitude": -72.2510
+    },
+    "pricePerDay": 200,
     "squareFeet": 1600,
     "bedrooms": 2,
     "bathrooms": 2,
     "masterRoom": 1,
     "childRoom": 1,
-    "amenities": [
-      "Rooftop Access",
-      "Gym"
-    ],
-    "numberOfBalconies": 1,
+    "amenities": ["Wood Stove", "Porch Swing"],
+    "numberOfBalconies": 2,
     "kitchen": 1,
-    "features": ["Sleek", "Modern"],
+    "features": ["Rustic", "Tranquil"],
     "host": {
-      "hostName": "Bruce Wayne",
-      "phone": "+1-555-999-2222",
-      "email": "bruce.wayne@example.com",
-      "rating": 4.8
+      "hostName": "Ava",
+      "email": "ava@barn.com",
+      "phone": "7778889999",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
     },
     "images": [
-      "https://i.postimg.cc/vH85pqCm/house.jpg",
-      "https://i.postimg.cc/vH85pqCm/house.jpg"
+      "https://i.ibb.co/234567/barn1.jpg",
+      "https://i.ibb.co/345678/barn2.jpg"
     ],
-    "availableDates": [
-      "2024-10-01",
-      "2024-10-05",
-      "2024-10-10"
-    ]
+    "createdAt": "2025-03-13T14:30:00.000+00:00",
+    "updatedAt": "2025-03-13T14:30:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Coastal Lighthouse",
+    "description": "A historic lighthouse converted into a unique stay with ocean views from the top.",
+    "category": "Unique Stay",
+    "location": "Cliffside",
+    "address": {
+      "street": "1, Beacon Rd",
+      "city": "Seaside",
+      "state": "ME",
+      "zip": "03901",
+      "latitude": 43.6615,
+      "longitude": -70.2553
+    },
+    "pricePerDay": 350,
+    "squareFeet": 1200,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": ["360° View", "Coastal Decor"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Historic", "Romantic"],
+    "host": {
+      "hostName": "Noah",
+      "email": "noah@lighthouse.com",
+      "phone": "2223334444",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/567890/lighthouse1.jpg",
+      "https://i.ibb.co/678901/lighthouse2.jpg"
+    ],
+    "createdAt": "2025-03-12T17:20:00.000+00:00",
+    "updatedAt": "2025-03-12T17:20:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Rustic Farmhouse",
+    "description": "A charming and spacious retreat nestled in the countryside, a farmhouse…",
+    "category": "Farmhouse",
+    "location": "Rural Area",
+    "address": {
+      "street": "10, Farm Rd",
+      "city": "Farm City",
+      "state": "TX",
+      "zip": "25002",
+      "latitude": 34.0522,
+      "longitude": 118.2437
+    },
+    "pricePerDay": 300,
+    "squareFeet": 2800,
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "masterRoom": 3,
+    "childRoom": 2,
+    "amenities": ["Fire Pit", "Fenced Yard"],
+    "numberOfBalconies": 6,
+    "kitchen": 2,
+    "features": ["Rustic", "Family-Friendly"],
+    "host": {
+      "hostName": "Price",
+      "email": "m@a.com",
+      "phone": "55454554358410",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co/nqZqXkGx/house.jpg",
+      "https://i.ibb.co/KjGM7j3Q/pexels-itsterrymag-2635038.jpg",
+      "https://i.ibb.co/KjXyN2Qv/pexels-pixabay-276724.jpg",
+      "https://i.ibb.co/XxgxTkQy/pexels-pixabay-280232.jpg"
+    ],
+    "createdAt": "2025-03-26T04:49:40.432+00:00",
+    "updatedAt": "2025-03-26T04:49:40.432+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Zen Garden Retreat",
+    "description": "A minimalist home with a Japanese-inspired garden, designed for relaxation.",
+    "category": "Unique Stay",
+    "location": "Suburban",
+    "address": {
+      "street": "5, Tranquil Ln",
+      "city": "Peaceville",
+      "state": "CA",
+      "zip": "90291",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "pricePerDay": 270,
+    "squareFeet": 1400,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 1,
+    "amenities": ["Meditation Room", "Koi Pond"],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Serene", "Minimalist"],
+    "host": {
+      "hostName": "Mia",
+      "email": "mia@zen.com",
+      "phone": "8889990000",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co.com/k6mvHf4t/contemporary-house-interior-design.jpg",
+      "https://i.ibb.co.com/BVF9dVV9/house-with-garden-design-that-says-home-is-surrounded-by-rocks.jpg",
+      "https://i.ibb.co.com/p6hzhDWD/contemporary-house-architecture.jpg"
+    ],
+    "createdAt": "2025-03-11T11:45:00.000+00:00",
+    "updatedAt": "2025-03-11T11:45:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Vineyard Villa",
+    "description": "A luxurious villa in the middle of a working vineyard, with wine tastings included.",
+    "category": "Villa",
+    "location": "Wine Country",
+    "address": {
+      "street": "100, Grapevine Rd",
+      "city": "Napa",
+      "state": "CA",
+      "zip": "94558",
+      "latitude": 38.2975,
+      "longitude": -122.2869
+    },
+    "pricePerDay": 500,
+    "squareFeet": 3000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "masterRoom": 1,
+    "childRoom": 3,
+    "amenities": ["Private Winery Tour", "Infinity Pool"],
+    "numberOfBalconies": 3,
+    "kitchen": 2,
+    "features": ["Luxury", "Vineyard Views"],
+    "host": {
+      "hostName": "Liam",
+      "email": "liam@vineyard.com",
+      "phone": "1112223333",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co.com/N221NWJc/winery-with-historic-building.jpg",
+      "https://i.ibb.co.com/BKwk1KYy/room-with-large-window-that-has-wine-rack-chair.jpg",
+      "https://i.ibb.co.com/8ggTfQhW/boutique-vineyard-hotel-in-the-south-african-winelands.jpg"
+    ],
+    "createdAt": "2025-03-10T15:10:00.000+00:00",
+    "updatedAt": "2025-03-10T15:10:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Floating Houseboat",
+    "description": "A cozy houseboat docked in a peaceful marina, with water all around.",
+    "category": "Houseboat",
+    "location": "Marina",
+    "address": {
+      "street": "Dock 7, Harbor Dr",
+      "city": "Baytown",
+      "state": "WA",
+      "zip": "98101",
+      "latitude": 47.6062,
+      "longitude": -122.3321
+    },
+    "pricePerDay": 190,
+    "squareFeet": 800,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "masterRoom": 0,
+    "childRoom": 0,
+    "amenities": ["Deck", "Kayak Included"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Unique", "Waterfront"],
+    "host": {
+      "hostName": "Charlotte",
+      "email": "charlotte@houseboat.com",
+      "phone": "3334445555",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co.com/qbTLwrJ/house-boat-with-ladder-side.jpg",
+      "https://i.ibb.co.com/7xLRd6y9/italy-tuscany-viareggio-tecnomar-velvet-83-luxury-yacht-dinette.jpg",
+      "https://i.ibb.co.com/7d61H3fW/view-sea-from-window.jpg"
+    ],
+    "createdAt": "2025-03-09T18:50:00.000+00:00",
+    "updatedAt": "2025-03-09T18:50:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Castle Stay",
+    "description": "A real medieval castle with modern comforts, fit for royalty.",
+    "category": "Castle",
+    "location": "Historic Estate",
+    "address": {
+      "street": "1, Castle Rd",
+      "city": "Kingsland",
+      "state": "NY",
+      "zip": "10001",
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    "pricePerDay": 700,
+    "squareFeet": 5000,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "masterRoom": 1,
+    "childRoom": 5,
+    "amenities": ["Great Hall", "Tower Access"],
+    "numberOfBalconies": 5,
+    "kitchen": 2,
+    "features": ["Historic", "Luxury"],
+    "host": {
+      "hostName": "William",
+      "email": "william@castle.com",
+      "phone": "9990001111",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co.com/XryKRrgr/castle-puppet-theater-park-kiev.jpg",
+      "https://i.ibb.co.com/GfZgtQYZ/sophisticated-sanctuaries.jpg",
+      "https://i.ibb.co.com/dyb8Krm/living-room-with-fireplace-fireplace.jpg",
+      "https://i.ibb.co.com/j9yjxb8Y/mara-serena-safari-lodge-maasai-mara-national-game-reserve-park-narok-county-exteriors-interiors.jpg",
+      "https://i.ibb.co.com/3ySRRTtb/empty-chairs-table-home.jpg"
+    ],
+    "createdAt": "2025-03-08T12:25:00.000+00:00",
+    "updatedAt": "2025-03-08T12:25:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Desert Dome",
+    "description": "A geodesic dome home in the desert, offering a unique glamping experience.",
+    "category": "Dome",
+    "location": "Desert",
+    "address": {
+      "street": "10, Dune Dr",
+      "city": "Joshua Tree",
+      "state": "CA",
+      "zip": "92252",
+      "latitude": 34.1347,
+      "longitude": -116.3131
+    },
+    "pricePerDay": 220,
+    "squareFeet": 1000,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "masterRoom": 0,
+    "childRoom": 0,
+    "amenities": ["Stargazing Roof", "Outdoor Shower"],
+    "numberOfBalconies": 1,
+    "kitchen": 1,
+    "features": ["Unique", "Nature-Focused"],
+    "host": {
+      "hostName": "Harper",
+      "email": "harper@dome.com",
+      "phone": "4445556666",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co.com/xSwzg8Pw/desert-dome-homes-sunset-landscape-warm-hues-architecture.jpg",
+      "https://i.ibb.co.com/ccpW9hv5/view-from-window.jpg",
+      "https://i.ibb.co.com/qMkYXYBf/there-is-bed-room-with-round-window-generative-ai.jpg"
+    ],
+    "createdAt": "2025-03-07T16:40:00.000+00:00",
+    "updatedAt": "2025-03-07T16:40:00.000+00:00",
+    "__v": 0
+  },
+  {
+    "title": "Jungle Eco-Lodge",
+    "description": "A sustainable lodge deep in the jungle, surrounded by wildlife and nature.",
+    "category": "Eco-Lodge",
+    "location": "Rainforest",
+    "address": {
+      "street": "5, Canopy Trail",
+      "city": "Greenhaven",
+      "state": "HI",
+      "zip": "96720",
+      "latitude": 19.8968,
+      "longitude": -155.5828
+    },
+    "pricePerDay": 300,
+    "squareFeet": 1800,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "masterRoom": 1,
+    "childRoom": 2,
+    "amenities": ["Solar Power", "Treehouse Deck"],
+    "numberOfBalconies": 2,
+    "kitchen": 1,
+    "features": ["Eco-Friendly", "Adventure"],
+    "host": {
+      "hostName": "Evelyn",
+      "email": "evelyn@jungle.com",
+      "phone": "7778889999",
+      "photoURL": "https://i.ibb.co.com/4dvL0hh/user.jpg"
+    },
+    "images": [
+      "https://i.ibb.co.com/ZbGnhNn/plants-trees-by-house.jpg",
+      "https://i.ibb.co.com/rKKFLFTf/empty-chairs-table-against-trees-forest.jpg",
+      "https://i.ibb.co.com/DDkG1R9b/high-angle-view-plants-trees-forest.jpg",
+      "https://i.ibb.co.com/k6HySkV5/plants-growing-outside-house-forest.jpg"
+    ],
+    "createdAt": "2025-03-06T10:15:00.000+00:00",
+    "updatedAt": "2025-03-06T10:15:00.000+00:00",
+    "__v": 0
   }
 ]

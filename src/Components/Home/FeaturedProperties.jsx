@@ -49,11 +49,11 @@ const FeaturedProperties = () => {
           {properties?.map((property) => (
             <SwiperSlide
               key={property?._id}
-              className="overflow-hidden pb-10"
+              className="overflow-hidden pb-10 rounded-lg"
             >
               <Link to={`properties/${property?._id}`} className="duration-700 group overflow-hidden h-96">
                 <img
-                  className="group-hover:scale-105 duration-700"
+                  className="group-hover:scale-105 duration-700 h-72 object-cover"
                   src={property?.images?.[0]}
                   alt="Image"
                 />

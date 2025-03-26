@@ -5,23 +5,20 @@ import "react-date-range/dist/theme/default.css";
 import PropTypes from "prop-types";
 import Button from "../Button";
 
-const AvailableDateSelector = ({ availableDates = [] }) => {
+const AvailableDateSelector = ({ availableDates }) => {
   console.log("Available Dates:", availableDates);
-  const dates = ["2025-10-01", "2025-10-02", "2025-10-03"];
+
+  // Ensure availableDates has valid start and end dates
+  const minDate = availableDates?.startDate ? new Date(availableDates.startDate) : new Date();
+  const maxDate = availableDates?.endDate ? new Date(availableDates.endDate) : null;
 
   const [selectedDates, setSelectedDates] = useState([
     {
-      startDate: new Date(),
-      endDate: new Date(),
+      startDate: minDate,
+      endDate: minDate,
       key: "selection",
     },
   ]);
-
-  // Function to disable unavailable dates
-  const isDateDisabled = (date) => {
-    const dateString = date.toISOString().split("T")[0]; // Format YYYY-MM-DD
-    return !(Array.isArray(dates) && dates.includes(dateString));
-  };
 
   return (
     <div className="flex flex-col items-center -mt-12">
@@ -30,8 +27,8 @@ const AvailableDateSelector = ({ availableDates = [] }) => {
         rangeColors={["#FD6C23"]}
         ranges={selectedDates}
         onChange={(item) => setSelectedDates([item.selection])}
-        minDate={new Date()} // Prevent past date selection
-        disabledDay={isDateDisabled} // Disable unavailable dates
+        minDate={minDate} // Set minimum selectable date
+        maxDate={maxDate} // Set maximum selectable date
       />
       <Button
         text="Book Now"
@@ -45,5 +42,8 @@ export default AvailableDateSelector;
 
 // ✅ Prop Validation
 AvailableDateSelector.propTypes = {
-  availableDates: PropTypes.arrayOf(PropTypes.string).isRequired,
+  availableDates: PropTypes.shape({
+    startDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
+    endDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
+  }).isRequired,
 };
