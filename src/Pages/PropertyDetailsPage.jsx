@@ -32,7 +32,7 @@ function PropertyDetailsPage() {
   console.log(property);
 
   return (
-    <div className="max-w-screen-xl mx-4 lg:mx-auto mt-32">
+    <div className="max-w-screen-xl mx-4 lg:mx-auto mt-40">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-5">
         {/* Image Slider */}
         <div className="lg:col-span-2">

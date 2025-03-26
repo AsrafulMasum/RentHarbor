@@ -10,7 +10,7 @@
       "state": "NY",
       "zip": "10001",
       "latitude": 40.7128,
-      "longitude": -74.0060
+      "longitude": -74.006
     },
     "pricePerDay": 450,
     "squareFeet": 1800,
@@ -195,7 +195,7 @@
       "state": "MN",
       "zip": "55024",
       "latitude": 44.9778,
-      "longitude": -93.2650
+      "longitude": -93.265
     },
     "pricePerDay": 220,
     "squareFeet": 1100,
@@ -380,7 +380,7 @@
       "state": "AZ",
       "zip": "85001",
       "latitude": 33.4484,
-      "longitude": -112.0740
+      "longitude": -112.074
     },
     "pricePerDay": 150,
     "squareFeet": 300,
@@ -454,7 +454,7 @@
       "state": "VT",
       "zip": "05001",
       "latitude": 43.6445,
-      "longitude": -72.2510
+      "longitude": -72.251
     },
     "pricePerDay": 200,
     "squareFeet": 1600,
@@ -552,6 +552,11 @@
       "https://i.ibb.co/KjXyN2Qv/pexels-pixabay-276724.jpg",
       "https://i.ibb.co/XxgxTkQy/pexels-pixabay-280232.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-26T04:49:40.432+00:00",
     "updatedAt": "2025-03-26T04:49:40.432+00:00",
     "__v": 0
@@ -590,6 +595,11 @@
       "https://i.ibb.co.com/BVF9dVV9/house-with-garden-design-that-says-home-is-surrounded-by-rocks.jpg",
       "https://i.ibb.co.com/p6hzhDWD/contemporary-house-architecture.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-11T11:45:00.000+00:00",
     "updatedAt": "2025-03-11T11:45:00.000+00:00",
     "__v": 0
@@ -628,6 +638,11 @@
       "https://i.ibb.co.com/BKwk1KYy/room-with-large-window-that-has-wine-rack-chair.jpg",
       "https://i.ibb.co.com/8ggTfQhW/boutique-vineyard-hotel-in-the-south-african-winelands.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-10T15:10:00.000+00:00",
     "updatedAt": "2025-03-10T15:10:00.000+00:00",
     "__v": 0
@@ -666,6 +681,11 @@
       "https://i.ibb.co.com/7xLRd6y9/italy-tuscany-viareggio-tecnomar-velvet-83-luxury-yacht-dinette.jpg",
       "https://i.ibb.co.com/7d61H3fW/view-sea-from-window.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-09T18:50:00.000+00:00",
     "updatedAt": "2025-03-09T18:50:00.000+00:00",
     "__v": 0
@@ -681,7 +701,7 @@
       "state": "NY",
       "zip": "10001",
       "latitude": 40.7128,
-      "longitude": -74.0060
+      "longitude": -74.006
     },
     "pricePerDay": 700,
     "squareFeet": 5000,
@@ -706,6 +726,11 @@
       "https://i.ibb.co.com/j9yjxb8Y/mara-serena-safari-lodge-maasai-mara-national-game-reserve-park-narok-county-exteriors-interiors.jpg",
       "https://i.ibb.co.com/3ySRRTtb/empty-chairs-table-home.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-08T12:25:00.000+00:00",
     "updatedAt": "2025-03-08T12:25:00.000+00:00",
     "__v": 0
@@ -744,6 +769,11 @@
       "https://i.ibb.co.com/ccpW9hv5/view-from-window.jpg",
       "https://i.ibb.co.com/qMkYXYBf/there-is-bed-room-with-round-window-generative-ai.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-07T16:40:00.000+00:00",
     "updatedAt": "2025-03-07T16:40:00.000+00:00",
     "__v": 0
@@ -783,6 +813,11 @@
       "https://i.ibb.co.com/DDkG1R9b/high-angle-view-plants-trees-forest.jpg",
       "https://i.ibb.co.com/k6HySkV5/plants-growing-outside-house-forest.jpg"
     ],
+    "availableDates": {
+      "startDate": "2025-03-26T18:00:00.000Z",
+      "endDate": "2025-04-29T18:00:00.000Z",
+      "key": "selection"
+    },
     "createdAt": "2025-03-06T10:15:00.000+00:00",
     "updatedAt": "2025-03-06T10:15:00.000+00:00",
     "__v": 0
