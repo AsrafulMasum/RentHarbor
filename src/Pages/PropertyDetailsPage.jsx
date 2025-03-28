@@ -15,7 +15,7 @@ import ReactStars from "react-rating-stars-component";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import AvailableDateSelector from "../Components/PropertyDeatails/AvailableDateSelector";
 import MapComponent from "../Components/PropertyDeatails/MapComponent";
 import { useEffect } from "react";
@@ -43,9 +43,13 @@ function PropertyDetailsPage() {
               }}
               slidesPerView={"auto"}
               loop={true}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               navigation={{
                 clickable: true,
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
               }}
               className="rounded-lg m-0"
             >
