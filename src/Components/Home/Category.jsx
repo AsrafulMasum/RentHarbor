@@ -48,7 +48,7 @@ const Category = () => {
 
         <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
           <HiBuildingOffice2 className="text-5xl text-primary group-hover:scale-125 duration-500" />
-          <h4 className="text-xl font-bold">Home Office</h4>
+          <h4 className="text-xl font-bold">Office</h4>
           <p className="my-4">
             Elevate your business with premium office rentals. Tailored
             environments, strategic locations, and premium amenities await.

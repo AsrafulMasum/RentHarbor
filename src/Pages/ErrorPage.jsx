@@ -17,14 +17,14 @@ const ErrorPage = () => {
   return (
     <div>
       <div className="flex justify-center items-center px-5">
-        <div className="min-h-screen text-center flex flex-col justify-center items-center gap-4">
+        <div className="min-h-screen max-h-screen text-center flex flex-col justify-center items-center gap-4">
           <Lottie options={defaultOptions}></Lottie>
+
           <h2 className="text-4xl font-bold">
             <span className="text-primary">{error.status}</span> ||{" "}
             <span className="text-primary">Page {error.statusText}</span>
           </h2>
           <p className="text-2xl font-medium">{error.data}</p>
-
           <Link to={"/"}>
             <Button
               text="Go Home"

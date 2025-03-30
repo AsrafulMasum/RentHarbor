@@ -95,7 +95,7 @@ const Navbar = ({ children }) => {
               )}
             </div>
             {
-              user && 
+              user && user?.role ==="Guest" &&
               <div className="ml-4 pl-4 border-l hidden md:block">
                 <Button
                   text="Become A Host"

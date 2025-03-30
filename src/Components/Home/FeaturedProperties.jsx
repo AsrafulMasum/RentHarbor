@@ -51,7 +51,7 @@ const FeaturedProperties = () => {
               key={property?._id}
               className="overflow-hidden pb-10 rounded-lg"
             >
-              <Link to={`properties/${property?._id}`} className="duration-700 group overflow-hidden h-96">
+              <Link to={`/properties/${property?._id}`} className="duration-700 group overflow-hidden h-96">
                 <img
                   className="group-hover:scale-105 duration-700 h-72 object-cover"
                   src={property?.images?.[0]}
@@ -74,9 +74,6 @@ const FeaturedProperties = () => {
 
                   <p className="text-secondary">{property?.features?.join(", ")}</p>
                 </div>
-                {/* <span className="text-white w-14 bg-secondary px-2 py-1 rounded-full font-semibold absolute top-56 right-10">
-                  $ 117
-                </span> */}
               </Link>
             </SwiperSlide>
           ))}
