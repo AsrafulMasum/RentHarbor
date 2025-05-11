@@ -28,7 +28,7 @@ const ErrorPage = () => {
           <Link to={"/"}>
             <Button
               text="Go Home"
-              style="bg-secondary btn-wide text-white hover:text-primary"
+              style="bg-primary btn-wide text-white hover:text-primary"
             />
           </Link>
         </div>

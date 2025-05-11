@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 
 function MyListings() {
   const { user } = useContext(AuthContext);
-  console.log(user);
+
   const { data } = useLoadSecureData(
     `/properties/hostProperties/${user?.email}`
   );
 
   return (
-    <div className="px-10 py-10 grid grid-cols-2 gap-10 max-h-screen overflow-y-scroll">
+    <div className="px-10 py-10 grid grid-cols-3 gap-10 max-h-screen overflow-y-scroll">
       {data?.result?.map((property) => (
         <Link
           key={property?._id}
           to={`/properties/${property?._id}`}
-          className="duration-700 group overflow-hidden h-96 rounded-lg shadow-md hover:shadow-xl"
+          className="duration-700 group overflow-hidden min-h-[430px] w-full rounded-lg shadow-md"
         >
           <img
             className="group-hover:scale-105 duration-700 h-72 object-cover w-full"
