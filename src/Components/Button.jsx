@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./button.css";
 import { TbFidgetSpinner } from "react-icons/tb";
 
-const Button = ({ text, style, loading }) => {
+const Button = ({ text, style, loading, fn }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
@@ -19,6 +19,7 @@ const Button = ({ text, style, loading }) => {
   return (
     <>
       <button
+        onClick={fn}
         onMouseMove={handleMouseMove}
         style={styles}
         type="submit"
@@ -40,6 +41,7 @@ Button.propTypes = {
   text: PropTypes.string,
   style: PropTypes.string,
   loading: PropTypes.bool,
+  fn: PropTypes.func,
 };
 
 export default Button;

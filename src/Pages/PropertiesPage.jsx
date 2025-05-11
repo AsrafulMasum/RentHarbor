@@ -2,11 +2,7 @@ import { Link } from "react-router-dom";
 import useLoadPublicData from "../Hooks/useLoadPublicData";
 
 function PropertiesPage() {
-  const {
-    data: properties,
-    refetch,
-    isLoading,
-  } = useLoadPublicData("/properties/allProperties");
+  const { data: properties } = useLoadPublicData("/properties/allProperties");
   console.log(properties);
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto mt-40 mb-20">

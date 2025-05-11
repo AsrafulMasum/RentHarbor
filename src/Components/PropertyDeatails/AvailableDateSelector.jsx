@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import PropTypes from "prop-types";
-import Button from "../Button";
 
-const AvailableDateSelector = ({ availableDates }) => {
-  console.log("Available Dates:", availableDates);
+const AvailableDateSelector = ({ availableDates, setDates }) => {
+  // console.log("Available Dates:", availableDates);
 
   // Ensure availableDates has valid start and end dates
-  const minDate = availableDates?.startDate ? new Date(availableDates.startDate) : new Date();
-  const maxDate = availableDates?.endDate ? new Date(availableDates.endDate) : null;
+  const minDate = availableDates?.startDate
+    ? new Date(availableDates.startDate)
+    : new Date();
+  const maxDate = availableDates?.endDate
+    ? new Date(availableDates.endDate)
+    : null;
 
   const [selectedDates, setSelectedDates] = useState([
     {
@@ -19,6 +22,10 @@ const AvailableDateSelector = ({ availableDates }) => {
       key: "selection",
     },
   ]);
+
+  useEffect(() => {
+    setDates(selectedDates);
+  }, [selectedDates, setDates]);
 
   return (
     <div className="flex flex-col items-center -mt-12">
@@ -30,10 +37,6 @@ const AvailableDateSelector = ({ availableDates }) => {
         minDate={minDate} // Set minimum selectable date
         maxDate={maxDate} // Set maximum selectable date
       />
-      <Button
-        text="Book Now"
-        style="btn-wide bg-primary text-white border border-primary"
-      />
     </div>
   );
 };
@@ -42,8 +45,6 @@ export default AvailableDateSelector;
 
 // ✅ Prop Validation
 AvailableDateSelector.propTypes = {
-  availableDates: PropTypes.shape({
-    startDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
-    endDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
-  }).isRequired,
+  availableDates: PropTypes.object,
+  setDates: PropTypes.func,
 };

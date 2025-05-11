@@ -18,10 +18,16 @@ import "swiper/css/pagination";
 import { Navigation, Autoplay } from "swiper/modules";
 import AvailableDateSelector from "../Components/PropertyDeatails/AvailableDateSelector";
 import MapComponent from "../Components/PropertyDeatails/MapComponent";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Button from "../Components/Button";
+import { Modal } from "antd";
 
 function PropertyDetailsPage() {
   const { id } = useParams();
+  const [dates, setDates] = useState({});
+  const [days, setDays] = useState({});
+  const [totalCost, setTotalCost] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,7 +35,19 @@ function PropertyDetailsPage() {
 
   const { data } = useLoadPublicData(`/properties/${id}`);
   const property = data?.property;
-  console.log(property);
+
+  const handleBook = () => {
+    const bookingTime = dates?.[0]?.endDate - dates?.[0]?.startDate;
+    const bookingDays = Math.floor(bookingTime / (1000 * 60 * 60 * 24)) + 1;
+    setDays(bookingDays);
+    const totalCost = bookingDays * property?.pricePerDay;
+    setTotalCost(totalCost);
+    setShowModal(true);
+  };
+
+  const handleConfirm = () => {
+    console.log("first");
+  };
 
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto mt-40">
@@ -158,14 +176,53 @@ function PropertyDetailsPage() {
         {/* Property description */}
         <p>{property?.description}</p>
       </div>
-      <div className="mb-10 mt-20 grid grid-cols-3 gap-10">
+
+      <div className="mb-10 mt-20 grid grid-cols-3 gap-x-10">
         <div className="col-span-2">
-          <MapComponent latitude={property?.address?.latitude} longitude={property?.address?.longitude} />
+          <MapComponent
+            latitude={property?.address?.latitude}
+            longitude={property?.address?.longitude}
+          />
         </div>
+
         <div>
-          <AvailableDateSelector availableDates={property?.availableDates} />
+          <AvailableDateSelector
+            setDates={setDates}
+            availableDates={property?.availableDates}
+          />
+        </div>
+        <div className="flex justify-end col-span-3 mr-10">
+          <Button
+            fn={handleBook}
+            text="Book Now"
+            style="btn-wide bg-primary text-white border border-primary w-80"
+          />
         </div>
       </div>
+      <Modal
+        centered
+        open={showModal}
+        onCancel={() => setShowModal(false)}
+        width={400}
+        footer={false}
+      >
+        <div className="p-4">
+          <h4 className="text-primary text-2xl font-semibold">
+            {property?.title}
+          </h4>
+          <p className="py-2 font-medium">
+            Price per night: ${property?.pricePerDay}
+          </p>
+          <p className="pb-2 font-medium">Total night to stay: {days}</p>
+          <hr />
+          <p className="pt-2 pb-4 font-medium">Total Cost: ${totalCost}</p>
+          <Button
+            fn={handleConfirm}
+            text="Confirm"
+            style="btn-wide bg-primary text-white border border-primary w-full"
+          />
+        </div>
+      </Modal>
     </div>
   );
 }
