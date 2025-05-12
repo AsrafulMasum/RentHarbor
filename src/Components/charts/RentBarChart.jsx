@@ -41,7 +41,7 @@ const yearlyUserStatsData = {
   ],
 };
 
-const UsersBarChart = () => {
+const RentBarChart = () => {
   const [selectedYear, setSelectedYear] = useState("2024");
   const userStatsData = yearlyUserStatsData[selectedYear];
 
@@ -95,4 +95,4 @@ const UsersBarChart = () => {
   );
 };
 
-export default UsersBarChart;
+export default RentBarChart;
