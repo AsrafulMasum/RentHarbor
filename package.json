@@ -29,6 +29,7 @@
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.21.3",
     "react-toastify": "^10.0.5",
+    "recharts": "^2.15.3",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.10.8",
     "swiper": "^11.0.6"
