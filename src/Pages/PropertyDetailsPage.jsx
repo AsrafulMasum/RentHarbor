@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import useLoadPublicData from "../Hooks/useLoadPublicData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   MdOutlineBedroomParent,
@@ -21,6 +20,7 @@ import MapComponent from "../Components/PropertyDeatails/MapComponent";
 import { useEffect, useState } from "react";
 import Button from "../Components/Button";
 import { Modal } from "antd";
+import useLoadSecureData from "../Hooks/useLoadSecureData";
 
 function PropertyDetailsPage() {
   const { id } = useParams();
@@ -33,7 +33,7 @@ function PropertyDetailsPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { data } = useLoadPublicData(`/properties/${id}`);
+  const { data } = useLoadSecureData(`/properties/${id}`);
   const property = data?.property;
 
   const handleBook = () => {

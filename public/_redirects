@@ -1,0 +1,1 @@
+/api/*   http://rent-harbor-server.vercel.app/:splat   200
