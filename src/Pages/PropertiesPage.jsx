@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useLoadPublicData from "../Hooks/useLoadPublicData";
 import Title from "../Components/Title";
 
 function PropertiesPage() {
-  const { data: properties } = useLoadPublicData("/properties/allProperties");
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const search = params.get("search") || "";
+  const { data: properties } = useLoadPublicData(
+    `/properties/allProperties?search=${encodeURIComponent(search)}`
+  );
 
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto mt-40 mb-20">
       <Title
         title="All Properties"
-        subTitle="Explore Our Properties for Rent as your needs" 
+        subTitle="Explore Our Properties for Rent as your needs"
         desc="Discover all available properties for rent in one place. Browse through a wide range of homes with detailed information, images, and pricing to find the perfect match for your needs."
       />
 
