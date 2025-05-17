@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
 import useLoadPublicData from "../Hooks/useLoadPublicData";
+import Title from "../Components/Title";
 
 function PropertiesPage() {
   const { data: properties } = useLoadPublicData("/properties/allProperties");
-  console.log(properties);
+
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto mt-40 mb-20">
-      <div className="grid grid-cols-3 gap-10">
+      <Title
+        title="All Properties"
+        subTitle="Explore Our Properties for Rent as your needs" 
+        desc="Discover all available properties for rent in one place. Browse through a wide range of homes with detailed information, images, and pricing to find the perfect match for your needs."
+      />
+
+      <div className="grid grid-cols-3 gap-10 mt-10">
         {properties?.properties?.map((property) => (
           <Link
             key={property?._id}
             to={`/properties/${property?._id}`}
-            className="duration-700 group overflow-hidden min-h-96 shadow-md"
+            className="duration-700 group overflow-hidden min-h-96 shadow-md rounded-lg"
           >
             <img
               className="group-hover:scale-105 duration-700 h-72 object-cover"

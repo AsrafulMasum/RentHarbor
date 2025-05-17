@@ -23,7 +23,7 @@ const ScrollToTopButton = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-10 right-10 bg-primary text-secondary text-3xl px-3 py-4 rounded-full z-50 transition-transform duration-100 
+        className={`fixed bottom-10 right-10 bg-primary text-white text-3xl px-3 py-4 rounded-full z-50 transition-transform duration-100 
           ${isHovered ? "animate-bounce" : ""}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
