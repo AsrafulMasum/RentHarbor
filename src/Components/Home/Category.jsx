@@ -3,8 +3,17 @@ import { MdApartment } from "react-icons/md";
 import { FaWarehouse } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import Title from "../Title";
+import { useNavigate } from "react-router-dom";
 
 const Category = () => {
+  const navigate = useNavigate();
+
+  const handleSearch = (category) => {
+    if (category) {
+      navigate(`/allProperties?search=${encodeURIComponent(category)}`);
+    }
+  };
+
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto my-10">
       <Title
@@ -21,7 +30,12 @@ const Category = () => {
             buy, each offering unique features and amenities to suit your needs.
             Find your ideal home today.
           </p>
-          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
+          <button
+            onClick={() => handleSearch("house")}
+            className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm"
+          >
+            Check it
+          </button>
         </div>
 
         <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
@@ -32,7 +46,12 @@ const Category = () => {
             apartments for rent or buy, featuring modern amenities and prime
             locations to match your lifestyle.
           </p>
-          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
+          <button
+            onClick={() => handleSearch("apartment")}
+            className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm"
+          >
+            Check it
+          </button>
         </div>
 
         <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
@@ -43,7 +62,12 @@ const Category = () => {
             offering ample storage and versatile layouts to accommodate your
             growing needs.
           </p>
-          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
+          <button
+            onClick={() => handleSearch("warehouse")}
+            className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm"
+          >
+            Check it
+          </button>
         </div>
 
         <div className="p-10 border text-center flex flex-col justify-center items-center gap-4 shadow-md hover:shadow-xl duration-700 group h-[450px] hover:rounded-bl-[80px] hover:rounded-tr-[80px]">
@@ -53,7 +77,12 @@ const Category = () => {
             Elevate your business with premium office rentals. Tailored
             environments, strategic locations, and premium amenities await.
           </p>
-          <button className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm">Check it</button>
+          <button
+            onClick={() => handleSearch("office")}
+            className="btn px-4 bg-transparent cursor-pointer rounded-lg font-semibold border group-hover:text-primary duration-500 btn-sm"
+          >
+            Check it
+          </button>
         </div>
       </div>
     </div>
