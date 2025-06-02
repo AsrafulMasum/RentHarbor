@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import useLoadPublicData from "../../Hooks/useLoadPublicData";
 
 const FeaturedProperties = () => {
@@ -26,11 +26,16 @@ const FeaturedProperties = () => {
           }}
           slidesPerView={1}
           spaceBetween={30}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
+          loop={true}
           pagination={{
             clickable: true,
             dynamicBullets: true,
           }}
+          autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -62,7 +67,7 @@ const FeaturedProperties = () => {
                     <h4 className="text-xl font-semibold text-primary">
                       {property?.title}
                     </h4>
-                    <p className="text-primary font-semibold">
+                    <p className="text-primary font-semibold text-nowrap">
                       $ {property?.pricePerDay}
                     </p>
                   </div>

@@ -48,8 +48,8 @@ function PropertyDetailsPage() {
   };
 
   const handleEdit = () => {
-    console.log("first")
-  }
+    console.log("first");
+  };
 
   const handleConfirm = () => {
     console.log("first");
@@ -99,12 +99,12 @@ function PropertyDetailsPage() {
             {property?.address?.street}, {property?.address?.state},{" "}
             {property?.address?.city} - {property?.address?.zip}
           </p>
-          <p className="text-lg mt-2 text-secondary">
+          <p className="text-lg mt-1 text-secondary">
             {property?.location}{" "}
             <span className="text-sm">({property?.category})</span>
           </p>
 
-          <div className="grid grid-cols-2 justify-between gap-4">
+          <div className="grid grid-cols-2 justify-between gap-4 mt-2">
             <div className="flex items-center gap-5 mt-5 group relative">
               <LuBedDouble
                 size={32}
@@ -172,7 +172,7 @@ function PropertyDetailsPage() {
               </p>
             </div>
           </div>
-          <p className="mt-5 text-lg font-semibold text-secondary">
+          <p className="mt-8 text-lg font-semibold text-secondary">
             {property?.amenities?.join(", ")}, {property?.features?.join(", ")}.
           </p>
         </div>
@@ -184,7 +184,7 @@ function PropertyDetailsPage() {
             <h4 className="text-lg font-medium">{property?.host?.hostName}</h4>
             <p>{property?.host?.email}</p>
           </div>
-          <div className="mx-5 flex flex-col items-end">
+          <div className="flex flex-col items-end">
             <ReactStars
               count={5}
               value={4.9}
@@ -194,9 +194,9 @@ function PropertyDetailsPage() {
               size={24}
               activeColor="#FD6C23"
             />
-            <div className="flex items-center gap-4">
-              <IoCallOutline className="text-3xl bg-primary p-1 rounded-lg text-white" />
+            <div className="flex items-center gap-1">
               <p>{property?.host?.phone}</p>
+              <IoCallOutline className="text-3xl p-1 rounded-lg text-primary" />
             </div>
           </div>
         </div>
