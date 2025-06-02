@@ -45,7 +45,7 @@ function PropertiesPage() {
                   <h4 className="text-xl font-semibold text-primary">
                     {property?.title}
                   </h4>
-                  <p className="text-primary font-semibold">
+                  <p className="text-primary font-semibold text-nowrap">
                     $ {property?.pricePerDay}
                   </p>
                 </div>

@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
-  MdOutlineBedroomParent,
-  MdOutlineBedroomChild,
-  MdOutlineBathroom,
-  MdBalcony,
-} from "react-icons/md";
-import { FaKitchenSet } from "react-icons/fa6";
-import { LuScale3D } from "react-icons/lu";
+  LuBedDouble,
+  LuBedSingle,
+  LuScale3D,
+  LuShowerHead,
+  LuUtensilsCrossed,
+} from "react-icons/lu";
 import { IoCallOutline } from "react-icons/io5";
+import balcony from "../assets/balcony.png";
 import ReactStars from "react-rating-stars-component";
 
 // Import Swiper styles
@@ -17,12 +17,14 @@ import "swiper/css/pagination";
 import { Navigation, Autoplay } from "swiper/modules";
 import AvailableDateSelector from "../Components/PropertyDeatails/AvailableDateSelector";
 import MapComponent from "../Components/PropertyDeatails/MapComponent";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "../Components/Button";
 import { Modal } from "antd";
 import useLoadSecureData from "../Hooks/useLoadSecureData";
+import { AuthContext } from "../Provider/AuthProvider";
 
 function PropertyDetailsPage() {
+  const { user } = useContext(AuthContext);
   const { id } = useParams();
   const [dates, setDates] = useState({});
   const [days, setDays] = useState({});
@@ -44,6 +46,10 @@ function PropertyDetailsPage() {
     setTotalCost(totalCost);
     setShowModal(true);
   };
+
+  const handleEdit = () => {
+    console.log("first")
+  }
 
   const handleConfirm = () => {
     console.log("first");
@@ -99,44 +105,66 @@ function PropertyDetailsPage() {
           </p>
 
           <div className="grid grid-cols-2 justify-between gap-4">
-            <div className="flex items-center gap-10 mt-5 group relative">
-              <MdOutlineBedroomParent className="text-4xl text-secondary" />
-              <p className="text-lg font-bold">{property?.masterRoom}</p>
+            <div className="flex items-center gap-5 mt-5 group relative">
+              <LuBedDouble
+                size={32}
+                strokeWidth={1.5}
+                className="text-secondary"
+              />
+              <p className="text-lg font-medium">{property?.masterRoom}</p>
               <p className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
                 Master_Room
               </p>
             </div>
-            <div className="flex items-center gap-10 mt-5 group relative">
-              <MdOutlineBedroomChild className="text-4xl text-secondary" />
-              <p className="text-lg font-bold">{property?.childRoom}</p>
+            <div className="flex items-center gap-5 mt-5 group relative">
+              <LuBedSingle
+                size={32}
+                strokeWidth={1.5}
+                className="text-secondary"
+              />
+              <p className="text-lg font-medium">{property?.childRoom}</p>
               <p className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
                 Child_Room
               </p>
             </div>
-            <div className="flex items-center gap-10 mt-5 group relative">
-              <FaKitchenSet className="text-4xl text-secondary" />
-              <p className="text-lg font-bold">{property?.kitchen}</p>
+            <div className="flex items-center gap-5 mt-5 group relative">
+              <LuUtensilsCrossed
+                size={32}
+                strokeWidth={1.5}
+                className="text-secondary"
+              />
+              <p className="text-lg font-medium">{property?.kitchen}</p>
               <p className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
                 Kitchen
               </p>
             </div>
-            <div className="flex items-center gap-10 mt-5 group relative">
-              <MdOutlineBathroom className="text-4xl text-secondary" />
-              <p className="text-lg font-bold">{property?.bathrooms}</p>
+            <div className="flex items-center gap-5 mt-5 group relative">
+              <LuShowerHead
+                size={40}
+                strokeWidth={1.3}
+                className="text-secondary"
+              />
+              <p className="text-lg font-medium">{property?.bathrooms}</p>
               <p className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
                 Bathrooms
               </p>
             </div>
-            <div className="flex items-center gap-10 mt-5 group relative">
-              <MdBalcony className="text-4xl text-secondary" />
-              <p className="text-lg font-bold">{property?.numberOfBalconies}</p>
+            <div className="flex items-center gap-5 mt-5 group relative pl-1">
+              <img className="w-7 h-7" src={balcony} alt="" />
+              <p className="text-lg font-medium">
+                {property?.numberOfBalconies}
+              </p>
               <p className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
                 Balconies
               </p>
             </div>
-            <div className="flex items-center gap-10 mt-5 group relative">
-              <LuScale3D className="text-4xl text-secondary" />
-              <p className="text-lg font-bold">
+            <div className="flex items-center gap-5 mt-5 group relative">
+              <LuScale3D
+                size={32}
+                strokeWidth={1.5}
+                className=" text-secondary"
+              />
+              <p className="text-lg font-medium">
                 {property?.squareFeet} m<sup>2</sup>
               </p>
               <p className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
@@ -144,7 +172,7 @@ function PropertyDetailsPage() {
               </p>
             </div>
           </div>
-          <p className="mt-5 text-lg font-bold text-secondary">
+          <p className="mt-5 text-lg font-semibold text-secondary">
             {property?.amenities?.join(", ")}, {property?.features?.join(", ")}.
           </p>
         </div>
@@ -192,13 +220,22 @@ function PropertyDetailsPage() {
           />
         </div>
         <div className="flex justify-end col-span-3 mr-10">
-          <Button
-            fn={handleBook}
-            text="Book Now"
-            style="btn-wide bg-primary text-white border border-primary w-80"
-          />
+          {property?.host?.email === user?.email ? (
+            <Button
+              fn={handleEdit}
+              text="Edit Now"
+              style="btn-wide bg-primary text-white border border-primary w-80"
+            />
+          ) : (
+            <Button
+              fn={handleBook}
+              text="Book Now"
+              style="btn-wide bg-primary text-white border border-primary w-80"
+            />
+          )}
         </div>
       </div>
+
       <Modal
         centered
         open={showModal}
