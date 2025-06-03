@@ -17,8 +17,8 @@ function UserDashboard() {
       icon: <BsGraphUpArrow className="text-3xl text-primary" />,
     },
     {
-      title: "Total Rent",
-      amount: "88K",
+      title: "Total Properties",
+      amount: "18",
       icon: <IoHomeOutline className="text-3xl text-primary" />,
     },
     {
