@@ -14,8 +14,14 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    await loginUser(email, password, setLoading);
-    navigate("/");
+    try {
+      await loginUser(email, password);
+      navigate("/");
+    } catch (error) {
+      console.error("Login failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -49,15 +55,22 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <Button text="Login" style="w-full mt-4 bg-primary font-bold text-base text-white border-0" loading={loading} />
+          <Button
+            text="Login"
+            style="w-full mt-4 bg-primary font-bold text-base text-white border-0"
+            loading={loading}
+          />
         </form>
 
-          <div
-            className="text-white text-center mt-2 text-sm"
+        <div className="text-white text-center mt-2 text-sm">
+          Don&#39;t have an account?{" "}
+          <Link
+            to="/register"
+            className="text-primary hover:underline text-base font-semibold"
           >
-            Don&#39;t have an account? <Link to="/register" className="text-primary hover:underline text-base font-semibold">Register Here</Link>
-          </div>
-
+            Register Here
+          </Link>
+        </div>
       </div>
     </div>
   );

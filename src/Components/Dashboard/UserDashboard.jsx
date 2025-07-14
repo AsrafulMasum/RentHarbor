@@ -30,7 +30,7 @@ function UserDashboard() {
 
   return (
     <>
-      <div className="w-[81vw] my-10 mx-10">
+      <div className="w-[79vw] my-10 mx-10">
         <div className="grid grid-cols-3 gap-6 h-[120px] mb-4">
           {statistics?.map((statistic) => (
             <div
