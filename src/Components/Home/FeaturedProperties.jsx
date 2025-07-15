@@ -1,16 +1,38 @@
 import { Link } from "react-router-dom";
 import Title from "../Title";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import useLoadPublicData from "../../Hooks/useLoadPublicData";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { toast } from "react-toastify";
 
 const FeaturedProperties = () => {
   const { data } = useLoadPublicData("/properties/allProperties");
   const properties = data?.properties;
+  const { user, getUser } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
+
+  const handleLike = async (id) => {
+    try {
+      const res = await axiosSecure.post(`/auth/wishList/${user?._id}`, {
+        propertyId: id,
+      });
+
+      if (res?.data?.success) {
+        await getUser();
+        toast.success(res?.data?.message);
+      }
+    } catch (error) {
+      toast.error("Failed to update wishlist");
+    }
+  };
 
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto my-20">
@@ -33,9 +55,9 @@ const FeaturedProperties = () => {
             dynamicBullets: true,
           }}
           autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -54,9 +76,12 @@ const FeaturedProperties = () => {
           {properties?.map((property) => (
             <SwiperSlide
               key={property?._id}
-              className="overflow-hidden pb-10 rounded-lg"
+              className="overflow-hidden pb-10 rounded-lg relative"
             >
-              <Link to={`/properties/${property?._id}`} className="duration-700 group overflow-hidden h-96">
+              <Link
+                to={`/properties/${property?._id}`}
+                className="duration-700 group overflow-hidden h-96"
+              >
                 <img
                   className="group-hover:scale-105 duration-700 h-72 object-cover"
                   src={property?.images?.[0]}
@@ -77,9 +102,24 @@ const FeaturedProperties = () => {
                     {property?.address?.state}
                   </p>
 
-                  <p className="text-secondary">{property?.features?.join(", ")}</p>
+                  <p className="text-secondary">
+                    {property?.features?.join(", ")}
+                  </p>
                 </div>
               </Link>
+              <div>
+                {user?.wishList?.includes(property._id) ? (
+                  <FcLike
+                    className="absolute top-4 right-4 text-2xl cursor-pointer"
+                    onClick={() => handleLike(property._id)}
+                  />
+                ) : (
+                  <FcLikePlaceholder
+                    className="absolute top-4 right-4 text-2xl cursor-pointer"
+                    onClick={() => handleLike(property._id)}
+                  />
+                )}
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

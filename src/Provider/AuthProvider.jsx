@@ -61,6 +61,7 @@ const AuthProvider = ({ children }) => {
 
   const data = {
     user,
+    getUser,
     loginUser,
     logoutUser,
   };
