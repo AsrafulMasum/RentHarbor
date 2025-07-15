@@ -12,27 +12,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { toast } from "react-toastify";
+import PropertyCard from "../shared/PropertyCard";
 
 const FeaturedProperties = () => {
   const { data } = useLoadPublicData("/properties/allProperties");
   const properties = data?.properties;
-  const { user, getUser } = useContext(AuthContext);
-  const axiosSecure = useAxiosSecure();
-
-  const handleLike = async (id) => {
-    try {
-      const res = await axiosSecure.post(`/auth/wishList/${user?._id}`, {
-        propertyId: id,
-      });
-
-      if (res?.data?.success) {
-        await getUser();
-        toast.success(res?.data?.message);
-      }
-    } catch (error) {
-      toast.error("Failed to update wishlist");
-    }
-  };
 
   return (
     <div className="max-w-screen-xl mx-4 lg:mx-auto my-20">
@@ -78,48 +62,7 @@ const FeaturedProperties = () => {
               key={property?._id}
               className="overflow-hidden pb-10 rounded-lg relative"
             >
-              <Link
-                to={`/properties/${property?._id}`}
-                className="duration-700 group overflow-hidden h-96"
-              >
-                <img
-                  className="group-hover:scale-105 duration-700 h-72 object-cover"
-                  src={property?.images?.[0]}
-                  alt="Image"
-                />
-                <div className="py-6 px-6 flex flex-col gap-2 bg-white border">
-                  <div className="flex justify-between items-center">
-                    <h4 className="text-xl font-semibold text-primary">
-                      {property?.title}
-                    </h4>
-                    <p className="text-primary font-semibold text-nowrap">
-                      $ {property?.pricePerDay}
-                    </p>
-                  </div>
-                  <p className="text-secondary">
-                    <span className="font-semibold">Location: </span>
-                    {property?.location}, {property?.address?.city},{" "}
-                    {property?.address?.state}
-                  </p>
-
-                  <p className="text-secondary">
-                    {property?.features?.join(", ")}
-                  </p>
-                </div>
-              </Link>
-              <div>
-                {user?.wishList?.includes(property._id) ? (
-                  <FcLike
-                    className="absolute top-4 right-4 text-2xl cursor-pointer"
-                    onClick={() => handleLike(property._id)}
-                  />
-                ) : (
-                  <FcLikePlaceholder
-                    className="absolute top-4 right-4 text-2xl cursor-pointer"
-                    onClick={() => handleLike(property._id)}
-                  />
-                )}
-              </div>
+              <PropertyCard property={property} />
             </SwiperSlide>
           ))}
         </Swiper>
