@@ -1,17 +1,28 @@
 import { useState } from "react";
+import useLoadSecureData from "../../Hooks/useLoadSecureData";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const tabs = [
-  { id: "tab1", label: "Wishlist", content: "This is the Wishlist content." },
-  { id: "tab2", label: "Triplist", content: "This is the Triplist content." },
   {
-    id: "tab3",
+    id: "Wishlist",
+    label: "Wishlist",
+    content: "This is the Wishlist content.",
+  },
+  {
+    id: "Triplist",
+    label: "Triplist",
+    content: "This is the Triplist content.",
+  },
+  {
+    id: "Reservationlist",
     label: "Reservationlist",
     content: "This is the Reservationlist content.",
   },
 ];
 
 function Properties() {
-  const [activeTab, setActiveTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState("Wishlist");
+  const { data } = useLoadSecureData("/properties/wishlist");
 
   return (
     <div className="p-10">

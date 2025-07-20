@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   LuBedDouble,
@@ -22,6 +22,7 @@ import Button from "../Components/Button";
 import { Modal } from "antd";
 import useLoadSecureData from "../Hooks/useLoadSecureData";
 import { AuthContext } from "../Provider/AuthProvider";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 function PropertyDetailsPage() {
   const { user } = useContext(AuthContext);
@@ -30,6 +31,8 @@ function PropertyDetailsPage() {
   const [days, setDays] = useState({});
   const [totalCost, setTotalCost] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const axiosSecure = useAxiosSecure();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -51,8 +54,14 @@ function PropertyDetailsPage() {
     console.log("first");
   };
 
-  const handleConfirm = () => {
-    console.log("first");
+  const handleCheckout = async () => {
+    const payload = {
+      bookingInfo: dates,
+      propertyInfo: property,
+    };
+
+    const res = await axiosSecure.post("/payments/payment-session", payload);
+    window.location.href = res?.data;
   };
 
   return (
@@ -254,8 +263,8 @@ function PropertyDetailsPage() {
           <hr />
           <p className="pt-2 pb-4 font-medium">Total Cost: ${totalCost}</p>
           <Button
-            fn={handleConfirm}
-            text="Confirm"
+            fn={handleCheckout}
+            text="Checkout"
             style="btn-wide bg-primary text-white border border-primary w-full"
           />
         </div>

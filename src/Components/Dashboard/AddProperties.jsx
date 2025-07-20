@@ -117,6 +117,7 @@ function AddProperties() {
         features: featuresArray,
         availableDates: state?.[0],
         host: {
+          hostId: user?._id,
           hostName: user?.name,
           email: user?.email,
           phone: user?.phone,
