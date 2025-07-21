@@ -38,7 +38,7 @@ const PropertyCard = ({ property }) => {
         className="duration-700 group overflow-hidden h-96"
       >
         <img
-          className="group-hover:scale-105 duration-700 h-72 object-cover"
+          className="group-hover:scale-105 duration-700 h-72 w-full object-cover"
           src={property?.images?.[0]}
           alt="Image"
         />
