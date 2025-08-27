@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: "Montserrat", sans-serif;
+@layer base {
+  * {
+    font-family: "Montserrat", sans-serif;
+    scrollbar-width: thin; 
+    scrollbar-color: #fd6c23 transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fd6c23;
+    border-radius: 16px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #264f0b;
+  }
 }

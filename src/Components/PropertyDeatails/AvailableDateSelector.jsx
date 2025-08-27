@@ -4,7 +4,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import PropTypes from "prop-types";
 
-const AvailableDateSelector = ({ availableDates, setDates }) => {
+const AvailableDateSelector = ({ availableDates, setDates, disableDates }) => {
   // console.log("Available Dates:", availableDates);
 
   // Ensure availableDates has valid start and end dates
@@ -34,9 +34,11 @@ const AvailableDateSelector = ({ availableDates, setDates }) => {
         rangeColors={["#FD6C23"]}
         ranges={selectedDates}
         onChange={(item) => setSelectedDates([item.selection])}
-        minDate={minDate} // Set minimum selectable date
-        maxDate={maxDate} // Set maximum selectable date
+        minDate={minDate}
+        maxDate={maxDate}
+        // scroll={{ enabled: true }}
       />
+      
     </div>
   );
 };

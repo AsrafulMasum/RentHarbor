@@ -62,6 +62,7 @@ function PropertyDetailsPage() {
 
     const res = await axiosSecure.post("/payments/payment-session", payload);
     window.location.href = res?.data;
+    console.log(res);
   };
 
   return (
