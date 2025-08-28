@@ -22,7 +22,9 @@ function Properties() {
   const { data: wishlistData } = useLoadSecureData("/properties/wishlist");
   const wishlist = wishlistData?.properties;
 
-  const { data: reservationData } = useLoadSecureData("/properties/reservations");
+  const { data: reservationData } = useLoadSecureData(
+    "/properties/reservations"
+  );
   const reservations = reservationData?.reservations;
 
   return (
@@ -48,16 +50,28 @@ function Properties() {
       <div className="p-4">
         {activeTab === "Wishlist" && (
           <div className="grid grid-cols-3 gap-10">
-            {wishlist?.map((property) => (
-              <PropertyCard key={property?._id} property={property} />
-            ))}
+            {wishlist?.length > 0 ? (
+              wishlist?.map((property) => (
+                <PropertyCard key={property?._id} property={property} />
+              ))
+            ) : (
+              <p>No properties in wishlist.</p>
+            )}
           </div>
         )}
+
         {activeTab === "Reservationlist" && (
           <div className="grid grid-cols-3 gap-10">
-            {reservations?.map((property) => (
-              <PropertyCard key={property?._id} property={property?.property} />
-            ))}
+            {reservations?.length > 0 ? (
+              reservations?.map((property) => (
+                <PropertyCard
+                  key={property?._id}
+                  property={property?.property}
+                />
+              ))
+            ) : (
+              <p>No reservations found.</p>
+            )}
           </div>
         )}
       </div>

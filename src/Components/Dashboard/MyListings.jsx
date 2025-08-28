@@ -11,7 +11,7 @@ function MyListings() {
   );
 
   return (
-    <div className="px-10 py-10 grid grid-cols-3 gap-10 max-h-screen overflow-y-scroll">
+    <div className="px-10 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10 max-h-screen overflow-y-scroll">
       {data?.result?.map((property) => (
         <Link
           key={property?._id}
