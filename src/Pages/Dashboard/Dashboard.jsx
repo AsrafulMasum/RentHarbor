@@ -22,8 +22,8 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex">
-      <aside className="flex flex-col w-80 h-screen px-4 py-5 2xl:py-20 overflow-y-auto bg-secondary">
+    <div className="grid grid-cols-6">
+      <aside className="col-span-1 flex flex-col w-full h-screen px-4 py-5 2xl:py-20 overflow-y-auto bg-secondary">
         <div className="flex flex-col items-center -mx-2">
           <img
             className="object-cover w-24 h-24 mx-2 rounded-full"
@@ -310,9 +310,9 @@ const Dashboard = () => {
         </nav>
       </aside>
 
-      <>
+      <div className="col-span-5">
         <Outlet />
-      </>
+      </div>
     </div>
   );
 };

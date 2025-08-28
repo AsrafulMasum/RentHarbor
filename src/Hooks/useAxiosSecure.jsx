@@ -23,6 +23,7 @@ const useAxiosSecure = () => {
           logoutUser();
           navigate("/logIn");
         }
+        return err;
       }
     );
   }, [logoutUser, navigate]);

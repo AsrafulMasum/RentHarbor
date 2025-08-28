@@ -1,6 +1,5 @@
 import { useState } from "react";
 import useLoadSecureData from "../../Hooks/useLoadSecureData";
-import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import PropertyCard from "../shared/PropertyCard";
 
 const tabs = [
@@ -22,7 +21,9 @@ function Properties() {
   const [activeTab, setActiveTab] = useState("Wishlist");
   const { data: wishlistData } = useLoadSecureData("/properties/wishlist");
   const wishlist = wishlistData?.properties;
-  console.log(wishlist);
+
+  const { data: reservationData } = useLoadSecureData("/properties/reservations");
+  const reservations = reservationData?.reservations;
 
   return (
     <div className="p-10 max-h-screen overflow-auto">
@@ -49,6 +50,13 @@ function Properties() {
           <div className="grid grid-cols-3 gap-10">
             {wishlist?.map((property) => (
               <PropertyCard key={property?._id} property={property} />
+            ))}
+          </div>
+        )}
+        {activeTab === "Reservationlist" && (
+          <div className="grid grid-cols-3 gap-10">
+            {reservations?.map((property) => (
+              <PropertyCard key={property?._id} property={property?.property} />
             ))}
           </div>
         )}

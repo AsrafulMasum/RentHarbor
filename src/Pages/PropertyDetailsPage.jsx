@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   LuBedDouble,
@@ -10,19 +10,18 @@ import {
 import { IoCallOutline } from "react-icons/io5";
 import balcony from "../assets/balcony.png";
 import ReactStars from "react-rating-stars-component";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Autoplay } from "swiper/modules";
-import AvailableDateSelector from "../Components/PropertyDeatails/AvailableDateSelector";
-import MapComponent from "../Components/PropertyDeatails/MapComponent";
+import AvailableDateSelector from "../Components/PropertyDetails/AvailableDateSelector";
+import MapComponent from "../Components/PropertyDetails/MapComponent";
 import { useContext, useEffect, useState } from "react";
 import Button from "../Components/Button";
 import { Modal } from "antd";
 import useLoadSecureData from "../Hooks/useLoadSecureData";
 import { AuthContext } from "../Provider/AuthProvider";
 import useAxiosSecure from "../Hooks/useAxiosSecure";
+import { toast } from "react-toastify";
 
 function PropertyDetailsPage() {
   const { user } = useContext(AuthContext);
@@ -32,7 +31,6 @@ function PropertyDetailsPage() {
   const [totalCost, setTotalCost] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const axiosSecure = useAxiosSecure();
-  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,9 +58,15 @@ function PropertyDetailsPage() {
       propertyInfo: property,
     };
 
-    const res = await axiosSecure.post("/payments/payment-session", payload);
-    window.location.href = res?.data;
-    console.log(res);
+    try {
+      const res = await axiosSecure.post("/payments/payment-session", payload);
+      if (res?.data) {
+        window.location.href = res?.data;
+      }
+      toast.success(res?.response?.data?.message);
+    } catch (error) {
+      console.log("Error creating payment session:", error);
+    }
   };
 
   return (

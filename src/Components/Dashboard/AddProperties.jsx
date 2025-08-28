@@ -142,7 +142,7 @@ function AddProperties() {
   };
 
   return (
-    <div className="w-5/6">
+    <div className="w-full">
       <form
         onSubmit={handleSubmit}
         className="p-10 max-h-screen overflow-y-scroll w-full"
