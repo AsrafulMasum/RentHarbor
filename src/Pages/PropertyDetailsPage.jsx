@@ -38,6 +38,7 @@ function PropertyDetailsPage() {
 
   const { data } = useLoadSecureData(`/properties/${id}`);
   const property = data?.property;
+  const reservedDates = data?.reservedDates;
 
   const handleBook = () => {
     const bookingTime = dates?.[0]?.endDate - dates?.[0]?.startDate;
@@ -231,6 +232,7 @@ function PropertyDetailsPage() {
           <AvailableDateSelector
             setDates={setDates}
             availableDates={property?.availableDates}
+            reservedDates={reservedDates}
           />
         </div>
         <div className="flex justify-end col-span-3 mr-10">
