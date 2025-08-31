@@ -30,13 +30,14 @@ function PropertyDetailsPage() {
   const [days, setDays] = useState({});
   const [totalCost, setTotalCost] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
   const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { data } = useLoadSecureData(`/properties/${id}`);
+  const { data, refetch } = useLoadSecureData(`/properties/${id}`);
   const property = data?.property;
   const reservedDates = data?.reservedDates;
 
@@ -51,6 +52,23 @@ function PropertyDetailsPage() {
 
   const handleEdit = () => {
     console.log("first");
+  };
+
+  const handleShowBlockModal = () => {
+    setShowDelete(true);
+  };
+
+  const handleBlock = async () => {
+    try {
+      const res = await axiosSecure.put(`/properties/block/${id}`);
+      if (res.data.success) {
+        toast.success(res?.data?.message);
+        refetch();
+      }
+    } catch (error) {
+      console.error("Error blocking property:", error);
+      toast.error("Failed to block property");
+    }
   };
 
   const handleCheckout = async () => {
@@ -235,8 +253,15 @@ function PropertyDetailsPage() {
             reservedDates={reservedDates}
           />
         </div>
+
         <div className="flex justify-end col-span-3 mr-10">
-          {property?.host?.email === user?.email ? (
+          {user?.role === "Admin" ? (
+            <Button
+              fn={handleShowBlockModal}
+              text={property?.isBlocked ? "Unblock Property" : "Block Property"}
+              style="btn-wide bg-primary text-white border border-primary w-80"
+            />
+          ) : property?.host?.email === user?.email ? (
             <Button
               fn={handleEdit}
               text="Edit Now"
@@ -273,6 +298,28 @@ function PropertyDetailsPage() {
             fn={handleCheckout}
             text="Checkout"
             style="btn-wide bg-primary text-white border border-primary w-full"
+          />
+        </div>
+      </Modal>
+
+      <Modal
+        centered
+        open={showDelete}
+        onCancel={() => setShowDelete(!showDelete)}
+        width={400}
+        footer={false}
+      >
+        <div className="p-6 text-center">
+          <p className="text-red-600 text-center font-semibold">
+            Are you sure!
+          </p>
+          <p className="pt-4 pb-12 text-center">
+            Do you want to block this property?
+          </p>
+          <Button
+            fn={handleBlock}
+            text={property?.isBlocked ? "Unblock Property" : "Block Property"}
+            style="btn-wide bg-primary text-white border border-primary w-80"
           />
         </div>
       </Modal>
