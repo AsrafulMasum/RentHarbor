@@ -17,6 +17,7 @@
     "i": "^0.3.7",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.3",
+    "moment": "^2.30.1",
     "npm": "^10.9.0",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",

@@ -1,11 +1,9 @@
-import useLoadPublicData from "../../Hooks/useLoadPublicData";
+import useLoadSecureData from "../../Hooks/useLoadSecureData";
 import PropertyCard from "../shared/PropertyCard";
 import Title from "../Title";
 
 function AllListings() {
-  const { data: properties } = useLoadPublicData(`/properties/allProperties`);
-
-  console.log(properties);
+  const { data: properties } = useLoadSecureData(`/properties/admin/allProperties`);
 
   return (
     <div className="py-10 px-10 max-h-screen overflow-y-auto">
