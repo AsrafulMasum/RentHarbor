@@ -5,6 +5,8 @@ import { RiDashboardLine } from "react-icons/ri";
 import { MdOutlineManageAccounts, MdOutlinePayments } from "react-icons/md";
 import { LuTableProperties } from "react-icons/lu";
 import { IoLogOutOutline, IoHomeOutline } from "react-icons/io5";
+import { HiOutlineUsers } from "react-icons/hi";
+import { PiChatsCircle } from "react-icons/pi";
 
 const Dashboard = () => {
   const [isGuestMode, setIsGuestMode] = useState(false);
@@ -269,7 +271,7 @@ const Dashboard = () => {
                     : "hover:bg-gray-800"
                 }`}
               >
-                <MdOutlinePayments className="text-xl" />
+                <PiChatsCircle className="text-xl" />
 
                 <span className="mx-4 font-medium">Massages</span>
               </Link>
@@ -282,7 +284,7 @@ const Dashboard = () => {
                     : "hover:bg-gray-800"
                 }`}
               >
-                <MdOutlinePayments className="text-xl" />
+                <HiOutlineUsers className="text-xl" />
 
                 <span className="mx-4 font-medium">Users</span>
               </Link>
