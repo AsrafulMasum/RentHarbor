@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import bgImage from "../assets/house.jpg";
-import addImage from "../assets/addImage.png";
+import bgImage from "../../assets/house.jpg";
+import addImage from "../../assets/addImage.png";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "../Components/Button";
-import useAxiosPublic from "../Hooks/useAxiosPublic";
+import Button from "../../Components/Button";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { toast } from "react-toastify";
 // import PhoneInput from "react-phone-input-2";
 
@@ -74,7 +74,7 @@ const RegisterPage = () => {
           if (res.data?.success) {
             toast.success("You have registered successfully.");
             setLoading(false);
-            navigate("/login");
+            navigate(`/verify-email?email=${formData?.email}`);
           }
         } catch (err) {
           setLoading(false);
@@ -124,7 +124,7 @@ const RegisterPage = () => {
             value={formData.phone}
             onChange={handleChange}
           />
-            {/* <PhoneInput
+          {/* <PhoneInput
               inputProps={{
                 required: true,
               }}

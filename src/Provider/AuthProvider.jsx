@@ -28,6 +28,14 @@ const AuthProvider = ({ children }) => {
     }
   };
 
+  const verifyEmailCode = async (email, code) => {
+    await axiosPublic.post("/auth/verify", { email, code });
+  };
+
+  const resendCode = async (email) => {
+    await axiosPublic.post("/auth/resend", { email });
+  };
+
   useEffect(() => {
     getUser();
   }, []);
@@ -64,6 +72,8 @@ const AuthProvider = ({ children }) => {
     getUser,
     loginUser,
     logoutUser,
+    verifyEmailCode,
+    resendCode,
   };
 
   return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;

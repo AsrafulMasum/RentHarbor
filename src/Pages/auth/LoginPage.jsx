@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import bgImage from "../assets/house.jpg";
+import bgImage from "../../assets/house.jpg";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "../Components/Button";
-import { AuthContext } from "../Provider/AuthProvider";
+import Button from "../../Components/Button";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const LoginPage = () => {
   const navigate = useNavigate();

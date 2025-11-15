@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
 import HomePage from "../Pages/HomePage";
-import RegisterPage from "../Pages/RegisterPage";
-import LoginPage from "../Pages/LoginPage";
 import ErrorPage from "../Pages/ErrorPage";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import UserDashboard from "../Components/Dashboard/UserDashboard";
@@ -16,6 +14,9 @@ import MyListings from "../Components/Dashboard/MyListings";
 import AllListings from "../Components/Dashboard/AllListings";
 import Messages from "../Components/Dashboard/Messages";
 import Users from "../Components/Dashboard/Users";
+import RegisterPage from "../Pages/auth/RegisterPage";
+import LoginPage from "../Pages/auth/LoginPage";
+import VerifyEmailPage from "../Pages/auth/VerifyEmailPage";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const MainRoutes = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
+      },
+      {
+        path: "verify-email",
+        element: <VerifyEmailPage />,
       },
     ],
   },
