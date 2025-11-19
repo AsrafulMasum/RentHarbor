@@ -17,6 +17,8 @@ import Users from "../Components/Dashboard/Users";
 import RegisterPage from "../Pages/auth/RegisterPage";
 import LoginPage from "../Pages/auth/LoginPage";
 import VerifyEmailPage from "../Pages/auth/VerifyEmailPage";
+import ForgotPassword from "../Pages/auth/ForgotPassword";
+import ResetPasswordPage from "../Pages/auth/ResetPasswordPage";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const MainRoutes = createBrowserRouter([
       {
         path: "verify-email",
         element: <VerifyEmailPage />,
+      },
+      {
+        path: "forgot-password",
+        element: <ForgotPassword />,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPasswordPage />,
       },
     ],
   },

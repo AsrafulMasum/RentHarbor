@@ -1,24 +1,44 @@
 import { useContext, useState } from "react";
 import bgImage from "../../assets/house.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../../Components/Button";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-const LoginPage = () => {
+const ResetPasswordPage = () => {
   const navigate = useNavigate();
-  const { loginUser } = useContext(AuthContext);
+  const resetToken = localStorage.getItem("resetToken");
+  const { resetPassword } = useContext(AuthContext);
+
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
 
   const handleSubmit = async (e) => {
-    setLoading(true);
     e.preventDefault();
+
+    if (!resetToken) {
+      return toast.error("Invalid or expired reset session!");
+    }
+
+    if (password !== confirm) {
+      return toast.error("Passwords do not match!");
+    }
+
+    setLoading(true);
+    const newPassword = password;
     try {
-      await loginUser(email, password);
-      navigate("/");
+      const res = await resetPassword(resetToken, newPassword);
+
+      if (res?.success) {
+        toast.success("Password reset successful!");
+        localStorage.removeItem("resetToken");
+
+        navigate("/login");
+      }
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Reset failed:", error);
+      toast.error(error?.response?.data?.message || "Reset failed!");
     } finally {
       setLoading(false);
     }
@@ -39,49 +59,37 @@ const LoginPage = () => {
           className="flex flex-col items-center gap-10 w-full"
           onSubmit={handleSubmit}
         >
-          <input
-            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <h2 className="text-white text-2xl font-semibold">
+            Reset Your Password
+          </h2>
+
           <input
             className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             type="password"
-            placeholder="Password"
+            placeholder="New Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
 
-          <Link
-            to="/forgot-password"
-            className="text-primary hover:underline text-base font-semibold"
-          >
-            Forgot Password?
-          </Link>
+          <input
+            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
+            type="password"
+            placeholder="Confirm New Password"
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+            required
+          />
 
           <Button
-            text="Login"
+            text="Reset Password"
             style="w-full mt-4 bg-primary font-bold text-base text-white border-0"
             loading={loading}
           />
         </form>
-
-        <div className="text-white text-center mt-2 text-sm">
-          Don&#39;t have an account?{" "}
-          <Link
-            to="/register"
-            className="text-primary hover:underline text-base font-semibold"
-          >
-            Register Here
-          </Link>
-        </div>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default ResetPasswordPage;

@@ -36,6 +36,23 @@ const AuthProvider = ({ children }) => {
     await axiosPublic.post("/auth/resend", { email });
   };
 
+  const forgotPassword = async (email) => {
+    await axiosPublic.post("/auth/forgot-password", { email });
+  };
+
+  const verifyResetCode = async (email, code) => {
+    const res = await axiosPublic.post("/auth/verify-reset-code", {
+      email,
+      code,
+    });
+    return res?.data;
+  };
+
+  const resetPassword = async (resetToken, newPassword) => {
+    const res = await axiosPublic.post("/auth/reset-password", { resetToken, newPassword });
+    return res?.data;
+  };
+
   useEffect(() => {
     getUser();
   }, []);
@@ -74,6 +91,9 @@ const AuthProvider = ({ children }) => {
     logoutUser,
     verifyEmailCode,
     resendCode,
+    forgotPassword,
+    verifyResetCode,
+    resetPassword,
   };
 
   return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;

@@ -137,7 +137,7 @@ function Users() {
   };
 
   return (
-    <div className="w-full h-full bg-white">
+    <div className="w-full h-full bg-white p-10">
       <div
         style={{
           borderRadius: "8px",
@@ -202,13 +202,13 @@ function Users() {
                 Pagination: {
                   itemActiveBg: "#FD6C23",
                   borderRadius: "100%",
-                  colorText: "white",
+                  colorText: "black",
                   colorTextDisabled: "#6C6C6C",
                   colorBorder: "#FD6C23",
                 },
                 Table: {
-                  rowHoverBg: "#AFDA8E",
-                  colorBgContainer: "#AFDA8E",
+                  rowHoverBg: "#FDFDFD",
+                  colorBgContainer: "#FDFDFD",
                   // headerColor: "#FDFDFD",
                 },
               },
@@ -226,7 +226,7 @@ function Users() {
               pagination={{
                 total: users?.length,
                 current: page,
-                pageSize: 10,
+                pageSize: 12,
                 onChange: (page) => setPage(page),
               }}
             />

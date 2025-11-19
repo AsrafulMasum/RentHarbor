@@ -1,24 +1,26 @@
-import { useContext, useState } from "react";
+import { useState, useContext } from "react";
 import bgImage from "../../assets/house.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
-const LoginPage = () => {
-  const navigate = useNavigate();
-  const { loginUser } = useContext(AuthContext);
+const ForgotPassword = () => {
+  const { forgotPassword } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    setLoading(true);
     e.preventDefault();
+    setLoading(true);
+
     try {
-      await loginUser(email, password);
-      navigate("/");
+      await forgotPassword(email);
+      toast.success("Password reset code sent to your email!");
+      navigate(`/verify-email?email=${email}&reset=true`);
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Reset failed:", error);
     } finally {
       setLoading(false);
     }
@@ -39,49 +41,35 @@ const LoginPage = () => {
           className="flex flex-col items-center gap-10 w-full"
           onSubmit={handleSubmit}
         >
+          <h2 className="text-white text-2xl font-semibold">
+            Send Verification Code
+          </h2>
+
           <input
             className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
             type="email"
-            placeholder="Email"
+            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <input
-            className="w-full px-4 py-2 bg-transparent text-white border-b border-gray-400 border-opacity-60 outline-none placeholder:text-white"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-
-          <Link
-            to="/forgot-password"
-            className="text-primary hover:underline text-base font-semibold"
-          >
-            Forgot Password?
-          </Link>
 
           <Button
-            text="Login"
+            text="Send Verification Code"
             style="w-full mt-4 bg-primary font-bold text-base text-white border-0"
             loading={loading}
           />
-        </form>
 
-        <div className="text-white text-center mt-2 text-sm">
-          Don&#39;t have an account?{" "}
           <Link
-            to="/register"
+            to="/login"
             className="text-primary hover:underline text-base font-semibold"
           >
-            Register Here
+            Back to Login
           </Link>
-        </div>
+        </form>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default ForgotPassword;

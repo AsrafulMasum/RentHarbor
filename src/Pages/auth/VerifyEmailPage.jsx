@@ -6,12 +6,14 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const VerifyEmailPage = () => {
-  const { verifyEmailCode, resendCode } = useContext(AuthContext);
+  const { verifyEmailCode, resendCode, verifyResetCode } =
+    useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState("");
 
   const [searchParams] = useSearchParams();
   const email = searchParams.get("email");
+  const isReset = searchParams.get("reset");
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -19,13 +21,30 @@ const VerifyEmailPage = () => {
     setLoading(true);
 
     try {
-      await verifyEmailCode(email, code);
+      if (isReset) {
+        // verify reset code
+        const res = await verifyResetCode(email, code);
+        if (res?.success) {
+          // save token for next step
+          localStorage.setItem("resetToken", res.resetToken);
+
+          toast.success("Code verified successfully.");
+          navigate("/reset-password");
+        }
+      } else {
+        // verify email code (normal verification)
+        const res = await verifyEmailCode(email, code);
+
+        if (res?.success) {
+          toast.success("Email verified successfully.");
+          navigate("/login");
+        }
+      }
     } catch (error) {
       console.error("Verification failed:", error);
+      toast.error(error?.response?.data?.message || "Verification failed");
     } finally {
       setLoading(false);
-      toast.success("Email verified successfully.");
-      navigate("/login");
     }
   };
 
