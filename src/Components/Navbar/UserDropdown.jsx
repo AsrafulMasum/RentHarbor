@@ -35,7 +35,7 @@ const UserDropdown = () => {
             </Link>
           </li>
 
-          {user?.role === "Guest" && (
+          {user?.role === "Guest" && !user?.isRequestedForHost && (
             <li>
               <Link className="text-white mt-1 px-[14px]">Become A Host</Link>
             </li>

@@ -44,11 +44,11 @@ const BecomeAHost = () => {
         }
       );
 
-      toast.success("Host request submitted!");
+      toast.success(res.data.message || "Host request submitted!");
       console.log(res.data);
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong!");
+      toast.error(error?.response?.data?.message || "Something went wrong!");
     } finally {
       setLoading(false);
     }
@@ -58,11 +58,11 @@ const BecomeAHost = () => {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-10 px-4">
       <div className="w-full max-w-2xl bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
         {/* Header */}
-        <h1 className="text-3xl font-bold text-gray-800 mb-2 text-center">
+        <h1 className="text-3xl font-bold text-primary mb-2 text-center">
           Become a Host
         </h1>
         <p className="text-gray-500 text-center mb-8">
-          Submit your documents to apply for hosting access.
+          Submit your documents to apply for host your property.
         </p>
 
         {/* Form */}

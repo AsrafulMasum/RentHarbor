@@ -7,10 +7,12 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import UserDropdown from "./UserDropdown";
 import Button from "../Button";
 import { CiSearch } from "react-icons/ci";
+import { IoIosNotificationsOutline } from "react-icons/io";
 
 const Navbar = ({ children }) => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
+  const notificationCount = 2;
 
   const navLinks = (
     <>
@@ -93,7 +95,28 @@ const Navbar = ({ children }) => {
                 {navLinks}
               </ul>
             </div>
-            <div className="ml-4">
+            <div className="space-x-6">
+              {/* Notifications */}
+              {user && (
+                <Link to="/notifications" className="relative inline-block">
+                  {/* Notification Icon */}
+                  <IoIosNotificationsOutline
+                    size={32}
+                    className="text-primary"
+                  />
+
+                  {/* Badge */}
+                  {notificationCount > 0 && (
+                    <span
+                      className="absolute -top-1 -right-1 bg-secondary_ex text-black text-xs font-semibold 
+                   px-1.5 py-0.5 rounded-full"
+                    >
+                      {notificationCount}
+                    </span>
+                  )}
+                </Link>
+              )}
+
               {user ? (
                 <UserDropdown></UserDropdown>
               ) : (
@@ -105,13 +128,13 @@ const Navbar = ({ children }) => {
                 // </Link>
                 <div onClick={handleNavigate}>
                   <Button
-                    text="Login"
+                    text="Book Now"
                     style="btn btn-sm border-none bg-primary text-white"
                   ></Button>
                 </div>
               )}
             </div>
-            {user && user?.role === "Guest" && (
+            {user && user?.role === "Guest" && !user?.isRequestedForHost && (
               <div className="ml-4 pl-4 border-l hidden md:block">
                 <Link to="/become-a-host">
                   <Button
