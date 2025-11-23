@@ -3,6 +3,7 @@ import bgImage from "../../assets/house.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -18,7 +19,8 @@ const LoginPage = () => {
       await loginUser(email, password);
       navigate("/");
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Login failed:", error?.response?.data?.message || error);
+      toast.error(error?.response?.data?.message || "Login failed!");
     } finally {
       setLoading(false);
     }

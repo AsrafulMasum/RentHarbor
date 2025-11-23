@@ -19,6 +19,7 @@ import LoginPage from "../Pages/auth/LoginPage";
 import VerifyEmailPage from "../Pages/auth/VerifyEmailPage";
 import ForgotPassword from "../Pages/auth/ForgotPassword";
 import ResetPasswordPage from "../Pages/auth/ResetPasswordPage";
+import BecomeAHost from "../Pages/auth/BecomeAHost";
 
 const MainRoutes = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const MainRoutes = createBrowserRouter([
       {
         path: "reset-password",
         element: <ResetPasswordPage />,
+      },
+      {
+        path: "become-a-host",
+        element: <BecomeAHost />,
       },
     ],
   },

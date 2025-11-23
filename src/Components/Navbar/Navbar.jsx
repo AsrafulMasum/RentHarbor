@@ -35,8 +35,8 @@ const Navbar = ({ children }) => {
     } else {
       navigate("/allProperties");
     }
-  }
-  
+  };
+
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -70,14 +70,20 @@ const Navbar = ({ children }) => {
                 <img className="w-20" src={logo} alt="Logo" />
               </Link>
             </div>
-            <form onSubmit={handleSearchSubmit} className="hidden lg:flex items-center justify-between">
+            <form
+              onSubmit={handleSearchSubmit}
+              className="hidden lg:flex items-center justify-between"
+            >
               <input
                 className="h-10 w-60 rounded-l-xl bg-transparent border border-r-0 focus:outline-none px-5 text-white placeholder:text-gray-300"
                 type="text"
                 name="search"
                 placeholder="Search ..."
               />
-              <button type="submit" className="rounded-r-xl border border-l-0 py-[7px] px-2 text-primary text-2xl font-extrabold">
+              <button
+                type="submit"
+                className="rounded-r-xl border border-l-0 py-[7px] px-2 text-primary text-2xl font-extrabold"
+              >
                 <CiSearch />
               </button>
             </form>
@@ -105,15 +111,16 @@ const Navbar = ({ children }) => {
                 </div>
               )}
             </div>
-            {
-              user && user?.role ==="Guest" &&
+            {user && user?.role === "Guest" && (
               <div className="ml-4 pl-4 border-l hidden md:block">
-                <Button
-                  text="Become A Host"
-                  style="btn border-tertiary hover:border-transparent bg-transparent text-white"
-                />
+                <Link to="/become-a-host">
+                  <Button
+                    text="Become A Host"
+                    style="btn border-tertiary hover:border-transparent bg-transparent text-white"
+                  />
+                </Link>
               </div>
-            }
+            )}
           </div>
         </div>
         {/* Page content here */}
