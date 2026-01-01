@@ -11,7 +11,7 @@ const imgHostingKey = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 
 function Accounts() {
   const axiosSecure = useAxiosSecure();
-  const { user } = useContext(AuthContext);
+  const { user, getUser } = useContext(AuthContext);
 
   const [form, setForm] = useState({
     name: "",
@@ -77,6 +77,7 @@ function Accounts() {
       const res = await axiosSecure.put(`/auth/update-user/${userId}`, form);
       if (res.data.success) {
         toast.success("Profile updated!");
+        getUser();
       }
     } catch (err) {
       toast.error("Update failed!");
