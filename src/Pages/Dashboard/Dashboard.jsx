@@ -66,7 +66,7 @@ const Dashboard = () => {
           </div>
         )}
 
-        <nav className="flex flex-col justify-between h-full gap-10">
+        <nav className="flex flex-col justify-between h-full gap-8">
           {user?.role === "Guest" && (
             <ul className="flex flex-col mt-4">
               <Link

@@ -52,7 +52,7 @@ function Accounts() {
     try {
       const res = await axios.post(
         `https://api.imgbb.com/1/upload?key=${imgHostingKey}`,
-        formData
+        formData,
       );
 
       const imageURL = res.data.data.url;
@@ -123,7 +123,7 @@ function Accounts() {
   }, [user]);
 
   return (
-    <div className="w-full h-full flex justify-center max-w-xl mx-auto py-10 px-4 mt-40">
+    <div className="w-full h-full flex justify-center max-w-xl mx-auto py-10 px-4 pt-20 max-h-screen overflow-y-auto">
       <ConfigProvider theme={{ token: { colorPrimary: "#FD6C23" } }}>
         <Tabs
           defaultActiveKey="1"
