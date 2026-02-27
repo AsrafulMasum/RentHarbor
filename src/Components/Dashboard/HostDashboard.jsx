@@ -27,6 +27,11 @@ const HostDashboard = () => {
         amount: "20 days",
         icon: <IoIosTimer className="text-4xl text-primary" />,
       },
+      {
+          title: "Total Reviews",
+          amount: "20 days",
+          icon: <IoIosTimer className="text-4xl text-primary" />,
+      },
     ];
 
   return (
@@ -39,10 +44,10 @@ const HostDashboard = () => {
             >
               <div>{statistic?.icon}</div>
               <div className="flex flex-col gap-1">
-                <h2 className="text-xl font-medium text-sub_title">
+                <h2 className="text-lg font-medium text-sub_title">
                   {statistic?.title}
                 </h2>
-                <h3 className="text-sub_title text-3xl font-semibold">
+                <h3 className="text-sub_title text-2xl font-semibold">
                   {statistic?.amount}
                 </h3>
               </div>
