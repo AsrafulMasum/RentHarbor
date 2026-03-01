@@ -8,12 +8,12 @@ const tabs = [
     label: "Wishlist",
   },
   {
-    id: "Triplist",
-    label: "Triplist",
+    id: "TripList",
+    label: "TripList",
   },
   {
-    id: "Reservationlist",
-    label: "Reservationlist",
+    id: "ReservationList",
+    label: "ReservationList",
   },
 ];
 
@@ -23,10 +23,11 @@ function Properties() {
   const wishlist = wishlistData?.properties;
 
   const { data: reservationData } = useLoadSecureData(
-    "/properties/reservations"
+    "/properties/reservations",
   );
   const reservations = reservationData?.reservations;
-
+  console.log(reservationData);
+  
   return (
     <div className="p-10 max-h-screen overflow-auto">
       {/* Tabs */}
@@ -60,7 +61,22 @@ function Properties() {
           </div>
         )}
 
-        {activeTab === "Reservationlist" && (
+        {activeTab === "TripList" && (
+          <div className="grid grid-cols-3 gap-10">
+            {reservations?.length > 0 ? (
+              reservations?.map((property) => (
+                <PropertyCard
+                  key={property?._id}
+                  property={property?.property}
+                />
+              ))
+            ) : (
+              <p>No reservations found.</p>
+            )}
+          </div>
+        )}
+
+        {activeTab === "ReservationList" && (
           <div className="grid grid-cols-3 gap-10">
             {reservations?.length > 0 ? (
               reservations?.map((property) => (
