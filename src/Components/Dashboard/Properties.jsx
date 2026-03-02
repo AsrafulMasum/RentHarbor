@@ -25,6 +25,7 @@ function Properties() {
   const { data: reservationData } = useLoadSecureData(
     "/properties/reservations",
   );
+  
   const reservations = reservationData?.reservations;
   console.log(reservationData);
   
